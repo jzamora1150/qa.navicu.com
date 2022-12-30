@@ -1,0 +1,31 @@
+{#
+    {% set arPrices = item.getTourPrices() %}
+#}
+
+{% if (arPrices.adults_price_markup) > 0 %}
+    {% set firstPrice = arPrices.adults_price_markup %}
+{% else %}
+    {% set firstPrice = 0 %}
+{% endif %}
+
+<input type="hidden" value="{{arPrices.adults_price_markup}}" id="a-price" >
+<input type="hidden" value="{{arPrices.kids_price_markup}}" id="k-price" >
+
+<p  class="justify-content-center price-element align-items-end">
+    <span class="total-label">TOTAL</span> 
+    <span class="amount" data-ref="{{firstPrice}}">{{firstPrice}}</span>
+    <span class="currency-code"> USD</span>
+</p> 
+
+{% if arPrices.available < 1 and firstPrice != 0 %}
+
+<p class="text-center pt-2">
+    AGOTADO
+</p>
+{% else %}
+<button class="add-to-cart-tour-button" id="tour-button">Añadir al carrito</button>
+
+{% endif %}
+
+
+

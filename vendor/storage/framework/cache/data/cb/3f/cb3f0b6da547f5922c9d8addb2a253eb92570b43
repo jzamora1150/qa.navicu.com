@@ -1,0 +1,194 @@
+1672493554a:1:{s:12:"purchase.htm";a:11:{s:8:"fileName";s:12:"purchase.htm";s:7:"content";s:4433:"url = "/compra/:code"
+layout = "default"
+title = "purchase"
+
+[PurchasePage]
+slug = "{{ :code }}"
+
+[PaymentMethodsHandler]
+
+[form]
+==
+<div class="rt-breadcump rt-breadcump-height d-none d-sm-block">
+    <div class="rt-page-bg rtbgprefix-cover" style="background-image: url({{'navicu/imgs/jpg/covers/cover-hoteles.jpg'|media}})">
+    </div><!-- /.rt-page-bg -->
+    <div class="container">
+        <div class="row rt-breadcump-height">
+            <div class="col-12">
+                <div class="breadcrumbs-content">
+                    <h3>Compra</h3>
+                </div><!-- /.breadcrumbs-content -->
+            </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</div><!-- /.rt-bredcump -->
+
+
+<section class="content-area upper-content-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4">
+                {% set obPurchase = PurchasePage.getPurchase() %}
+                
+                {% partial 'resume/purchase-resume' obPurchase = obPurchase %}
+
+               
+               
+            </div><!-- /.col-lg-9 -->
+
+            <div class="col-lg-8 mx-auto">
+                {% if obPurchase.status.id == 2 %}
+                <div class="rt-sidebar-group">
+                    <div class="flight-list-box rt-mb-30 pt-30 rounded-7">
+                        <h5 class="host-label">Métodos del huesped</h5>
+                            {% set paymentMethodList = PaymentMethodsHandler.getPaymentMethodsList() %}
+                       
+                            <div class="col-12 position-relative pb-4">
+
+                                <select id="payment-method-select" data-show-content="true" class="form-control position-relative">
+
+                                    {% for paymentMethod in paymentMethodList %}
+                                        {% if paymentMethod.codigo == "stripe" or paymentMethod.codigo == "zelle" %}
+                                        <option value="{{paymentMethod.codigo}}" data-content="">{{paymentMethod.nombre}}</option>
+                                        {% endif %}
+                                    {% endfor %}
+                                     
+                                    {#
+                                    <optgroup label="VES">   
+                                    {% for paymentMethod in paymentMethodList %}
+                                        {% if paymentMethod.codigo == "transf-ves" %}
+                                        <option value="{{paymentMethod.codigo}}" data-content="">{{paymentMethod.nombre}}</option>
+                                        {% endif %}
+                                    {% endfor %}
+                                    </optgroup>
+                                    #}
+                                    
+                                    
+                                </select>
+                            </div>
+                            
+                            
+                        {% for paymentMethod in paymentMethodList %}
+                            <div class="payment-info {{loop.first == false ? 'd-none'}}" id="{{paymentMethod.codigo}}-container">
+                                {% if paymentMethod.codigo == "zelle" %}
+                            
+                                {% partial 'payment-methods/zelle-info' paymentMethod = paymentMethod object = obPurchase type="compra" %}
+
+                            {% elseif paymentMethod.codigo == "stripe"  %}
+
+                                {% partial 'payment-methods/stripe-form' object = obPurchase type = "compra"  %}
+
+                            {% elseif paymentMethod.codigo == "transf-ves" %}
+
+                                tengo tranfer
+                            {% endif %}
+                            </div>  
+                        {% endfor %}
+                        
+                    </div><!-- /.flight-list-box -->
+
+                </div><!-- /.rt-sidebar-group -->
+                {% elseif obPurchase.status.id == 3 %}
+
+                    {% partial 'statuses/status-3' %}
+
+                {% elseif obPurchase.status.id == 1 %}
+
+                    {% partial 'statuses/status-1' %}
+
+                {% endif %}
+            </div>
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>";s:5:"mtime";i:1671815073;s:6:"markup";s:4289:"<div class="rt-breadcump rt-breadcump-height d-none d-sm-block">
+    <div class="rt-page-bg rtbgprefix-cover" style="background-image: url({{'navicu/imgs/jpg/covers/cover-hoteles.jpg'|media}})">
+    </div><!-- /.rt-page-bg -->
+    <div class="container">
+        <div class="row rt-breadcump-height">
+            <div class="col-12">
+                <div class="breadcrumbs-content">
+                    <h3>Compra</h3>
+                </div><!-- /.breadcrumbs-content -->
+            </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</div><!-- /.rt-bredcump -->
+
+
+<section class="content-area upper-content-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4">
+                {% set obPurchase = PurchasePage.getPurchase() %}
+                
+                {% partial 'resume/purchase-resume' obPurchase = obPurchase %}
+
+               
+               
+            </div><!-- /.col-lg-9 -->
+
+            <div class="col-lg-8 mx-auto">
+                {% if obPurchase.status.id == 2 %}
+                <div class="rt-sidebar-group">
+                    <div class="flight-list-box rt-mb-30 pt-30 rounded-7">
+                        <h5 class="host-label">Métodos del huesped</h5>
+                            {% set paymentMethodList = PaymentMethodsHandler.getPaymentMethodsList() %}
+                       
+                            <div class="col-12 position-relative pb-4">
+
+                                <select id="payment-method-select" data-show-content="true" class="form-control position-relative">
+
+                                    {% for paymentMethod in paymentMethodList %}
+                                        {% if paymentMethod.codigo == "stripe" or paymentMethod.codigo == "zelle" %}
+                                        <option value="{{paymentMethod.codigo}}" data-content="">{{paymentMethod.nombre}}</option>
+                                        {% endif %}
+                                    {% endfor %}
+                                     
+                                    {#
+                                    <optgroup label="VES">   
+                                    {% for paymentMethod in paymentMethodList %}
+                                        {% if paymentMethod.codigo == "transf-ves" %}
+                                        <option value="{{paymentMethod.codigo}}" data-content="">{{paymentMethod.nombre}}</option>
+                                        {% endif %}
+                                    {% endfor %}
+                                    </optgroup>
+                                    #}
+                                    
+                                    
+                                </select>
+                            </div>
+                            
+                            
+                        {% for paymentMethod in paymentMethodList %}
+                            <div class="payment-info {{loop.first == false ? 'd-none'}}" id="{{paymentMethod.codigo}}-container">
+                                {% if paymentMethod.codigo == "zelle" %}
+                            
+                                {% partial 'payment-methods/zelle-info' paymentMethod = paymentMethod object = obPurchase type="compra" %}
+
+                            {% elseif paymentMethod.codigo == "stripe"  %}
+
+                                {% partial 'payment-methods/stripe-form' object = obPurchase type = "compra"  %}
+
+                            {% elseif paymentMethod.codigo == "transf-ves" %}
+
+                                tengo tranfer
+                            {% endif %}
+                            </div>  
+                        {% endfor %}
+                        
+                    </div><!-- /.flight-list-box -->
+
+                </div><!-- /.rt-sidebar-group -->
+                {% elseif obPurchase.status.id == 3 %}
+
+                    {% partial 'statuses/status-3' %}
+
+                {% elseif obPurchase.status.id == 1 %}
+
+                    {% partial 'statuses/status-1' %}
+
+                {% endif %}
+            </div>
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>";s:4:"code";N;s:3:"url";s:13:"/compra/:code";s:6:"layout";s:7:"default";s:5:"title";s:8:"purchase";s:12:"PurchasePage";a:1:{s:4:"slug";s:11:"{{ :code }}";}s:21:"PaymentMethodsHandler";a:0:{}s:4:"form";a:0:{}}}

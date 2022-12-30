@@ -1,0 +1,178 @@
+url = "/paquete-unitario/:slug"
+layout = "default"
+title = "upselling"
+
+[UpsellingPage]
+slug = "{{ :slug }}"
+==
+{% partial 'banners/upselling-banner' %}
+
+{% set upselling = UpsellingPage.upselling %}
+
+<div class="container">
+    <div class="col-md-12">
+        <div class="d-flex justify-content-center">
+            <div class="tour-title-container ">
+                <h4 class="tour-page-pre-title text-center">
+                    Reserva tu próximo viaje
+                </h4>
+                <h2 class="tour-page-title text-center">
+                    {{upselling.titulo}}
+                </h2>
+                <p class="tour-page-description text-center">
+                    Conoce los paquetes que hemos seleccionado especialmente para ti
+                    y vive la mejor experiencia durante tu viaje
+                 </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-12">
+        <div class="tour-container">
+            <div class="row">
+            
+                <div class="col-md-4 tour-img">
+                    <img src="{{upselling.imagen.path}}" class="img-fluid" alt="">
+                </div>
+                   
+                <div class="col-md-8 tour-info">
+                    <form id="upselling-form" name="upselling-form">
+                        <input type="hidden" name="upselling_id" value="{{upselling.id}}">
+                        <div class="col-md-12">
+                            <div class="d-flex">
+                                <h4 class="tour-title">
+                                    {{upselling.titulo}}
+                                </h4>
+                                
+                                
+                            </div>
+                            {#
+                            <div class="d-flex">
+                                <div class="tour-rules w-100 d-md-flex justify-content-between">
+                                    <div class="d-flex">
+                                        <span >
+                                            {{item.getNightsDescription() }} 
+                                        </span>
+                                        
+                                    </div>
+                                    <div class="d-none d-sm-block">
+                                        <span class="custom-separator">·</span>
+                                    </div>
+                                    {% if tour.hotel is not empty %}
+                                    <div class="d-flex">
+                                        <span>
+                                            {{tour.hotel.nombre}} 
+                                        </span>
+                                        
+                                    </div>
+                                    <div class="d-none d-sm-block">
+                                        <span class="custom-separator">·</span>
+                                    </div>
+                                    {% endif %}
+                                    
+                                    <div class="d-flex">
+                                        
+                                        <span >
+                                            <strong>Salida</strong> {{tour.fecha_desde|date("d-m")}}
+                                            <strong>Retorno</strong> {{tour.fecha_hasta|date("d-m")}}
+                                        </span>
+                                        
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex">
+                                <div class="yellow-separator">
+                                    
+                                </div>
+                            </div>
+                            #}
+                            <div class="row">
+                                {% if upselling.ind_calendario == 1 %}
+                                <div class="col-md-6 d-flex align-items-end">
+                                    <div class="form-group col-md-12 pl-0 calendar-container">
+
+                                        
+
+                                        <input type="text" autocomplete="off" value="{{searchParams.dates}}" onkeypress="return false;" name="dates"
+                                            class="single-datepicker form-control rt-input-group rt-date-picker has-icon" placeholder="Elige tus fechas">
+                                        <span class="input-iconbadge"><i class="icofont-ui-calendar"></i></span>
+                                    </div>
+                                </div>
+                                {% endif %}
+                                <div class="col-md-6">
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        
+                                        <div class="form-group pax-element col-md-3">
+                                            <label for="">Adultos</label>
+                                            <select class="form-control pax-control" name="adults" id="adult-select">
+                                                {% for i in 1..UpsellingPage.maxAdults %}
+                                                    <option value="{{i}}">{{i}}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                        <div class="form-group pax-element pr-5 col-md-3">
+                                            <label for="">Niños</label>
+                                            <select class="form-control pax-control" name="kids" id="kid-select">
+                                                {% for i in 0..UpsellingPage.maxKids %}
+                                                    <option value="{{i}}">{{i}}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                        <div class="form-group d-flex align-items-end col-md-6 justify-content-around">
+                                            <button class="round-button tour-quantity" data-action="add">
+                                                <i class="fas fa-plus fa-xs"></i>
+                                            </button>
+                                            <span class="px-3" id="tour-quantity-value" >1</span>
+                                            <input type="hidden" id="tour-quantity" name="quantity" value="1">
+                                            <button class="round-button tour-quantity" data-action="subs">
+                                                <i class="fas fa-minus fa-xs"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+
+                            <div class="d-flex ">
+                                <div class="col-md-12 px-0">
+                                    <div class="row">
+                                        <div class="col-md-8" id="tour-description-content">
+                                            {{upselling.descripcion|raw}}
+                                        </div>
+                                        <div class="col-md-4 tour-price-container d-flex flex-column 
+                                            justify-content-center text-center" id="upselling-prices-container">
+
+                                            {% if upselling.ind_calendario == 0 %}
+                                            
+                                                {% set arPrices = UpsellingPage.loadSinglePrices(upselling.id) %}
+
+                                                {% partial 'tour/upselling-price' arPrices = arPrices %}
+
+                                            {% else %}
+                                                {% partial 'tour/upselling-price' %}
+                                            {% endif %}
+
+
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                       
+                        
+                        
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+       
+    </div>
+    
+
+</div>

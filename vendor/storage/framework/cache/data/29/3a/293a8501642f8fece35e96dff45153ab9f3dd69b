@@ -1,0 +1,1 @@
+1672362211a:1:{s:7:"columns";a:3:{s:8:"impuesto";a:2:{s:5:"label";s:8:"Impuesto";s:4:"type";s:4:"text";}s:5:"valor";a:2:{s:5:"label";s:5:"Valor";s:4:"type";s:6:"number";}s:8:"hotel_id";a:4:{s:5:"label";s:5:"Hotel";s:4:"type";s:4:"text";s:6:"select";s:6:"nombre";s:8:"relation";s:5:"hotel";}}}

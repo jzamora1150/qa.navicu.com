@@ -1,0 +1,136 @@
+{% set cart = CartHandler.getCart() %}
+
+{% set currentCurrency = CurrencyHandler.getCurrentCurrency() %}
+{% set arPrices = CartHandler.getCartPriceArray() %} 
+<div class="rt-sidebar-group pb-4">
+    <div class="rt-widget final-booking">
+
+        <ul>
+            <li class="clearfix equivalent">
+
+                <span>Equivalente</span>
+                <span class="float-right">{{arPrices.VES}} VES</span>
+            </li>
+
+            <li class="clearfix sub-total">
+
+                <span>Total</span>
+                <span class="float-right">{{arPrices.total_price }} <small>{{currentCurrency.acronimo}}</small></span>
+            </li>
+
+        </ul>
+    </div><!-- /.rt-widget -->
+    
+</div>
+
+    {% for hotel in cart.hotels %}
+    <div class="flt-dtls-box rt-mb-30">
+        <div class="upper-top-content d-md-flex flex-md-row justify-content-md-between align-items-center">
+            <div class="left">
+                
+                <span>{{hotel.hotel_name}}</span>
+                
+            </div><!-- /.left -->
+            <!-- /.right -->
+        </div><!-- /.upper-top-content -->
+        {% for room in hotel.rooms %}
+        <div class="flight-list-box">
+            <div class="hotel-inner-content row pb-2">
+                
+                <div class="hotel-text col-md-12">
+    
+                   <div class="footer3-elements cart-body-element">
+                       {#
+                       <a href="#" data-code="{{hotel.hotel_id}}-{{loop.index0}}" class="remove-from-cart">
+                        <img src="{{'navicu/imgs/svg/remove-cart.svg'|media}}" alt="">
+                       </a>
+                       #}
+                       <span class="d-block heading-color-1 rt-strong room-name">{{room.room_name}}</span>
+                            {% if room.tour_name is not empty%}
+                            <div class="clearfix room-detail d-flex align-items-center pb-2">
+                                <img src="{{'navicu/imgs/svg/packs.svg'|media}}">
+                                <p class="p-0 m-0 hotel-tour-name">
+                                    
+                                    {{room.tour_name}}
+                                </p>
+                            </div>
+                            {% endif %}
+                           <div class="clearfix room-detail">
+                               <span class="float-left ">Ocupación</span>
+                               <span class="float-right">{{room.pax_description}}</span>
+                            </div>
+                           <div class="clearfix room-detail">
+                               <span class="float-left">Régimen</span>
+                               <span class="float-right">{{room.regime_name}}</span>
+                            </div>
+                            <div class="clearfix room-detail">
+                                <span class="float-left">Check-in</span>
+                                <span class="float-right">{{room.params.checkin}}</span>
+                             </div>
+                             <div class="clearfix room-detail">
+                                <span class="float-left">Check-out</span>
+                                <span class="float-right">{{room.params.checkout}}</span>
+                             </div>
+                           <div class="clearfix room-price">
+                               <span class="float-left">Precio</span>
+                               <span class="float-right rt-strong">{{room.price}} {{currentCurrency.acronimo}}</span>
+                            </div>
+                            
+                       
+                   </div><!-- /.footer3-elements -->
+                </div><!-- /.hotel-text -->
+            </div><!-- /.hotel-inner-content -->
+            {#
+            <div class="rt-divider style-three"></div>
+            #}
+        </div><!-- /.flight-list-box -->
+        {% endfor %}
+        
+    </div>
+    {% endfor %}
+
+    {% for upselling in cart.upsellings %}
+    <div class="flight-list-box pb-2  mb-4 upselling-cart-item">
+        <div class="hotel-inner-content row">
+            
+            <div class="hotel-text col-md-12">
+
+               <div class="footer3-elements cart-body-element">
+                   {#
+                   <a href="#" data-type="upselling" data-code="{{loop.index0}}" class="remove-from-cart float-right">
+                    <span><img src="{{'navicu/imgs/svg/delete-icon.svg'|media}}" alt="remove"></span>
+                   </a>
+                   #}
+                   <div class=" d-flex align-items-center">
+                    <img src="{{'navicu/imgs/svg/packs-basics.svg'|media}}">
+                    <span class="d-block heading-color-1 rt-strong room-name mt-1">{{upselling.upselling_name}}</span>
+                   </div>
+                   
+                        
+                       <div class="clearfix room-detail">
+                           <span class="float-left ">Ocupación</span>
+                           <span class="float-right">{{upselling.pax_description}}</span>
+                        </div>
+                       
+                        <div class="clearfix room-detail">
+                            <span class="float-left">Fecha de disfrute</span>
+                            <span class="float-right">{{upselling.date}}</span>
+                         </div>
+                        
+                       <div class="clearfix room-price pt-3">
+                           <span class="float-left">Precio</span>
+                           <span class="float-right">{{upselling.total_markup_price}} {{currentCurrency.acronimo}}</span>
+                        </div>
+                        
+                   
+               </div><!-- /.footer3-elements -->
+            </div><!-- /.hotel-text -->
+        </div><!-- /.hotel-inner-content -->
+        {#
+        <div class="rt-divider style-three"></div>
+        #}
+    </div><!-- /.flight-list-box -->
+    {% endfor %}
+
+    
+

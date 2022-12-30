@@ -1,0 +1,77 @@
+{% for post in posts %}
+<article class="single-blg-post list-view standard-post">
+    <a href="#" class="post-thumbnail">
+        <img src="{{post.featured_images[0].path}}" alt="">
+        
+    </a>
+    <div class="entry-content">
+        <header class="entry-header">
+            <h4 class="entry-title">
+                <a href="{{ 'single-post'|page({slug: post.slug }) }}" rel="bookmark">{{post.title}}</a>
+            </h4>
+            <div class="entry-meta">
+                <span>{{ post.published_at|date('M d, Y') }}</span>
+                
+            </div><!-- .entry-meta -->
+        </header><!-- .entry header -->
+        <p>
+            {{post.excerpt}}
+
+        </p>
+        <footer class="entry-footer text-center">
+            <a href="{{ 'single-post'|page({slug: post.slug }) }}">Leer más</a>
+        </footer><!-- ./ footer -->
+    </div><!-- .entry content -->
+</article><!-- ./artice single blog -->
+{% endfor %}
+
+
+{% if posts.lastPage > 1 %}
+<div class="w-100 d-none d-sm-none d-md-block">
+    <nav class="d-flex justify-content-end">
+        <ul class="pagination  rt-paganation">
+            <li class="page-item {{ posts.currentPage > 1 ? '' : 'disabled' }}">
+                <a class="pagination-link" href="{{ 'blog'|page({ page: posts.currentPage-1 }) }}">
+                    <i class="icofont-simple-left"></i>
+                </a>
+            </li>
+            {% for page in 1..posts.lastPage %}
+            <li class="page-item {{ posts.currentPage == page ? 'active' : null }}">
+                <a class="pagination-link" href="{{ 'blog'|page({ page: page }) }}">{{ page }}</a>
+            </li>
+            {% endfor %}
+            
+            <li class="page-item {{ posts.currentPage == posts.lastPage ? 'disabled' }}">
+                <a class="pagination-link" href="{{ 'blog'|page({ page: posts.currentPage+1 }) }}">
+                    <i class="icofont-simple-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div class="w-100 d-block d-sm-none pb-5">
+    <nav class="d-flex justify-content-center">
+        <ul class="pagination  rt-paganation">
+            <li class="page-item {{ posts.currentPage > 1 ? '' : 'disabled' }}">
+                <a class="pagination-link" href="{{ 'blog'|page({ page: posts.currentPage-1 }) }}">
+                    <i class="icofont-simple-left"></i>
+                </a>
+            </li>
+            {% for page in 1..posts.lastPage %}
+            <li class="page-item {{ posts.currentPage == page ? 'active' : null }}">
+                <a class="pagination-link" href="{{ 'blog'|page({ page: page }) }}">{{ page }}</a>
+            </li>
+            {% endfor %}
+            
+            <li class="page-item {{ posts.currentPage == posts.lastPage ? 'disabled' }}">
+                <a class="pagination-link" href="{{ 'blog'|page({ page: posts.currentPage+1 }) }}">
+                    <i class="icofont-simple-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+{% endif %}
+

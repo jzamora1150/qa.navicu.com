@@ -1,0 +1,14 @@
+@font-face {
+    font-family: TT Commons Regular;
+    src: url(../themes/emigrar/assets/fonts/brand/TTCommons-Regular.woff);
+  }
+
+  @font-face {
+    font-family: TT Commons Bold;
+    src: url(../themes/emigrar/assets/fonts/brand/TTCommons-Bold.woff);
+  }
+  
+  @font-face {
+    font-family: TT Commons Medium;
+    src: url(../themes/emigrar/assets/fonts/brand/TTCommons-Medium.woff);
+  }  

@@ -1,0 +1,116 @@
+1672499202a:1:{s:22:"home/carousel-post.htm";a:7:{s:8:"fileName";s:22:"home/carousel-post.htm";s:7:"content";s:2657:"description = "Más reciente"
+
+[viewBag]
+snippetCode = "mas-reciente"
+snippetName = "Post más reciente"
+snippetProperties[linkblog][title] = "link al blog"
+snippetProperties[linkblog][type] = "checkbox"
+snippetProperties[linkblog][default] = 0
+snippetProperties[linkblog][options][] = ""
+==
+<?php
+function onStart()
+{
+  use Rainlab\Blog\Models\Post;
+    $this['posts'] = Post::isPublished()->orderBy('published_at', 'desc')->get();
+}
+?>
+==
+<!-- style="background-image: url({{'images/background/bgshapes_1.png'|media}})" -->
+<section class="post-area  rtbgprefix-full bg-hide-md" >
+    <div class="container-fluid p-0">
+       <div class="deal-carosel-active owl-carousel">
+            {% for post in posts %}
+            <div class="row single-deal-carosel align-items-center ">
+                <div class="col-lg-5 item-left pr-0">
+                    {% if post.featured_images[0] is not empty %}
+                        {% set postImg = post.featured_images[0].path %}
+                    {% else %}
+                        {% set postImg = 'images/misc/deal-bg.jpg'|media %}
+                    {% endif %}
+                    <div class="deal-bg" style="background-image: url('{{postImg}}')">
+                        
+                    </div><!-- /.deal-bg -->
+                </div><!-- /.col-md-6 -->
+                <div class="col-lg-7 item-right">
+                    <div class="carousel-text-container d-flex align-items-start flex-column justify-content-between">
+                        <div class="rt-section-title-wrapper text-white" >
+                            
+    
+                            <h2 class="rt-section-title">
+                               
+                                {{ post.title }}
+                            </h2><!-- /.rt-section-title -->
+                            
+                            
+                            <p class="pt-3">
+                                {{ str_words(post.summary, 25) }}
+                            </p>
+                            
+                        </div><!-- /.rt-section-title-wrapper -->
+                        <div class="pt-4">
+                           
+                            <a href="{{ 'single-post'|page({slug: post.slug }) }}" class="btn  btn-nav-v1-outline ml-3">Leer más</a>
+                            
+                        </div>
+                    </div>
+                    
+                </div><!-- /.col-md-6 -->
+            </div><!-- /.row -->
+            {% endfor %}
+       </div><!-- /.deal-carosel-active -->
+    </div><!-- /.container -->
+ </section>
+
+
+
+ ";s:5:"mtime";i:1671815073;s:6:"markup";s:2189:"<!-- style="background-image: url({{'images/background/bgshapes_1.png'|media}})" -->
+<section class="post-area  rtbgprefix-full bg-hide-md" >
+    <div class="container-fluid p-0">
+       <div class="deal-carosel-active owl-carousel">
+            {% for post in posts %}
+            <div class="row single-deal-carosel align-items-center ">
+                <div class="col-lg-5 item-left pr-0">
+                    {% if post.featured_images[0] is not empty %}
+                        {% set postImg = post.featured_images[0].path %}
+                    {% else %}
+                        {% set postImg = 'images/misc/deal-bg.jpg'|media %}
+                    {% endif %}
+                    <div class="deal-bg" style="background-image: url('{{postImg}}')">
+                        
+                    </div><!-- /.deal-bg -->
+                </div><!-- /.col-md-6 -->
+                <div class="col-lg-7 item-right">
+                    <div class="carousel-text-container d-flex align-items-start flex-column justify-content-between">
+                        <div class="rt-section-title-wrapper text-white" >
+                            
+    
+                            <h2 class="rt-section-title">
+                               
+                                {{ post.title }}
+                            </h2><!-- /.rt-section-title -->
+                            
+                            
+                            <p class="pt-3">
+                                {{ str_words(post.summary, 25) }}
+                            </p>
+                            
+                        </div><!-- /.rt-section-title-wrapper -->
+                        <div class="pt-4">
+                           
+                            <a href="{{ 'single-post'|page({slug: post.slug }) }}" class="btn  btn-nav-v1-outline ml-3">Leer más</a>
+                            
+                        </div>
+                    </div>
+                    
+                </div><!-- /.col-md-6 -->
+            </div><!-- /.row -->
+            {% endfor %}
+       </div><!-- /.deal-carosel-active -->
+    </div><!-- /.container -->
+ </section>";s:4:"code";s:143:"
+function onStart()
+{
+  use Rainlab\Blog\Models\Post;
+    $this['posts'] = Post::isPublished()->orderBy('published_at', 'desc')->get();
+}";s:11:"description";s:13:"Más reciente";s:7:"viewBag";a:3:{s:11:"snippetCode";s:12:"mas-reciente";s:11:"snippetName";s:18:"Post más reciente";s:17:"snippetProperties";a:1:{s:8:"linkblog";a:4:{s:5:"title";s:12:"link al blog";s:4:"type";s:8:"checkbox";s:7:"default";s:1:"0";s:7:"options";a:1:{i:0;s:0:"";}}}}}}

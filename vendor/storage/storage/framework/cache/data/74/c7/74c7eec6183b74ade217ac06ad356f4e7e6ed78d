@@ -1,0 +1,92 @@
+1672155369a:1:{s:17:"blog-category.htm";a:9:{s:8:"fileName";s:17:"blog-category.htm";s:7:"content";s:1693:"url = "/blog/categoria/:slug/:page?"
+layout = "default"
+title = "blog-category"
+
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ :slug }}"
+postsPerPage = 5
+noPostsMessage = "No posts found"
+sortOrder = "published_at desc"
+categoryPage = "blog"
+postPage = "blog"
+==
+<div class="rt-breadcump rt-breadcump-height">
+    <div class="rt-page-bg rtbgprefix-cover" style="background-image: url({{'navicu/imgs/jpg/covers/cover-blog.jpg'|media}})">
+    </div><!-- /.rt-page-bg -->
+    <div class="container">
+        <div class="row rt-breadcump-height">
+            <div class="col-12">
+                <div class="breadcrumbs-content">
+                    <h3>Blog</h3>
+                </div><!-- /.breadcrumbs-content -->
+            </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</div><!-- /.rt-bredcump -->
+
+
+{% set posts = blogPosts.posts %}
+
+<div class="blog-content-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 col-lg-8 order-1 order-lg-0">
+                <div class="all-blog-post">
+
+                    {% partial 'blog/post-list' posts = posts %}
+
+                    
+       
+                    
+                </div>
+            </div><!-- ./column -->
+            <div class="col-xl-3 col-lg-4 order-0 order-lg-1">
+                <div class="sidebar-group">
+                    
+                    {% partial 'blog/main-categories' blogCategories = blogCategories %}
+                    
+                </div><!-- ./sidebar -->
+            </div><!-- ./column -->
+        </div><!-- ./row -->
+    </div><!-- ./ copntainer -->
+</div>";s:5:"mtime";i:1649626184;s:6:"markup";s:1403:"<div class="rt-breadcump rt-breadcump-height">
+    <div class="rt-page-bg rtbgprefix-cover" style="background-image: url({{'navicu/imgs/jpg/covers/cover-blog.jpg'|media}})">
+    </div><!-- /.rt-page-bg -->
+    <div class="container">
+        <div class="row rt-breadcump-height">
+            <div class="col-12">
+                <div class="breadcrumbs-content">
+                    <h3>Blog</h3>
+                </div><!-- /.breadcrumbs-content -->
+            </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</div><!-- /.rt-bredcump -->
+
+
+{% set posts = blogPosts.posts %}
+
+<div class="blog-content-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-9 col-lg-8 order-1 order-lg-0">
+                <div class="all-blog-post">
+
+                    {% partial 'blog/post-list' posts = posts %}
+
+                    
+       
+                    
+                </div>
+            </div><!-- ./column -->
+            <div class="col-xl-3 col-lg-4 order-0 order-lg-1">
+                <div class="sidebar-group">
+                    
+                    {% partial 'blog/main-categories' blogCategories = blogCategories %}
+                    
+                </div><!-- ./sidebar -->
+            </div><!-- ./column -->
+        </div><!-- ./row -->
+    </div><!-- ./ copntainer -->
+</div>";s:4:"code";N;s:3:"url";s:28:"/blog/categoria/:slug/:page?";s:6:"layout";s:7:"default";s:5:"title";s:13:"blog-category";s:9:"blogPosts";a:7:{s:10:"pageNumber";s:11:"{{ :page }}";s:14:"categoryFilter";s:11:"{{ :slug }}";s:12:"postsPerPage";s:1:"5";s:14:"noPostsMessage";s:14:"No posts found";s:9:"sortOrder";s:17:"published_at desc";s:12:"categoryPage";s:4:"blog";s:8:"postPage";s:4:"blog";}}}

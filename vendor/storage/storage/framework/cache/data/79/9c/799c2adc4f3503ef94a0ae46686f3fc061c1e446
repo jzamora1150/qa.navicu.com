@@ -1,0 +1,239 @@
+1672155369a:1:{s:11:"default.htm";a:10:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:5183:"description = "default template"
+
+[SearchHandler]
+
+[CurrencyHandler]
+
+[CartHandler]
+
+[SeoCmsPage]
+==
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        {% component 'SeoCmsPage' %}
+        
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="{{ 'navicu/imgs/png/favicon-navicu.png'|media }}"/>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+<!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
+        {% partial 'assets/headers' %}
+
+        <!-- Google Tag Manager -->
+
+       <!-- Google Tag Manager -->
+       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5KKBS7L');</script>
+        <!-- End Google Tag Manager -->
+
+        <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCZylRj0lhbpYyZuVv8grqcizQAVQyCFXQ"></script>
+
+    </head>
+
+    <body>
+        
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KKBS7L"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    <div id="main-header-container">
+        {% partial 'main-header' %}
+    </div>
+    
+
+    {% page %}
+
+    {% partial 'modals/terms-conditions' %}
+
+    <div class="modal left fade" id="cart-side-modal" tabindex="" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" id="cart-body-container">
+                {% partial 'modals/cart-body' %}
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="modal left fade" id="navigation-side-menu" tabindex="" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="col-sm-12 pt-5 pl-5 navigation-menu-header d-flex justify-content-between ">
+                    <img class="img-fluid" style="width: 180px" src="{{'navicu/imgs/svg/logo-header-navicu-white.svg'|media}}" alt="Navicu.com">
+                    <span class="text-white">
+                        <a href="#" data-dismiss="modal">
+                            <img class="img-fluid" style="width: 50px" src="{{'navicu/imgs/svg/arrow-left.svg'|media}}">
+                        </a>
+                    </span>
+                </div>
+                <div class="d-flex justify-content-around flex-column h-100">
+                    <div class="col-sm-12  pt-5 pl-5">
+                        <ul class="side-menu-list">
+                        
+                            <li><a href="{{'tour-list'|page}}">Paquetes</a></li>
+                            <li><a href="{{'upselling-list'|page}}">Actividades</a></li>
+                            <li> <a href="{{'blog'|page}}">Blog</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-sm-12  pt-5 pl-5 d-flex justify-content-center">
+                        <a href="{{'contact'|page}}" id="contact-button" class="rt-btn dark-orange">Contáctanos</a>
+                    </div>
+                    
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="modal left fade" id="side-search-box" tabindex="" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="col-sm-12 pt-5 pl-5 navigation-menu-header d-flex justify-content-between ">
+                    <span class="text-white">
+                        <a href="#" data-dismiss="modal">
+                            <img class="img-fluid" style="width: 50px" src="{{'navicu/imgs/svg/arrow-left.svg'|media}}">
+                        </a>
+                    </span>
+                </div>
+                <div class="d-flex justify-content-around flex-column h-100">
+                    {% partial 'banner-searchbox' %}
+                    
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+
+    {% partial 'newsletter-footer' %}
+
+    {% partial 'assets/scripts' %}
+    
+    {% framework extras %}
+    </body>
+</html>";s:5:"mtime";i:1661918070;s:6:"markup";s:5072:"<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        {% component 'SeoCmsPage' %}
+        
+        <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+        <link rel="shortcut icon" type="image/png" href="{{ 'navicu/imgs/png/favicon-navicu.png'|media }}"/>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+<!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
+        {% partial 'assets/headers' %}
+
+        <!-- Google Tag Manager -->
+
+       <!-- Google Tag Manager -->
+       <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5KKBS7L');</script>
+        <!-- End Google Tag Manager -->
+
+        <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCZylRj0lhbpYyZuVv8grqcizQAVQyCFXQ"></script>
+
+    </head>
+
+    <body>
+        
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KKBS7L"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+    <div id="main-header-container">
+        {% partial 'main-header' %}
+    </div>
+    
+
+    {% page %}
+
+    {% partial 'modals/terms-conditions' %}
+
+    <div class="modal left fade" id="cart-side-modal" tabindex="" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" id="cart-body-container">
+                {% partial 'modals/cart-body' %}
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="modal left fade" id="navigation-side-menu" tabindex="" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="col-sm-12 pt-5 pl-5 navigation-menu-header d-flex justify-content-between ">
+                    <img class="img-fluid" style="width: 180px" src="{{'navicu/imgs/svg/logo-header-navicu-white.svg'|media}}" alt="Navicu.com">
+                    <span class="text-white">
+                        <a href="#" data-dismiss="modal">
+                            <img class="img-fluid" style="width: 50px" src="{{'navicu/imgs/svg/arrow-left.svg'|media}}">
+                        </a>
+                    </span>
+                </div>
+                <div class="d-flex justify-content-around flex-column h-100">
+                    <div class="col-sm-12  pt-5 pl-5">
+                        <ul class="side-menu-list">
+                        
+                            <li><a href="{{'tour-list'|page}}">Paquetes</a></li>
+                            <li><a href="{{'upselling-list'|page}}">Actividades</a></li>
+                            <li> <a href="{{'blog'|page}}">Blog</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-sm-12  pt-5 pl-5 d-flex justify-content-center">
+                        <a href="{{'contact'|page}}" id="contact-button" class="rt-btn dark-orange">Contáctanos</a>
+                    </div>
+                    
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="modal left fade" id="side-search-box" tabindex="" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="col-sm-12 pt-5 pl-5 navigation-menu-header d-flex justify-content-between ">
+                    <span class="text-white">
+                        <a href="#" data-dismiss="modal">
+                            <img class="img-fluid" style="width: 50px" src="{{'navicu/imgs/svg/arrow-left.svg'|media}}">
+                        </a>
+                    </span>
+                </div>
+                <div class="d-flex justify-content-around flex-column h-100">
+                    {% partial 'banner-searchbox' %}
+                    
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+
+    {% partial 'newsletter-footer' %}
+
+    {% partial 'assets/scripts' %}
+    
+    {% framework extras %}
+    </body>
+</html>";s:4:"code";N;s:11:"description";s:16:"default template";s:13:"SearchHandler";a:0:{}s:15:"CurrencyHandler";a:0:{}s:11:"CartHandler";a:0:{}s:10:"SeoCmsPage";a:0:{}}}

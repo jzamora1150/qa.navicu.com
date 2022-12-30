@@ -1,0 +1,90 @@
+1672499202a:1:{s:20:"banner-searchbox.htm";a:5:{s:8:"fileName";s:20:"banner-searchbox.htm";s:7:"content";s:2538:"
+<div class="rt-banner-searchbox standard-search" id="banner-searchbox">
+    <div class="tab-content" id="myTabContent">
+    
+        <div class="tab-pane  show active" id="rt-item_a_second" role="tabpanel" aria-labelledby="rt-item_a_second">
+            <form action="#" id="main-search" class="main-search">
+                
+                <div class="rt-input-group">
+                    <div class="single-input  col-rt-in-4 mr-1">
+                        <input type="text" class="form-control autocomplete" autocomplete="off" value="{{searchParams.criteria}}" id="autocomplete" placeholder="¿Hotel, Ciudad, Lugar?">
+                        
+                    </div><!-- /.single-input -->
+                    <div class="single-input  col-rt-in-4">
+                    <input type="text" autocomplete="off" value="{{searchParams.dates}}" onkeypress="return false;"  name="dates"
+                        class="form-control rt-date-picker has-icon calendar-input" placeholder="Elige tus fechas">
+                    <span class="input-iconbadge"><i class="icofont-ui-calendar"></i></span>
+                    </div><!-- /.single-input -->
+                    
+                    <!-- /.single-input -->
+                    <div class="single-input  col-rt-in-1 d-none d-sm-none d-md-block">
+                        <button type="submit">
+                            <i class=" icofont-search"></i>
+                           
+                        </button>
+                    </div><!-- /.single-input -->
+                    <div class="single-input  col-rt-in-4 d-block d-sm-none ">
+                        <button type="submit">
+                            <span class="">
+                                Buscar al mejor precio
+                            </span>
+                        </button>
+                    </div><!-- /.single-input -->
+
+
+                    <div id="criteria-container">
+                        {% if searchParams.search_type is not empty %}
+                        <input type="hidden" name="criteria" value="{{searchParams.criteria}}">
+                        <input type="hidden" name="search_type" value="{{searchParams.search_type}}">
+                        <input type="hidden" name="search_id" value="{{searchParams.search_id}}">
+                        {% endif %}
+                    </div>
+                </div><!-- /.rt-input-group -->
+            </form><!-- ./ form -->
+        </div>
+    </div>
+</div><!-- /.rt-banner-searchbox -->";s:5:"mtime";i:1672403745;s:6:"markup";s:2536:"<div class="rt-banner-searchbox standard-search" id="banner-searchbox">
+    <div class="tab-content" id="myTabContent">
+    
+        <div class="tab-pane  show active" id="rt-item_a_second" role="tabpanel" aria-labelledby="rt-item_a_second">
+            <form action="#" id="main-search" class="main-search">
+                
+                <div class="rt-input-group">
+                    <div class="single-input  col-rt-in-4 mr-1">
+                        <input type="text" class="form-control autocomplete" autocomplete="off" value="{{searchParams.criteria}}" id="autocomplete" placeholder="¿Hotel, Ciudad, Lugar?">
+                        
+                    </div><!-- /.single-input -->
+                    <div class="single-input  col-rt-in-4">
+                    <input type="text" autocomplete="off" value="{{searchParams.dates}}" onkeypress="return false;"  name="dates"
+                        class="form-control rt-date-picker has-icon calendar-input" placeholder="Elige tus fechas">
+                    <span class="input-iconbadge"><i class="icofont-ui-calendar"></i></span>
+                    </div><!-- /.single-input -->
+                    
+                    <!-- /.single-input -->
+                    <div class="single-input  col-rt-in-1 d-none d-sm-none d-md-block">
+                        <button type="submit">
+                            <i class=" icofont-search"></i>
+                           
+                        </button>
+                    </div><!-- /.single-input -->
+                    <div class="single-input  col-rt-in-4 d-block d-sm-none ">
+                        <button type="submit">
+                            <span class="">
+                                Buscar al mejor precio
+                            </span>
+                        </button>
+                    </div><!-- /.single-input -->
+
+
+                    <div id="criteria-container">
+                        {% if searchParams.search_type is not empty %}
+                        <input type="hidden" name="criteria" value="{{searchParams.criteria}}">
+                        <input type="hidden" name="search_type" value="{{searchParams.search_type}}">
+                        <input type="hidden" name="search_id" value="{{searchParams.search_id}}">
+                        {% endif %}
+                    </div>
+                </div><!-- /.rt-input-group -->
+            </form><!-- ./ form -->
+        </div>
+    </div>
+</div><!-- /.rt-banner-searchbox -->";s:4:"code";N;}}

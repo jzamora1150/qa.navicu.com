@@ -1,0 +1,257 @@
+1672493554a:1:{s:8:"cart.htm";a:10:{s:8:"fileName";s:8:"cart.htm";s:7:"content";s:7497:"url = "/cart"
+layout = "default"
+title = "cart"
+meta_title = "Carrito"
+meta_description = "Estas a un paso te reservar con nosotros"
+==
+<div class="rt-breadcump rt-breadcump-height d-none d-sm-block">
+    <div class="rt-page-bg rtbgprefix-cover" style="background-image: url({{'navicu/imgs/jpg/covers/cover-hoteles.jpg'|media}})">
+    </div><!-- /.rt-page-bg -->
+    <div class="container">
+        <div class="row rt-breadcump-height">
+            <div class="col-12">
+                <div class="breadcrumbs-content">
+                    <h3>Carrito</h3>
+                    <!-- 
+                    <div class="breadcrumbs">
+                        <span class="divider"><i class="icofont-home"></i></span>
+                        <a href="#" title="Home">Home</a>
+                        <span class="divider"><i class="icofont-simple-right"></i></span>
+                        <a href="#">China</a>
+                        <span class="divider"><i class="icofont-simple-right"></i></span>
+                        <a href="#">Hotels</a>
+                        <span class="divider"><i class="icofont-simple-right"></i></span>
+                        <a href="#" title="Home">Hong Kong Hotels</a>
+                        <span class="divider"><i class="icofont-simple-right"></i></span>
+                        Empire Hotel Kowloon - Tsim Sha Tsui
+
+                    </div>
+                    -->
+                </div><!-- /.breadcrumbs-content -->
+            </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</div><!-- /.rt-bredcump -->
+
+<section class="content-area upper-content-area ">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 d-none d-sm-block cart-list-container" id="cart-list-container">
+                
+                {% partial 'cart/cart-list' %}
+               
+            </div><!-- /.col-lg-9 -->
+            <div class="col-lg-8 mx-auto">
+                <div class="rt-sidebar-group">
+                    <div class="flight-list-box rt-mb-30 pt-30" id="user-form-container">
+
+                        <h5 class="host-label">Información del huesped</h5>
+                        <div class="row pt-5 pb-5 d-block d-sm-none">
+                            <div class="col-md-12 text-center">
+                                <a href="#" data-toggle="modal" data-target="#cart-side-modal"
+                                    class="yellow-pill-button">Detalles de la reserva</a>
+                            </div>
+                        </div>
+                        <form id="booking-form" class="rt-form rt-line-form flight-lable pt-4">
+                            
+                            <div class="row">
+                                <div class="col-md-12 rt-mb-30 ">
+                                    <label for="fst-name">Nombre y Apellido</label>
+                                    <input type="text" class="form-control" name="name" placeholder="Ej: Juan Perez">
+                                </div><!-- /.col-md-6 -->
+                                <div class="col-md-12 rt-mb-30">
+                                    <label>Email</label>
+                                    <input type="text" class="form-control" name="email" placeholder="Ej: juanperez@gmail.com">
+                                </div><!-- /.col-md-6 -->
+                                <div class="col-lg-6 rt-mb-30">
+                                    <label>Tipo de documento</label>
+                                    <select name="document_type">
+                                        
+                                        <option value="V">C.I</option>
+                                        <option value="J">J</option>
+                                        <option value="P">P</option>
+                                        <option value="E">E</option>
+                                    </select>
+                                </div><!-- /.col-md-6 -->
+                                <div class="col-md-6 rt-mb-30">
+                                    <label >Documento</label>
+                                    <input type="text" class="form-control" name="document" placeholder="Ej: 999999999">
+                                </div>
+                                <div class="col-lg-6 rt-mb-30">
+                                    <label>Codigo País</label>
+                                    <select name="country_code">
+                                        <option value="+58">+58</option>
+                                        
+                                    </select>
+                                </div><!-- /.col-md-6 -->
+                                <div class="col-md-6 rt-mb-30">
+                                    <label>Teléfono</label>
+                                    <input type="text" name="phone" class="form-control" placeholder="Ej: 04145555555">
+                                </div>
+                                <div class="col-md-12">
+                                    <hr>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="cart-total-container d-block d-sm-none w-100 pb-5">
+                    
+                                        {% partial 'cart/cart-total' %}
+                                       
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label>Observaciones</label>
+                                    <textarea placeholder="Si tienes alguna duda escríbela aquí" name="message" class="form-control rt-mb-30"></textarea>
+                                </div> 
+                                
+                                <div class="col-md-12 rt-mb-30" id="terms-condition-container">
+                                    <div class="custom-control custom-checkbox d-flex align-items-center">
+                                        <input type="checkbox" name="terms" class="custom-control-input" id="terms">
+                                        <label class="custom-control-label pl-2" for="terms">
+                                            Acepto las <a href="#" data-toggle="modal" data-target="#terms-condition-modal">condiciones de uso y las políticas de privacidad</a>
+                                        </label>
+                                      </div>
+                                      
+                                </div>
+                                
+                            </div><!-- /.row -->
+                            
+                            <div class="d-none d-sm-flex justify-content-end">
+                                <button type="submit" class="save-booking">Pagar mi reserva</button>
+                            </div>
+
+                            <div class="d-flex d-sm-none justify-content-center">
+                                <button type="submit" class="save-booking">Pagar mi reserva</button>
+                            </div>
+                        </form>
+                    </div><!-- /.flight-list-box -->
+
+                </div><!-- /.rt-sidebar-group -->
+            </div><!-- /.col-lg-3 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>";s:5:"mtime";i:1671815073;s:6:"markup";s:7355:"<div class="rt-breadcump rt-breadcump-height d-none d-sm-block">
+    <div class="rt-page-bg rtbgprefix-cover" style="background-image: url({{'navicu/imgs/jpg/covers/cover-hoteles.jpg'|media}})">
+    </div><!-- /.rt-page-bg -->
+    <div class="container">
+        <div class="row rt-breadcump-height">
+            <div class="col-12">
+                <div class="breadcrumbs-content">
+                    <h3>Carrito</h3>
+                    <!-- 
+                    <div class="breadcrumbs">
+                        <span class="divider"><i class="icofont-home"></i></span>
+                        <a href="#" title="Home">Home</a>
+                        <span class="divider"><i class="icofont-simple-right"></i></span>
+                        <a href="#">China</a>
+                        <span class="divider"><i class="icofont-simple-right"></i></span>
+                        <a href="#">Hotels</a>
+                        <span class="divider"><i class="icofont-simple-right"></i></span>
+                        <a href="#" title="Home">Hong Kong Hotels</a>
+                        <span class="divider"><i class="icofont-simple-right"></i></span>
+                        Empire Hotel Kowloon - Tsim Sha Tsui
+
+                    </div>
+                    -->
+                </div><!-- /.breadcrumbs-content -->
+            </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</div><!-- /.rt-bredcump -->
+
+<section class="content-area upper-content-area ">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-4 d-none d-sm-block cart-list-container" id="cart-list-container">
+                
+                {% partial 'cart/cart-list' %}
+               
+            </div><!-- /.col-lg-9 -->
+            <div class="col-lg-8 mx-auto">
+                <div class="rt-sidebar-group">
+                    <div class="flight-list-box rt-mb-30 pt-30" id="user-form-container">
+
+                        <h5 class="host-label">Información del huesped</h5>
+                        <div class="row pt-5 pb-5 d-block d-sm-none">
+                            <div class="col-md-12 text-center">
+                                <a href="#" data-toggle="modal" data-target="#cart-side-modal"
+                                    class="yellow-pill-button">Detalles de la reserva</a>
+                            </div>
+                        </div>
+                        <form id="booking-form" class="rt-form rt-line-form flight-lable pt-4">
+                            
+                            <div class="row">
+                                <div class="col-md-12 rt-mb-30 ">
+                                    <label for="fst-name">Nombre y Apellido</label>
+                                    <input type="text" class="form-control" name="name" placeholder="Ej: Juan Perez">
+                                </div><!-- /.col-md-6 -->
+                                <div class="col-md-12 rt-mb-30">
+                                    <label>Email</label>
+                                    <input type="text" class="form-control" name="email" placeholder="Ej: juanperez@gmail.com">
+                                </div><!-- /.col-md-6 -->
+                                <div class="col-lg-6 rt-mb-30">
+                                    <label>Tipo de documento</label>
+                                    <select name="document_type">
+                                        
+                                        <option value="V">C.I</option>
+                                        <option value="J">J</option>
+                                        <option value="P">P</option>
+                                        <option value="E">E</option>
+                                    </select>
+                                </div><!-- /.col-md-6 -->
+                                <div class="col-md-6 rt-mb-30">
+                                    <label >Documento</label>
+                                    <input type="text" class="form-control" name="document" placeholder="Ej: 999999999">
+                                </div>
+                                <div class="col-lg-6 rt-mb-30">
+                                    <label>Codigo País</label>
+                                    <select name="country_code">
+                                        <option value="+58">+58</option>
+                                        
+                                    </select>
+                                </div><!-- /.col-md-6 -->
+                                <div class="col-md-6 rt-mb-30">
+                                    <label>Teléfono</label>
+                                    <input type="text" name="phone" class="form-control" placeholder="Ej: 04145555555">
+                                </div>
+                                <div class="col-md-12">
+                                    <hr>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="cart-total-container d-block d-sm-none w-100 pb-5">
+                    
+                                        {% partial 'cart/cart-total' %}
+                                       
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <label>Observaciones</label>
+                                    <textarea placeholder="Si tienes alguna duda escríbela aquí" name="message" class="form-control rt-mb-30"></textarea>
+                                </div> 
+                                
+                                <div class="col-md-12 rt-mb-30" id="terms-condition-container">
+                                    <div class="custom-control custom-checkbox d-flex align-items-center">
+                                        <input type="checkbox" name="terms" class="custom-control-input" id="terms">
+                                        <label class="custom-control-label pl-2" for="terms">
+                                            Acepto las <a href="#" data-toggle="modal" data-target="#terms-condition-modal">condiciones de uso y las políticas de privacidad</a>
+                                        </label>
+                                      </div>
+                                      
+                                </div>
+                                
+                            </div><!-- /.row -->
+                            
+                            <div class="d-none d-sm-flex justify-content-end">
+                                <button type="submit" class="save-booking">Pagar mi reserva</button>
+                            </div>
+
+                            <div class="d-flex d-sm-none justify-content-center">
+                                <button type="submit" class="save-booking">Pagar mi reserva</button>
+                            </div>
+                        </form>
+                    </div><!-- /.flight-list-box -->
+
+                </div><!-- /.rt-sidebar-group -->
+            </div><!-- /.col-lg-3 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</section>";s:4:"code";N;s:3:"url";s:5:"/cart";s:6:"layout";s:7:"default";s:5:"title";s:4:"cart";s:10:"meta_title";s:7:"Carrito";s:16:"meta_description";s:40:"Estas a un paso te reservar con nosotros";}}

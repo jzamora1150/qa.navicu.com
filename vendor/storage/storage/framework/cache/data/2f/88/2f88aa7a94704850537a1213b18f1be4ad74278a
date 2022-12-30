@@ -1,0 +1,1 @@
+1672115259a:1:{s:6:"scopes";a:1:{s:5:"hotel";a:4:{s:5:"label";s:5:"Hotel";s:10:"modelClass";s:36:"HesperiaPlugins\Hoteles\Models\Hotel";s:10:"conditions";s:23:"hotel_id in (:filtered)";s:8:"nameFrom";s:6:"nombre";}}}

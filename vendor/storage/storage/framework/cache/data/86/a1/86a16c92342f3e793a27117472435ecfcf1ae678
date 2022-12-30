@@ -1,0 +1,1 @@
+1672115702a:1:{s:7:"columns";a:3:{s:2:"id";a:4:{s:5:"label";s:2:"ID";s:4:"type";s:4:"text";s:10:"searchable";b:1;s:8:"sortable";b:1;}s:6:"titulo";a:3:{s:5:"label";s:6:"Titulo";s:4:"type";s:4:"text";s:10:"searchable";b:1;}s:5:"hotel";a:2:{s:8:"relation";s:5:"hotel";s:6:"select";s:6:"nombre";}}}

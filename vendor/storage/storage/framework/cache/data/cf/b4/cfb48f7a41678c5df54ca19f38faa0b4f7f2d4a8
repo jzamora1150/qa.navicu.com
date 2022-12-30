@@ -1,0 +1,168 @@
+1672155385a:1:{s:26:"search-results/filters.htm";a:5:{s:8:"fileName";s:26:"search-results/filters.htm";s:7:"content";s:3954:"
+{% set subcategories = searchParams.subcategory %}
+
+
+<div class="col-xl-12 mx-auto col-lg-12 col-md-12">
+    <div class="rt-sidebar-group">
+        <form id ="filter-form">
+            <div class="rt-widget widget_rating">
+                <div class="filter-body">
+                        <ul>
+                            <label>Filtrar por orden</label>
+                            <li class="clearfix">
+                                <div class="form-group">
+                                    <select class="form-control" name="sort">
+                                        <option value="default" {{searchParams.sort == 'default' ? 'selected' }}>Recomendados Navicu</option>
+                                        <option value="min-price" {{searchParams.sort == 'min-price' ? 'selected' }}>Menor Precio</option>
+                                    </select>
+                                </div>
+                            </li>
+                            
+                            <hr>
+                            <label>Estrellas</label>
+                        
+                            {% set arStars = filters.stars %}
+
+                            {% for star in arStars %}
+
+                                {% if star > 0 %}
+                                <li class="clearfix">
+                                
+                                    <div class="form-check-inline">
+                                    
+                                        <input class="form-check-input" value="{{star}}" name="stars[]" type="checkbox"
+
+                                        {{star in searchParams.stars ? 'checked' }}>
+
+                                        <label class="form-check-label">
+                                        <span>
+                                            
+                                                {% for i in 1..star %}
+                                                <img src="{{'navicu/imgs/svg/fill-star-nv.svg'|media}}" alt="{{atributo.nombre}}" class="hotel-star">
+                                                {% endfor %}
+                                            
+                                        </span>
+                                        </label>
+                                    </div><!-- ./orm-group -->
+                                    
+                                </li>
+                                {% endif %}
+
+                            {% endfor %}
+                        
+                            
+                        </ul>
+                        {% if filters.categories is not empty %}
+
+                        <hr>
+                        <label>Categorias</label>
+            
+                        <ul>
+                            {% for key, category in  filters.categories %}
+                            <li class="clearfix">
+            
+                                <div class="form-check-inline">
+                                    <input class="form-check-input" type="checkbox" name="categories[]" value="{{key}}"
+                                    {{key in searchParams.categories ? 'checked' }}>
+                                    <label class="form-check-label">
+                                        {{category}}
+                                    </label>
+                                </div><!-- ./orm-group -->
+                                
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        <hr>
+                        {% endif %}
+                </div>
+                <div class="filter-button d-flex justify-content-center">
+                    <button type="submit" id="filter-button" class="rt-btn dark-orange">Filtrar</button>
+                </div>
+            </div><!-- /.rt-widget -->
+        </form>
+    </div>
+    
+</div>";s:5:"mtime";i:1662427528;s:6:"markup";s:3952:"{% set subcategories = searchParams.subcategory %}
+
+
+<div class="col-xl-12 mx-auto col-lg-12 col-md-12">
+    <div class="rt-sidebar-group">
+        <form id ="filter-form">
+            <div class="rt-widget widget_rating">
+                <div class="filter-body">
+                        <ul>
+                            <label>Filtrar por orden</label>
+                            <li class="clearfix">
+                                <div class="form-group">
+                                    <select class="form-control" name="sort">
+                                        <option value="default" {{searchParams.sort == 'default' ? 'selected' }}>Recomendados Navicu</option>
+                                        <option value="min-price" {{searchParams.sort == 'min-price' ? 'selected' }}>Menor Precio</option>
+                                    </select>
+                                </div>
+                            </li>
+                            
+                            <hr>
+                            <label>Estrellas</label>
+                        
+                            {% set arStars = filters.stars %}
+
+                            {% for star in arStars %}
+
+                                {% if star > 0 %}
+                                <li class="clearfix">
+                                
+                                    <div class="form-check-inline">
+                                    
+                                        <input class="form-check-input" value="{{star}}" name="stars[]" type="checkbox"
+
+                                        {{star in searchParams.stars ? 'checked' }}>
+
+                                        <label class="form-check-label">
+                                        <span>
+                                            
+                                                {% for i in 1..star %}
+                                                <img src="{{'navicu/imgs/svg/fill-star-nv.svg'|media}}" alt="{{atributo.nombre}}" class="hotel-star">
+                                                {% endfor %}
+                                            
+                                        </span>
+                                        </label>
+                                    </div><!-- ./orm-group -->
+                                    
+                                </li>
+                                {% endif %}
+
+                            {% endfor %}
+                        
+                            
+                        </ul>
+                        {% if filters.categories is not empty %}
+
+                        <hr>
+                        <label>Categorias</label>
+            
+                        <ul>
+                            {% for key, category in  filters.categories %}
+                            <li class="clearfix">
+            
+                                <div class="form-check-inline">
+                                    <input class="form-check-input" type="checkbox" name="categories[]" value="{{key}}"
+                                    {{key in searchParams.categories ? 'checked' }}>
+                                    <label class="form-check-label">
+                                        {{category}}
+                                    </label>
+                                </div><!-- ./orm-group -->
+                                
+                            </li>
+                            {% endfor %}
+                        </ul>
+                        <hr>
+                        {% endif %}
+                </div>
+                <div class="filter-button d-flex justify-content-center">
+                    <button type="submit" id="filter-button" class="rt-btn dark-orange">Filtrar</button>
+                </div>
+            </div><!-- /.rt-widget -->
+        </form>
+    </div>
+    
+</div>";s:4:"code";N;}}

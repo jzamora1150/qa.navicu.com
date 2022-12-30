@@ -1,0 +1,1 @@
+1672110865a:1:{s:7:"columns";a:2:{s:6:"nombre";a:5:{s:5:"label";s:6:"Nombre";s:4:"span";s:4:"auto";s:18:"oc.commentPosition";s:0:"";s:8:"required";i:1;s:4:"type";s:4:"text";}s:12:"pivot[orden]";a:3:{s:5:"label";s:5:"Orden";s:4:"type";s:6:"number";s:7:"default";i:0;}}}

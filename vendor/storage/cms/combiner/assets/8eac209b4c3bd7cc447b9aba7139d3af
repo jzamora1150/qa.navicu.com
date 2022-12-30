@@ -1,0 +1,2292 @@
+body {
+    background-color: #F5F5F5;
+}
+
+.single-rt-banner {
+    background-position: 100% 0%;
+    background-size: cover;
+}
+.single-rt-banner .rt-banner-content h1 {
+    font-family: "TT Commons Bold";
+    font-size: 50px;
+    line-height: normal;
+}
+
+.single-rt-banner .rt-banner-content p {
+    font-family: 'TT Commons Medium';
+    font-size: 22px;
+    margin-bottom: 1rem;
+}
+.rt-input-group .col-rt-in-4{
+    max-width: 46%; 
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 46%;
+        -ms-flex: 0 0 46%;
+            flex: 0 0 46%;
+}
+
+.rt-input-group .form-control {
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #783CBD22;
+    border: 1px solid #EBEBEB;
+    border-radius: 3px;
+    opacity: 1;
+    
+    
+}
+
+.flight-list-box {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #7B7B7B29;
+   
+}
+.flight-list-box:hover {
+    border: 1px solid #7B7B7B29;
+}
+
+.select2-container--default .select2-selection--single {
+    box-shadow: 0px 0px 6px #783CBD22;
+}
+
+.select2-results__option{
+    font-family: 'TT Commons Medium';
+    color: #808080 !important;
+    font-size: 16px;
+}
+
+.rt-widget {
+    box-shadow: 0px 0px 6px #7B7B7B29;
+    border-radius: 7px;
+}
+
+.rt-widget .rt-widget-title {
+    padding: 0px;
+    border: 0px;
+}
+.filter-body label{
+    color: #2C0660;
+    font-family: 'TT Commons Medium';
+}
+
+.rounded-7{
+    border-radius: 7px;
+}
+
+.filter-body .form-group{
+    box-shadow: 0px;
+    padding: 2px;
+}
+.filter-body .form-group select, .room-modal-form .form-group select, .room-form .form-group select{
+    padding: 10px;
+    height: calc(1.5em + 1.75rem + 2px);
+    font-family: 'TT Commons Medium';
+    color: #808080;
+    font-size: 15px;
+    box-shadow: 0px 0px 6px #783CBD22;
+}
+
+
+.filter-body .form-check-inline .form-check-input {
+    
+    margin-top: -3px;
+}
+/*
+.rt-banner-height {
+    height: 100vh;
+    min-height: 650px;
+}
+
+.rt-banner-height {
+    height: 650px;
+}
+*/
+.rt-input-group .single-input button {
+    background: transparent linear-gradient(180deg, #9831F5 0%, #6D2DCE 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #783CBD5F;
+    border-radius: 3px;
+    opacity: 1;
+    margin-right: 0px;
+}
+
+.rt-input-group .single-input input::placeholder,  .rt-input-group .single-input input, 
+.calendar-container .form-control.rt-date-picker.has-icon, .calendar-container .form-control.rt-date-picker.has-icon::placeholder{
+    color: #430090;
+    font-weight: bold;
+    text-transform: none;
+    font-family: 'TT Commons Medium';
+    font-size: 16px;
+}
+.rt-input-group .single-input input:-ms-input-placeholder {
+    color: #430090;
+}
+
+.rt-input-group .single-input input::-ms-input-placeholder {
+    color: #430090;
+}
+.rt-input-group .single-input .input-iconbadge i, .calendar-container .input-iconbadge i {
+    color: #430090;
+}
+
+.main-menu{
+    font-family: 'TT Commons Medium';
+}
+
+
+
+#banner-searchbox{
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px #783CBD29;
+    background: #DEC6FF;
+    position: relative;
+    z-index: 3;
+}
+
+.main-menu ul li.active a{
+    color: #783CBD;
+}
+
+.white-menu .main-menu > ul > li > a:hover {
+    color: #EDA900;
+}
+
+.white-menu .main-menu > ul > li.current-menu-item > a:hover {
+    color: #783CBD;
+}
+
+.purple-menu .main-menu > ul > li > a {
+    color: #2C0660;
+}
+
+.main-menu ul li a {
+    font-family: 'TT Commons Medium';
+    padding: 1px 24px;
+}
+/*
+.rt-banner-content{
+    margin-top: 10%;
+}
+*/
+.single-rt-banner .rt-banner-content p {
+    color: #783CBD;
+}
+
+.dark-violet-text{
+    color: #430090;
+}
+
+.half-violet-1-text{
+    color: #783CBD !important;
+}
+
+.dark-orange{
+    background: #EDA900;
+}
+
+.violet-border{
+    border: 1px solid #783CBD;
+}
+#contact-button, #filter-button{
+    font-weight: lighter;
+    color: #fff;
+    box-shadow: 0px 0px 6px #18072C76;
+    border-radius: 3px;
+    opacity: 1;
+    padding: 8px 37px;
+    font-family: 'TT Commons Medium';
+
+}
+
+.portfolio-area{
+    background: transparent linear-gradient(180deg, #EBEBEB 0%, #FFFFFF 100%, #F7F7F7 100%) 0% 0% no-repeat padding-box;
+    color: #2C0660;
+}
+
+.rt-site-footer .footer-top {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.rt-site-footer {
+    margin-top: 60px;
+}
+
+.rt-site-footer .footer-top .rt-dot-divider {
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+}
+
+.rt-site-footer .footer-top .footer-subscripbe-box .form-control {
+    
+    color: #430090;
+    font-size: 13px;
+    border: 1px solid #430090;
+}
+
+.portfolio-area .filter-list li {   
+        padding: 12px 30px;
+        background: transparent linear-gradient(257deg, #A94AFF 0%, #8A3CFF 100%) 0% 0% no-repeat padding-box;
+        box-shadow: 0px 0px 5px #803CAA;
+        border-radius: 8px;
+        border: 0px;
+        font-family: 'TT Commons Medium';
+        width: 145px;
+}
+
+
+.portfolio-area .filter-list li.active{
+    background: transparent linear-gradient(229deg, #FFC127 0%, #FFD774 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 5px #803CAA;
+    border-radius: 8px;
+    padding: 12px 30px;
+    color: #430090
+}
+
+.portfolio-box-1 .portfolio-badge {
+    background: #fff;
+    width: 145px;
+    line-height: normal;
+    height: 55px;
+    text-align: left;
+    top: -1px;
+    left: -1px;
+}
+
+.portfolio-box-1 .portfolio-badge span{
+    font-family: 'TT Commons Bold';
+    color: #430090;
+    
+}
+
+.portfolio-box-1 .inner-content h6 {
+    font-size: 18px;
+    font-family: 'TT Commons Bold';
+}
+
+.flight-box .trip-to span:nth-child(2), .flight-box .trip-form span:nth-child(2) {
+    font-size: 21px;
+    font-family: 'TT Commons Bold';
+    font-weight: inherit;
+}
+
+.flight-box .trip-to span:nth-child(2) small {
+    font-size: 14px;
+    font-family: 'TT Commons Medium';
+    text-transform: none;
+}
+
+.flight-box .rt-inner-overlay.color_1 {
+    background-image: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(2,0,36,1) 97%);
+}
+.flight-box .rt-inner-overlay {
+    opacity: 0.3;
+    border-radius: 10px;
+}
+
+.flight-box .trip-to span:nth-child(1), .flight-box .trip-form span:nth-child(1) {
+    font-family: 'TT Commons Medium';
+    font-size: 12px;
+}
+.content-area{
+    position:relative;
+    z-index: -1;
+}
+.ui-autocomplete{
+    width: 300px;
+}
+
+.rt-sticky-active .main-menu > ul > li > a {
+    color: #fff;
+}
+/* autocomplete */
+
+.autocomplete-suggestions {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    box-sizing: border-box; 
+    border: 1px solid #999; 
+    background: #FFF; 
+    cursor: default; 
+    overflow: auto; 
+    -webkit-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64);
+    -moz-box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); 
+    box-shadow: 1px 4px 3px rgba(50, 50, 50, 0.64); 
+    display: inline-table;
+}
+.autocomplete-suggestion { 
+    padding: 2px 12px; 
+    white-space: nowrap; 
+    overflow: hidden;
+    
+}
+.autocomplete-no-suggestion { 
+    padding: 
+    2px 5px;
+}
+.autocomplete-selected { 
+    background: #F0F0F0;
+ }
+.autocomplete-suggestions strong { 
+    font-weight: bold; 
+    color: #000;
+    
+}
+.autocomplete-group { 
+    padding: 6px 5px; 
+    font-weight: bold; 
+    font-size: 16px; 
+    color: #000; 
+    display: block; 
+    /*border-bottom: 1px solid #000; */
+}
+.rt-banner-searchbox {
+    overflow: inherit;
+}
+
+/* end autocomplete */
+
+
+#search-wrapper{
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+    position:relative;
+    z-index: 2;
+
+}
+.filter-body{
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    max-height: 450px;
+}
+.filter-button{
+    display: flex;
+    margin-top: 4px;
+    padding: 20px;
+
+    flex-shrink: 0;
+}
+
+.filter-body hr{
+    border: 0px;
+    border-bottom: 1px solid #783CBD;
+}
+.pagination.rt-paganation{
+    background: #fff;
+    width: fit-content;
+    padding: 0px;
+    font-family: 'TT Commons Regular';
+    font-size: 16px;
+    box-shadow: 0px 0px 3px #A2A2A24B;
+}
+
+.pagination.rt-paganation li.page-item {
+     margin-right: 0px;
+     padding: 12px 15px 10px 15px;
+}
+.page-item:first-child{
+    border-radius: 2px 0 0 2px;
+}
+
+.page-item:last-child{
+    border-radius: 0 2px 2px 0;
+}
+.page-item.active{
+    font-family: 'TT Commons Bold';
+    border-bottom:  2px solid #783CBD;
+    
+}
+.page-item a{
+    font-family: 'TT Commons Regular';
+    color: #783CBD;
+}
+.page-item.active a{
+    color: #783CBD;
+}
+
+.pagination-link{
+    
+}
+
+.stickybar{
+    width: 25%;
+    position: fixed;
+    top: 120px;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    /*background: #7386D5;*/
+}
+
+.sticky-logo {
+    max-width: 150px;
+}
+
+.brand-logo, .sticky-logo{
+    max-width: 150px;
+}
+
+#search-room-container{
+    position: relative;
+    z-index: 2;
+}
+
+#sidebar{
+    //position: relative;
+    //z-index: 2;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+.flt-dtls-box .upper-top-content {
+    padding-top: 15px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    background: transparent linear-gradient(180deg, #9831F5 0%, #6D2DCE 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #00000029;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.flt-dtls-box .upper-top-content .left span{
+    text-transform: none;
+}
+
+.cart-body-element .room-name{
+    color: #2C0660;
+    font-family: 'TT Commons Medium';
+}
+
+.room-detail span{
+    font-size: 13.5px;
+    color: #808080;
+    font-family: 'TT Commons Medium';
+}
+
+.room-price span{
+    font-size: 13.5px;
+    font-family: 'TT Commons Medium';
+    color: #783CBD;
+}
+
+.room-price .float-right{
+    font-size: 19px;
+    font-family: 'TT Commons Bold';
+}
+
+
+.hotel-text .icofont-close {
+    position: absolute;
+    right: 0;
+    top: -10px;
+    margin-right: 4px;
+}
+
+
+.toast-title{
+    font-size: 1.6rem;
+}
+.toast-message{
+    font-size: 1.4rem;
+}
+
+.select2-results__option {
+    color: #000;
+    background: #fff;
+    border: 1px solid rgba(79, 79, 79, .1);
+}
+
+.counter-box-1 {
+    background: transparent linear-gradient(180deg, #EBEBEB 0%, #F7F7F7 100%, #F7F7F7 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 3px #8080804B;
+    border-radius: 14px;
+    opacity: 1;
+}
+
+.counter-box-1 img {
+    margin-right: 20px;
+}
+
+.counter-box-1 h5 {
+    font-family: 'TT Commons Medium';
+    font-size: 16px;
+    margin: 0 0 10px;
+    color: #430090;
+    letter-spacing: 0px;
+    text-transform: none;
+}
+
+.counter-box-1 h6 {
+    font-family: 'TT Commons Bold';
+    color: #430090;
+}
+
+.rt-section-title {
+    text-transform: none;
+    font-family: 'TT Commons Bold';
+    color: #430090;
+    font-size: 37px;
+}
+.works-area h5, .flight-dela-area h5, .testimonials-area h5{
+    font-family: 'TT Commons Bold';
+    text-transform: none;
+    color: #783CBD;
+    font-size: 21px;
+}
+.rt-section-title-wrapper p{
+    text-transform: none;
+    font-family: 'TT Commons Medium';
+    color: #808080;
+    font-size: 18px;
+}
+
+
+
+.cta-box-1 {
+    background: transparent linear-gradient(180deg, #9831F5 0%, #6D2DCE 100%) 0% 0% no-repeat padding-box;
+}
+
+.rt-breadcump h3{
+    font-size: 3.5rem;
+    font-family: 'TT Commons Bold';
+    text-transform: none;
+}
+
+.hotel-result-count{
+    text-transform: none;
+    font-family: 'TT Commons Medium';
+    color: #808080;
+}
+
+.whatsapp-gradient-button{
+    color: #fff;
+    background: #51C9A0 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #460B795F;
+    border-radius: 3px;
+    padding: 13px 29px;
+    font-size: 16px;
+    border: 0px;
+    font-family: 'TT Commons Medium';
+}
+.whatsapp-gradient-button img{
+    width: 28px;
+    padding: 0px 5px;
+}
+
+.services-box-1{
+    box-shadow: 0px 0px 16px #6B31AD21;
+    border-radius: 14px;
+    opacity: 1;
+}
+
+.services-box-1 h4 {
+    text-transform: none;
+    font-family: 'TT Commons Bold';
+    color: #430090;
+}
+
+.services-box-1 p {
+    font-family: 'TT Commons Medium';
+    color: #808080;
+    letter-spacing: 0px;
+}
+.single-deal-carosel .item-left{
+    /*padding-right: 0px;*/
+}
+
+.single-deal-carosel .item-right{
+    height: 475px;
+    padding-left: 0px;
+    background: transparent linear-gradient(232deg, #9831F5 0%, #6D2DCE 100%) 0% 0% no-repeat padding-box;
+}
+
+.single-deal-carosel .deal-bg{
+    height: 552px;
+}
+
+.single-deal-carosel .deal-bg{
+    background-size: cover;
+}
+.rt-section-title-wrapper p {
+    color: #808080;
+    font-family: 'TT Commons Medium';
+    font-size: 16px;
+    line-height: normal;
+
+}
+
+.single-deal-carosel .rt-section-title-wrapper .rt-section-title {
+    color: #F5C753;
+    margin: 0;
+}
+
+.text-white .rt-section-title span {
+    color: #fff;
+    font-family: 'TT Commons Bold';
+    text-transform: none;
+}
+.rt-section-title-wrapper h4{
+    /*padding-bottom: 10px;*/
+    font-size: 19px;
+    font-family: 'TT Commons Bold';
+}
+
+.owl-nav button.owl-prev, .owl-nav button.owl-next{
+    box-shadow: 0px 0px 6px #783CBD62 !important;
+    color: #6D2DCE;
+}
+
+.carousel-text-container{
+    padding: 40px 20px 40px 50px;
+    height: 100%;
+    
+}
+
+.carousel-text-container ul li{
+    margin: 0;
+    
+    padding: 0;
+}
+.btn-nav-y1{
+    
+    background: #F5C753 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #460B795F;
+    border-radius: 3px;
+    color: #fff;
+    padding: 13px 29px;
+    font-size: 16px;
+    font-family: 'TT Commons Medium';
+}
+
+.btn-nav-p1-outline{
+    box-shadow: 0px 0px 6px #460B795F;
+    background: transparent;
+    border: 1px solid #FFFFFF;
+    border-radius: 3px;
+    color: #fff;
+    padding: 13px 29px;
+    font-size: 16px;
+    font-family: 'TT Commons Medium';
+}
+
+.btn-nav-v1-outline{
+    box-shadow: 0px 0px 6px #460B795F;
+    background: transparent;
+    border: 1px solid #783CBD;
+    border-radius: 3px;
+    color: #783CBD;
+    padding: 13px 29px;
+    font-size: 16px;
+    font-family: 'TT Commons Bold';
+}
+
+.services-box-2 p{
+    line-height: normal;
+    color: #808080;
+    font-family: 'TT Commons Medium';
+    font-size: 16px;
+}
+
+.post-area {
+    padding: 100px 0 0;
+}
+
+
+
+.post-area .rt-section-title-wrapper .rt-section-title {
+    color: #430090;
+    margin: 0;
+}
+
+.post-area .single-deal-carosel .item-right {
+    padding: 30px;
+    background: #E6E6E6;
+}
+
+.play-video {
+    margin-top: 45px;
+    padding: 120px 0;
+}
+
+/*
+.testimonials-mobile-container{
+    height: 400px;
+
+}
+*/
+.singleTbox-1 .autor-bio h5 {
+    color: #2C0660;
+    font-family: 'TT Commons Bold';
+}
+
+.singleTbox-1 .autor-bio p {
+    font-size: 16px;
+    color: #808080;
+    font-family: 'TT Commons Medium';
+}
+
+.singleTbox-1 .inner-content p {
+    font-size: 18px;
+    font-family: 'TT Commons Medium';
+    color: #808080;
+}
+.brands-area{
+    padding-top: 0px;
+}
+.rt-site-footer{
+    background: transparent linear-gradient(236deg, #760ED5 0%, #410F8E 100%) 0% 0% no-repeat padding-box;
+}
+
+.rt-site-footer .rt-section-title{
+    color: #F5C753;
+    font-family: 'TT Commons Bold';
+}
+
+.rt-site-footer .footer-top .footer-subscripbe-box .btn {
+    font-family: 'TT Commons Medium';
+    background: #F5C753;
+    color: #430090;
+    text-transform: none;
+
+}
+.rt-site-footer .footer-top .footer-subscripbe-box .btn:hover {
+    background-color: #F5C753 !important;
+    color: #fff !important;
+}
+
+.rt-site-footer .footer-top .footer-subscripbe-box .form-control::placeholder {
+    color: #430090;
+    font-family: 'TT Commons Medium';
+}
+.filter-body .form-group .form-control{
+    border-right: 10px solid transparent
+
+}
+
+.rt-single-widget .rt-footer-title, #accordionLink .btn-link {
+    color: #F5C753;
+    font-family: 'TT Commons Bold';
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.rt-single-widget .rt-footer-title {
+    margin-bottom: 15px;
+}
+
+#accordionLink li, ul{
+    list-style-type: none;
+    padding: 0;
+    margin:0;
+}
+
+.rt-site-footer .footer-bottom {
+    background: #2C0660;
+    color: #DEC6FF;
+}
+
+/*hoteles recomendados home*/
+
+.portfolio-area .rt-section-title-wrapper, .portfolio-area .rt-section-title-wrapper h5,
+.portfolio-area .rt-section-title-wrapper h2{
+    color: #2C0660;
+}
+
+.portfolio-area .rt-section-title-wrapper p {
+    color: #2C0660;
+}
+
+.portfolio-area h5{
+    font-family: 'TT Commons Bold';
+    text-transform: none;
+    font-size: 21px;
+}
+
+.room-modal-price{
+    text-align: right;
+}
+.room-form-end-container{
+    text-align: right;
+}
+
+@media (min-width: 300px){
+    .counter-area{
+        margin-top: 80px;
+    }
+   .tour-wrapper{
+    margin-bottom: 40px !important;
+   }
+}
+
+.hotel-inner-content .top p.hotel-card-city {
+    color: #808080;
+    font-family: 'TT Commons Medium';
+    font-size: 18px;
+}
+.hotel-card-presentation {
+    line-height: 21px;
+}
+.hotel-inner-content .top p.hotel-card-presentation{
+    font-size: 16px;
+    color: #808080;
+    font-family: 'TT Commons Regular';
+}
+.hotel-inner-content .top p a{
+    color:#2C0660;
+}
+
+.hotel-inner-content .hotel-thumb .hotel-bg {
+    border-radius: 7px;
+    height: 170px;
+}
+
+.hotel-result-card .default-price{
+    color: #B98400;
+    font-family: 'TT Commons Medium';
+}
+
+.post-thumbnail img{
+    border-radius: 7px;
+}
+
+.single-blg-post, .single-blg-post:hover {
+    background: #FCFAFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #7B7B7B40;
+    border-radius: 7px;
+}
+
+.status-card .iconbox-content h5{
+    text-transform: none;
+    color: #783CBD;
+    font-size: 1.7rem;
+    margin:0;
+    font-family: 'TT Commons Bold';
+
+}
+
+.status-card p{
+    margin-top: 15px !important;
+    padding-bottom: 15px !important;
+    color: #808080;
+    font-family: 'TT Commons Medium';
+    line-height: 1.6rem;
+}
+
+.hotel-tabs .hotel-information-raw{
+    font-family: 'TT Commons Medium';
+
+}
+@media (max-width: 768px) {
+    /*pequeño*/
+    .toast-message{
+        line-height: 2.3rem;
+    }
+    .blog-banner-container.rt-breadcump .rt-breadcump-height {
+        height: 250px;
+    }
+    .status-card p {
+        line-height: 2.5rem;
+
+    }
+
+    .status-card .iconbox-content h5 {
+        font-size: 2.7rem;
+
+    }
+    .final-booking{
+        margin-top: 77px;
+    }
+
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+
+    .rt-site-header.rt-fixed-top.mobile-home-menu{
+        background: #F5F5F5;
+    }
+    .tour-title-container{
+        padding-top: 100px;
+    }
+
+    .single-deal-carosel .item-right {
+        background: #9831f5;
+    }
+    .single-deal-carosel .deal-bg {
+        border-radius: 4%;
+    }
+
+    .deal-carosel-active .owl-nav .owl-next {
+        left: 52% !important;
+        bottom: -4% !important;
+    }
+
+    .deal-carosel-active .owl-nav .owl-prev{
+        left: 36% !important;
+        bottom: -4% !important;
+    }
+    .deal-carosel-active {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .single-deal-carosel .deal-bg {
+        height: 295px;
+    }
+
+    .single-deal-carosel .item-right {
+        height: 650px;
+    }
+
+    .carousel-text-container {
+        padding: 0px;
+    }
+
+    .rt-section-title {
+        font-size: 20px;
+    }
+
+    .flight-dela-area h5{
+        font-size: 17px;
+    }
+
+    .single-rt-banner .rt-banner-content h1 {
+        font-size: 25px;
+    }
+
+    .single-rt-banner .rt-banner-content p {
+        font-size: 18px;
+    }
+
+    .rt-input-group .single-input button {
+        width: 100%;
+    }
+
+    .counter-area {
+        margin-top: 0px;
+    }
+
+    .owl-carousel .owl-item {
+        padding-right: 15px;
+    }
+    .singleTbox-1{
+        /*border: 1px solid red;*/
+        position: relative;
+        padding: 10px 30px;
+    }
+    .testimonials-area .tns-controls{
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        width: 92%;
+        z-index: 99;
+        margin-top: 75px;
+    }
+
+    .testimonials-area .tns-controls button{
+        box-shadow: 0px 0px 6px #C4C4C462 !important;
+        border-radius: 50%;
+        background-color: #fff !important;
+        color: #410F8E;
+        border: none;
+        font-family: 'IcoFont' !important;
+        font-size: 14px;
+        padding: 5px 12px;
+        font-weight: bold;
+
+    }
+
+    .singleTbox-1 .inner-content p {
+        font-size: 15px;
+        line-height: 17px;
+
+    }
+
+    .testimonials-area .rt-section-title-wrapper p {
+        font-size: 15px;
+
+    }
+
+    .footer-main{
+        padding: 30px;
+    }
+
+    .footer-main .btn-link.collapsed{
+
+    }
+
+    #accordionLink .btn-link{
+        font-size: 16px;
+        text-align: left;
+    }
+    #accordionLink .card{
+        background-color: transparent;
+        border: 0;
+    }
+    #accordionLink{
+        width: 100%;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #7042B6;
+    }
+
+    .rt-single-widget{
+        padding-top: 15px;
+        padding-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    .footer-navigation{
+        border-bottom: 1px solid #C8B2F5;
+    } 
+
+    .post-area .single-deal-carosel .item-right {
+        height: 250px;
+    }
+
+    .post-area .deal-carosel-active .owl-nav .owl-prev,
+    .post-area .deal-carosel-active .owl-nav .owl-next  {
+        bottom: -7% !important;
+
+    }
+    
+    .contact-action-button{
+        width: 157px;
+    }
+    .contact-form{
+        padding-bottom: 30px;
+    }
+
+    .no-banner{
+        background: #783CBD;
+    }
+    /*
+    .rt-site-header.rt-fixed-top,
+    .main-header.rt-fixed-top{
+    z-index: 9999; 
+
+    }
+    */
+
+    .mobile-result-bar{
+        margin-top: 25px;
+        padding: 10px;
+        font-size: 13px;
+        background: #EBE7F0;
+        color: #391860;
+        font-family: 'TT Commons Medium';
+    }
+
+    .hotel-result-count{
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 14px;
+    }
+
+    .result-link{
+        margin-left: 15px;
+    }
+
+    .result-link .box-style__1 {
+        border: none;
+        padding: 0;
+    
+    }
+
+    .result-link .hotel-text .top{
+        padding: 10px 20px;
+
+    }
+
+    .hotel-inner-content .hotel-thumb .hotel-bg {
+        border-radius: 7px 7px 0px 0px;
+        height: 190px;
+    }
+
+    .default-price{
+        margin-top: 44.5%;
+        padding-right: 20px;
+        background: rgba(255,255,255, .7);
+        width: 150px;
+        margin-left: 58%;
+        color: #fff !important;
+        border-radius: 7px 0 0 0;
+    }
+
+    .min-price-content{
+        padding: 10px 30px;
+    }
+    .attribute-container{
+        border-bottom: 1px solid #E7D9FF;
+        padding: 10px;
+        margin: 0 10px;
+        
+    }
+
+    .main-menu {
+        margin-right: -23px;
+
+    }
+
+    .room-modal-price{
+        text-align: center;
+    }
+
+    .room-form-end-container{
+        text-align: center;
+    }
+
+    .regime-info{
+        padding-bottom: 15px;
+    }
+
+    #hotel-main-container{
+        margin-top: 60px;
+    }
+    #hotel-main-container .tiny-slider img{
+        border-radius: 8px;
+    }
+    #hotel-main-container .mobile-hotel-gallery-item{
+        margin-right: 12px;
+    }
+    
+    #edit-dates-container{
+        background: #EBE7F0;
+        font-size: 2rem;
+        border-radius: 4px;
+        padding: 10px 20px;
+        font-weight: bold;
+        color: #391860;
+    }
+
+    #edit-dates-container{
+        margin-bottom: 20px;
+    }
+
+    #user-form-container{
+        background: #F5F5F5;
+        box-shadow: none;
+        border: none;
+        margin-top: 60px;
+    }
+
+    #user-form-container .form-control{
+        background: #F5F5F5;
+        
+    }
+    .cart-total-container .final-booking{
+        padding: 20px 20px 0px 20px;
+    }
+
+    .blog-banner.rt-breadcump .rt-breadcump-height {
+        height: 250px;
+
+    }
+
+    .blog-banner.rt-breadcump{
+        margin-bottom: 15px;
+    }
+
+    .single-blg-post {
+        padding: 0px;
+        border:none;
+    }
+
+    .post-thumbnail img {
+        border-radius: 7px 7px 0px 0px; 
+
+    }
+
+    .single-blg-post, .single-blg-post:hover {
+        box-shadow: none;
+    }
+
+    .blog-content-area .widget.widget_categories{
+        box-shadow: 0 5px 10px 0 #7B7B7B40;
+        background: #fff;
+        border: none;
+    }
+
+    .footer-subscripbe-box p{
+        line-height: 3rem;
+        padding-bottom: 10px;
+    }
+
+  
+}
+
+.rt-sticky-active .main-menu > ul > li > a:hover {
+    color: #EDA900;
+}
+
+.yellow-pill-button{
+    background: #EDA900;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 16px;
+    font-size: 1.8rem;
+}
+.yellow-pill-button:hover {
+    color: #Fff;
+}
+.hotel-search-bar .form-control{
+    font-size: 1.5rem;
+}
+.hotel-search-bar h5{
+    font-size: 15px;
+    text-transform: none;
+}
+
+.room-capacity{
+    color: #2C0660;
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+.footer-link-decored{
+    text-decoration: underline;
+}
+.footer-colored-link{
+    color: #DEC6FF !important;
+}
+
+
+
+.navicu-footer-logo{
+    width: 160px;   
+}
+
+.rt-footer-social .social-links img {
+    height: 40px;
+}
+
+.rt-single-widget ul li a {
+    padding-left: 0px;
+}
+
+.hotel-result-card{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #7B7B7B29;
+    border-radius: 7px;
+}
+.hotel-result-card .hotel-text h5{
+    color: #783CBD;
+    font-family: 'TT Commons Medium';
+    font-size: 20px;
+    text-transform: none;
+}
+
+.hotel-result-card .hotel-text h5 .star-rating i{
+    color: #F5C753;
+    font-size: 16px;
+
+}
+.hotel-inner-content .star-rating i{
+    color: #F5C753;
+}
+
+.hotel-tabs .tab-pane .flight-list-box{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #7B7B7B29;
+    border-radius: 7px;
+
+}
+.hotel-tabs .tab-pane .flight-list-box, .flight-list-box p{
+    font-family: 'TT Commons Medium';
+    color: #808080;
+    line-height: 21px;
+}
+
+
+.hotel-inner-content .hotel-description{
+    font-size: 16px;
+    color: #808080;
+    font-family: 'TT Commons Regular';
+    line-height: 21px;
+}
+.hotel-inner-content h5, .hotel-tabs .tab-pane .flight-list-box h5{
+    color: #783CBD;
+    font-family: 'TT Commons Medium';
+    font-size: 20px;
+    text-transform: none;
+}
+.filter-body i.fa-star{
+    color: #F5C753;
+    font-size: 12px;
+}
+
+
+
+
+.hotel-result-card .min-price-content small{
+    font-size: 12px;
+    color:#783CBD;
+    font-family: 'TT Commons Medium';
+}
+
+.hotel-inner-content .middle-text .right span:nth-child(2) {
+    color: #783CBD;
+    font-family: "TT Commons Bold";
+}
+.hotel-result-button, .change-dates-button, .room-modal-trigger-btn, .save-booking{
+    background: transparent linear-gradient(180deg, #9831F5 0%, #6D2DCE 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #460B795F;
+    border-radius: 3px;
+    font-family: 'TT Commons Medium';
+    padding: 10px 25px;
+    color: #fff;
+    border: 0px;
+}
+
+#booking-form hr{
+    border: 0px;
+    height: 1px;
+    border-top: 1px solid #C8B2F5;
+}
+
+.modal-total-text{
+    color: #783CBD;
+    font-family: 'TT Commons Bold';
+    font-size: 24px;
+
+}
+
+.single-tour .icon-thumb {
+    padding: 5px;
+}
+
+.modal-total-text small{
+    font-family: 'TT Commons Medium';
+    font-size: 14px;
+}
+#modal-body-container .modal-content{
+    border-radius: 7px 7px 0px 0px;
+}
+
+.modal-content .close {
+    font-size: 2.5rem;
+    color: #fff;
+    opacity: 1;
+}
+
+.add-to-cart, .go-to-pay{
+    background: #EDA900 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #460B795F;
+    border-radius: 3px;
+    font-weight: lighter;
+    color: #fff;
+    padding: 8px 37px;
+    font-family: 'TT Commons Medium';
+    border: 0px;
+}
+
+.go-to-pay:hover{
+    color: #fff;
+    /* en el pdf dice #EDA900*/
+}
+
+.side-cart-modal-total{
+    color: #783CBD;
+    font-family: 'TT Commons Medium';
+}
+.side-cart-modal-total span:first-child{
+    font-size: 16px;
+}
+.side-cart-modal-total span:last-child{
+    font-size: 19px ;
+    font-family: 'TT Commons Bold';
+}
+
+.rt-widget.final-booking li, .final-booking .equivalent{
+    color: #2C0660;
+    font-family: 'TT Commons Medium';
+    font-size: 17px;
+}
+
+.rt-widget.final-booking li.sub-total {
+    color: #783CBD;
+    font-family: 'TT Commons Medium';
+    border-top: 1px solid #783CBD;
+    
+}
+
+.upper-content-area{
+    z-index: 1;
+}
+
+.host-label{
+    color: #783CBD;
+    font-family: 'TT Commons Bold';
+    text-transform: none;
+}
+.payment-info .alert{
+    font-family: 'TT Commons Medium';
+}
+.payment-info .alert strong{
+    color: #783CBD;
+    
+}
+
+.payment-info .alert{
+    background: transparent linear-gradient(180deg, #EBEBEB 0%, #F7F7F7 100%, #F7F7F7 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 3px #8080804B;
+    border-radius: 10px;
+}
+
+.flight-lable.rt-form label {
+    color: #2C0660;
+    font-family: 'TT Commons Medium';
+    text-transform: none;
+    font-size: 16px;
+}
+.rt-form.rt-line-form .form-control{
+    border-radius: 0;
+}
+
+.rt-form.rt-line-form .form-control::placeholder {
+    color: #CECECE;
+}
+
+.rt-widget.final-booking li.sub-total span:nth-child(2) {
+    color: #783CBD;
+    font-family: 'TT Commons Bold';
+    
+}
+
+.hotel-result-button:hover{
+    color: #fff;
+}
+
+.box-style__1 {
+    border: none;
+    padding: 20px;
+}
+
+.landing-hotel-inner-content{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #7B7B7B29;
+    border-radius: 7px;
+    padding: 20px;
+    font-family: 'TT Commons Medium';
+
+}
+.room-info-container p{
+    font-family: 'TT Commons Medium';
+    color: #808080;
+}
+
+.room-info-container h5{
+    color: #783CBD;
+    font-family: 'TT Commons Medium';
+    font-size: 20px;
+    text-transform: none;
+}
+.room-min-price-container{
+
+    color: #783CBD;
+    font-family: "TT Commons Bold";
+    font-size: 24px;
+}
+
+.room-min-price-container small{
+    font-size: 13px;
+}
+.rt-duel-slider-thumb {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.slick-arrow{
+    color: #fff;
+    font-weight: 900;
+}
+.rtbgprefix-cover-room{
+    background-size: cover;
+    height: 195px;
+
+}
+.grey-room-body{
+    background: #FAFAFA 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #7B7B7B45;
+    margin: 0;
+    padding: 0;
+}
+.rooms-main-container{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #7B7B7B46;
+    border-radius: 7px;
+}
+
+.rt-breadcump .rt-breadcump-height {
+    height: 300px;
+}
+
+.rt-breadcump .breadcrumbs-content {
+    padding-top: 140px;
+}
+
+.room-modal-form .modal-header{
+    background: transparent linear-gradient(180deg, #9831F5 0%, #6D2DCE 100%) 0% 0% no-repeat padding-box;
+    border-radius: 7px 7px 0px 0px;
+    
+
+}
+.room-modal-form .modal-header .modal-title{
+    color: #fff;
+    font-family: 'TT Commons Bold';
+
+}
+
+.room-modal-form .modal-body{
+    background: #FCFAFF 0% 0% no-repeat padding-box;
+    border-radius: 7px;
+}
+
+.room-modal-form .form-group label{
+    color: #808080;
+    font-family: 'TT Commons Medium';
+}
+
+.room-modal-form hr{
+    border-top: 1px solid #C8B2F5;
+}
+
+.regime-info .media-body .rt-strong{
+    color: #783CBD;
+    font-family: 'TT Commons Medium';
+}
+
+.regime-info .media-body .rt-medium.title-font{
+    color: #808080;
+    font-family: 'TT Commons Medium';
+    font-size: 11px;
+}
+
+.deal-area {
+    padding: 0 0 70px;
+}
+
+.spacer-top {
+    height: 70px;
+}
+
+.rt-section-padding {
+    padding: 70px 0;
+}
+
+.play-video {
+    margin-top: 30; 
+    padding: 35px 0;
+}
+
+
+
+
+
+.single-blg-post .entry-content .entry-header .entry-title {
+    font-family: 'TT Commons Bold';
+    color: #783CBD;
+    font-size: 22px;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.single-blg-post .entry-content .entry-header .entry-title a {
+    color: #783CBD;
+}
+
+.single-blg-post .entry-content .entry-header .entry-meta {
+    color: #2C0660;
+    font-family: 'TT Commons Medium';
+    margin: 0;
+    
+}
+
+.single-blg-post .entry-content .entry-header .entry-meta span {
+    font-size: 18px;
+}
+
+.single-blg-post .entry-content p {
+    padding-top: 2rem;
+    color: #808080;
+    font-family: 'TT Commons Medium';
+}
+
+.single-blg-post .entry-content .entry-footer {
+    border-top: 1px solid #CDB0FA;
+}
+
+.single-blg-post .entry-content .entry-header .entry-title a:hover {
+    color: #783CBD;
+}
+
+.single-blg-post .entry-content .entry-footer a {
+    color: #2C0660;
+    text-transform: none;
+    font-family: 'TT Commons Medium';
+    font-size: 18px;
+}
+
+.sidebar-group .widget{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #7B7B7B40;
+    border-radius: 7px;
+    border: 0px;
+}
+.widget_categories h4{
+    color: #2C0660;
+    font-family: 'TT Commons Bold';
+    font-size: 18px;
+}
+
+.widget > ul > li{
+    font-size: 16px;
+    color: #808080;
+    font-family: 'TT Commons Medium';
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #C8B2F5;
+
+}
+.widget > ul > li span{
+    color: #783CBD;
+}
+.attribute-icon{
+    width: 45px;
+}
+
+.remove-from-cart{
+    margin-top: -12px;
+    margin-right: -8px;
+}
+
+#side-search-box.modal.left .modal-dialog {
+    width: 100%;
+    
+
+}
+
+#side-search-box #banner-searchbox{
+    margin: 20px;
+
+}
+
+.bottom-bordered{
+    border-bottom: 1px solid #C8B2F5;
+}
+
+#side-search-box.modal .modal-content{
+    background: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(8px); 
+}
+@media (max-width: 1199.98px){
+    .rt-input-group .col-rt-in-4
+    {
+        max-width: 46%; 
+
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 46%;
+            -ms-flex: 0 0 46%;
+                flex: 0 0 46%;
+    }
+}
+@media (max-width: 767.98px){
+    .rt-input-group .col-rt-in-4
+    {
+        max-width: 100%; 
+
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 100%;
+            -ms-flex: 0 0 100%;
+                flex: 0 0 100%;
+    }
+}
+
+@media (max-width: 1600px){
+    .deal-carosel-active .owl-nav .owl-prev, .deal-carosel-active .owl-nav .owl-next {
+        left: 87%;
+        bottom: -5%;
+    }
+
+    .deal-carosel-active .owl-nav .owl-next {
+        left: 92%;
+    }
+}
+
+
+/* PRUEBA */
+
+.modal.left .modal-dialog {
+	position:fixed;
+	right: 0;
+	margin: auto;
+	width: 320px;
+	height: 100%;
+	-webkit-transform: translate3d(0%, 0, 0);
+	-ms-transform: translate3d(0%, 0, 0);
+	-o-transform: translate3d(0%, 0, 0);
+	transform: translate3d(0%, 0, 0);
+}
+
+.modal.left .modal-content {
+	height: 100%;
+	
+}
+
+.modal.left .modal-body {
+	padding: 15px 15px 80px;
+    flex-shrink: 1;
+    -webkit-box-flex: 1;
+    flex-grow: 1;
+    overflow-y: auto;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+
+.modal.right .modal-footer{
+    flex-shrink: 0;
+    display: flex;
+    margin-top: 4px;
+    padding: 20px;
+}
+
+.modal.right.fade .modal-dialog {
+	left: -320px;
+	-webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+	-moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+	-o-transition: opacity 0.3s linear, left 0.3s ease-out;
+	transition: opacity 0.3s linear, left 0.3s ease-out;
+}
+
+.modal.right.fade.show .modal-dialog {
+	right: 0;
+}
+
+/* ----- MODAL STYLE ----- */
+.modal-content {
+	border-radius: 0;
+	border: none;
+}
+
+.modal-header {
+	border-bottom-color: #eeeeee;
+	background-color: #fafafa;
+}
+
+/* ----- v CAN BE DELETED v ----- */
+
+.demo {
+	padding-top: 60px;
+	padding-bottom: 110px;
+}
+
+
+.indicator__value {
+    font-family: 'TT Commons Regular';
+    height: 15px;
+    font-size: 10px;
+    padding: 2px 3.8px;
+    border-radius: 1000px;
+    position: relative;
+    top: -11px;
+    right: -23px;
+    font-weight: 700;
+    margin-left: -5px;
+    margin-right: -8px;
+
+    background: #f1632b;
+    color: #fff;
+}
+
+.icofont-cart{
+    font-size:1.2em;
+}
+
+/*calendar*/
+
+.datepicker__inner {
+    padding: 0px;
+}
+
+@media (min-width: 768px){
+    .datepicker__month {
+        width: 280px;
+    }
+
+   
+}
+
+
+
+.datepicker__month-caption {
+    background: #F5EDFF 0% 0% no-repeat padding-box;
+}
+
+.datepicker__month-name {
+    text-transform: none;
+    color: #2C0660;
+}
+
+.datepicker__month-button:hover, .datepicker__month-button {
+    background-color: transparent;
+    color: #7042B6;
+}
+
+
+
+.datepicker__week-days{
+    background: #F7F7F7;
+    height: 3em;
+}
+
+.datepicker__week-name {
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: none;
+    font-family: 'TT Commons Medium';
+    color: #2C0660;
+}
+
+.datepicker__month-day--selected {
+    background-color: #F5EDFF;
+    color: #A37AD3;
+}
+
+.datepicker__month-day--first-day-selected, .datepicker__month-day--last-day-selected {
+    background-color: #783CBD;
+    color: #fff;
+}
+
+.tour-container{
+    box-shadow: 0px 0px 8px #80808043;
+    border: 1px solid #F1D9FF;
+    background: #FCFAFF;
+}
+
+.tour-page-pre-title {
+    color: #2C0660;
+    font-family: "TT Commons Bold";
+    font-size: 22;
+}
+
+.tour-page-title {
+    color: #783CBD;
+    font-family: "TT Commons Bold";
+    font-size: 25
+
+}
+.tour-page-description{
+    color: #2C0660;
+    font-family: "TT Commons Medium";
+    font-size:  18px;
+
+}
+.tour-info{
+    padding: 20px;
+}
+.tour-title{
+    font-family: "TT Commons Bold";
+    color: #430090;
+    font-size: 22px;
+}
+.tour-rules{
+    color: #783CBD;
+    font-family: "TT Commons Medium";
+    font-size: 17px;
+}
+
+.tour-rules .custom-separator{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.yellow-separator{
+    width: 35px;
+    background-color: #EDA900;
+    height: 3px;
+    margin-bottom: 10px;
+}
+.round-button{
+    border: 0.5px solid #E8D9FF;
+    background: #fff;
+    border-radius: 100%;
+    padding: 0px 12px 5px 12px;
+}
+.round-button i{
+    align-self: "top";
+    font-size: 0.55em;
+}
+
+.pax-element label{
+    color: #2C0660;
+    font-family: "TT Commons Medium";
+
+}
+.pax-control{
+    border: 0;
+    border-bottom: 1px solid #AFAFAF;
+    border-radius: 0;
+    background-color: transparent;
+    padding-bottom: 0.5rem;
+    width: 55px;
+    font-size: 1.6rem;
+    font-family: "TT Commons Medium";
+    color: #808080;
+
+}
+.tour-price-container .total-label{
+    color: #2C0660;
+    font-family: "TT Commons Medium";
+    font-size: 1.5rem;
+    padding: 0 5px 0 5px;
+}
+.tour-price-container .amount, .tour-price-container .currency-code{
+    color: #2C0660;
+    font-size: 3rem;
+    font-family: "TT Commons Bold";
+
+}
+
+.tour-price-container .currency-code{
+    margin-left: 5px;
+}
+.add-to-cart-tour-button{
+    font-weight: lighter;
+    color: #fff;
+    box-shadow: 0px 0px 6px #18072C76;
+    border-radius: 3px;
+    opacity: 1;
+    padding: 8px 37px;
+    font-family: 'TT Commons Medium';
+    border: 0;
+    background: transparent linear-gradient(255deg, #A94AFF 0%, #8A3CFF 100%) 0% 0% no-repeat padding-box;
+}
+#tour-description-content{
+    padding-top: 1.5rem;
+}
+
+#tour-description-content ul{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+}
+#tour-description-content ul li{
+    padding: 0;
+    margin: 0;
+    vertical-align: middle;
+
+}
+#tour-description-content{
+    font-family: 'TT Commons Regular';
+    font-size: 1.5rem;
+}
+
+#tour-description-content ul li::before{
+    font-size: 0.8em;
+    content: ">";
+    font-family: 'TT Commons Regular';
+    color: #2C0660;
+    padding-right: 5px;
+    vertical-align: inherit;
+
+}
+
+#tour-quantity-value{
+    margin-bottom: 2px;
+    color: #2C0660;
+    font-family: 'TT Commons Regular';
+
+}
+.rt-site-header.rt-sticky.rt-sticky-active, .main-header.rt-sticky.rt-sticky-active {
+    background: #783CBD;
+}
+
+.rt-breadcump {
+    margin-bottom: 60px;
+}
+
+.tour-item-link{
+    position: absolute;
+    border-radius: 21px;
+    padding: 5px 10px 5px 30px;
+    bottom: -18px;
+    font-size: 14px;
+    align-self: center;
+    color: #fff;
+    font-family: 'TT Commons Medium';
+    text-decoration: none;
+    background: transparent linear-gradient(180deg, #9831F5 0%, #6D2DCE 100%) 0% 0% no-repeat padding-box;
+}
+.tour-item-link span{
+    color: #EDA900;
+    margin-left: 15px;
+    padding-right: 5px;
+}
+.tour-item-link:hover{
+    color: #fff;    
+}
+.tour-item img{
+    box-shadow:  6px #E5E5E55F;
+
+    border-radius: 6px;
+}
+
+.tour-item{
+    /*padding-bottom: 30px;*/
+}
+
+.calendar-container .rt-date-picker{
+    box-shadow: 0px 0px 6px #783CBD22;
+    border-radius: 3px;
+    border: 1px solid #EBEBEB;
+    /*min-width: 200px;*/
+    height: 50px;
+}
+
+.calendar-container .input-iconbadge i {
+    position: absolute;
+    top: 43%;
+    left: 20px;
+    transform: translateY(-50%);
+}
+
+.calendar-container .form-control.has-icon {
+    padding-left: 40px;
+}
+
+/*single datepicker*/
+
+.bootstrap-datetimepicker-widget .datepicker{
+    color: #2C0660;
+    font-family: 'TT Commons Medium';
+}
+
+.bootstrap-datetimepicker-widget .prev,  .bootstrap-datetimepicker-widget .picker-switch,
+.bootstrap-datetimepicker-widget .next{
+    background: #F5EDFF;
+    border-radius: 0;
+}
+
+.bootstrap-datetimepicker-widget .dow{
+    background: #F7F7F7;
+    border-radius: 0;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: none;
+
+}
+.bootstrap-datetimepicker-widget table td.active, .bootstrap-datetimepicker-widget table td.active:hover {
+    background-color: #783CBD !important;
+    color: #fff;
+}
+
+.bootstrap-datetimepicker-widget table td{
+    border-radius: 0 !important;
+}
+
+.upselling-cart-item{
+    border-radius: 8px;
+    box-shadow: 0px 0px 6px #00000029;
+
+}
+.hotel-tabs .tab-pane .flight-list-box, .flight-list-box p.hotel-tour-name{
+    line-height: 1.5rem;
+    color: #783CBD;
+    font-size: 14px;
+}
+
+.footer-subscripbe-box{
+    background: transparent linear-gradient(270deg, #FAF5FF 0%, #F7EDFF 100%) 0% 0% no-repeat padding-box;
+    padding-top: 40px;
+}
+
+
+.rt-section-title-wrapper h4 {
+    color:  #2C0660;
+}
+
+.rt-section-title-wrapper p{
+    color: #808080;
+}
+
+/* contact */
+
+.contact-form.rt-form.rt-line-form .form-control{
+    border-bottom: 1px solid #DEA0FF;
+    background-color: transparent;
+    padding: 20px 20px 20px 0px;
+}
+
+.contact-form .contact-form-button{
+    font-weight: lighter;
+    color: #fff;
+    box-shadow: 0px 0px 6px #18072c76;
+    border-radius: 3px;
+    opacity: 1;
+    padding: 8px 37px;
+    font-family: 'TT Commons Medium';
+    background: #EDA900;
+    border: 0;
+
+}
+
+.contact-form .custom-control-label::before, #terms-condition-container .custom-control-label::before{
+    height: 1.3rem;
+    width: 1.3rem;
+    top: 0.45rem;
+
+}
+.custom-control-label::after {
+    width: 1.3rem;
+    height: 1.3rem;
+    top: 0.45rem;
+
+}
+.contact-form.flight-lable.rt-form label, #terms-condition-container label {
+    color: #B4B4B4;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.contact-item {
+    background: #FCFAFF;
+    box-shadow: 0px 0px 16px #6B31AD21;
+    border-radius: 14px;
+    padding: 2rem 4rem;
+    height: 100%;
+    min-height: 200px;
+
+}
+.contact-item h4{
+    color: #430090;
+    font-family: 'TT Commons Bold';
+    font-size: 19px;
+}
+.contact-item h3{
+    color: #808080;
+    font-family: 'TT Commons Bold';
+    font-size: 22px;
+
+}
+.contact-item p{
+    color: #808080;
+    font-family: 'TT Commons Medium';
+    line-height: 18px;
+    padding: 0;
+
+}
+.flight-dela-area{
+    padding-top: 4rem;
+
+}
+#navigation-side-menu.modal.left .modal-dialog {
+    width: 100%;
+}
+
+#navigation-side-menu .modal-dialog .modal-content{
+    background-color: #783CBD;
+
+}
+#navigation-side-menu .side-menu-list li{
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-right: 20px;
+    border-bottom: 1px solid #fff;
+    vertical-align: middle;
+}
+
+#navigation-side-menu .side-menu-list li a{
+    color: #fff;
+    font-size: 22px;
+    font-family: 'TT Commons Medium';
+
+    //padding: 20px;
+    
+}
+
+.hotel-thumb .attribute-icon{
+    width: 32px;
+    height: 32px;
+}
+
+.result-link{
+    cursor: pointer;
+}
+
+.room-form .form-group label{
+    color: #A37AD3;
+    font-size: 1.4rem;
+}
+.room-form .media-body{
+    line-height: 1.3;
+}
+
+#terms-condition-modal .modal-title{
+    color: #430090;
+    font-family: 'TT Commons Bold';
+    text-transform: none;
+    font-size: 1.6rem;
+  
+}
+
+#terms-condition-modal .modal-footer button{
+    background: transparent linear-gradient(180deg, #9831F5 0%, #6D2DCE 100%) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 0px 6px #783cbd5f;
+    border-radius: 3px;
+    opacity: 1;
+    margin-right: 0px;
+    padding: 10px 20px;
+    font-family: 'TT Commons Medium';
+    font-size: 1.5rem;
+
+}
+
+#terms-condition-modal .modal-content{
+    padding: 20px;
+    border-radius: 12px;
+}
+
+#terms-condition-modal .modal-header{
+    background: #fff;
+    border: none;
+}
+
+#terms-condition-modal .modal-content .close {
+    color: #430090;
+}
+
+.carousel-text-container ul li{
+    font-family: 'TT Commons Medium';
+}
+
+
+.action-button{
+    background: #EDA900;
+    border: 0;
+    padding: 10px 15px 10px 15px;
+    color: #fff;
+    border-radius: 3px;
+    box-shadow: 0px 0px 6px #460B795F;
+    text-transform: none;
+    font-family: 'TT Commons Medium';
+
+}
+.action-button:hover{
+    color: #fff;
+}
+
+.page-item.disabled a{
+    pointer-events: none;
+}
+
+#toast-container .toast{
+    width: 80%;
+}
+@media (min-width: 768px){
+    #upselling-form .datepicker {
+        width: 300px;
+    }
+}

@@ -1,0 +1,267 @@
+1672155369a:1:{s:22:"home/carousel-trip.htm";a:5:{s:8:"fileName";s:22:"home/carousel-trip.htm";s:7:"content";s:6887:"<!-- style="background-image: url({{'images/background/bgshapes_1.png'|media}})" -->
+<section class="deal-area   rtbgprefix-full bg-hide-md" >
+    <div class="container-fluid p-0">
+       <div class="deal-carosel-active owl-carousel">
+
+            <div class="row single-deal-carosel align-items-center">
+                <div class="col-lg-5 item-left pr-0">
+                    <div class="deal-bg" style="background-image: url({{'navicu/imgs/jpg/VERANO-2.jpg'|media}})">
+                        
+                    </div><!-- /.deal-bg -->
+                </div><!-- /.col-md-6 -->
+                <div class="col-lg-7 item-right">
+                    <div class="carousel-text-container d-flex align-items-start flex-column justify-content-between">
+                        <div class="rt-section-title-wrapper text-white" >
+                            <h4>Disfruta de la magia de Canaima con navicu.com </h4>
+                            
+                            <h2 class="rt-section-title">
+                               
+                                Paquetes turísticos todo incluído
+                            </h2>
+                            
+                            <!-- /.rt-section-title -->
+                            <p class="text-white">
+                                Vive una experiencia única donde tendrás todo incluido en el Campamento Parakaupa,
+                                disfruta de 5 días y 4 noches con salida desde #Caracas  </p>
+                            <h4>Incluye:</h4>
+                            
+                            <p class="text-white">
+                                <ul>
+                                    <li>
+                                        Boleto ida y vuelta desde CCS 
+                                    </li>
+                                    <li>
+                                        Asistencia en aeropuerto de Canaima y Traslados 
+                                    </li>
+                                    <li>
+                                        Cóctel de Bienvenida
+                                    </li>
+                                    <li>
+                                        Excursión: Laguna de Canaima, Salta Sapo y Hacha
+                                    </li>
+                                    <li>
+                                        Habitación con A/A y agua caliente 
+                                    </li>
+                                    <li>
+                                        Comidas con platos típicos venezolanos con bebidas e hidratación 
+                                    </li>
+                                    <li>
+                                        Visita a la comunidad indígena (Cultura Pemón) 
+                                    </li>
+
+                                </ul>
+                                 
+                            </p>
+                            
+                        </div><!-- /.rt-section-title-wrapper -->
+                        <div class="">
+                            {#
+                            <a href="#" class="btn  btn-nav-y1">Comprar</a>
+                            #}
+                            <a 
+                              href="https://navicu.com.ve/post/semana-santa-2022-en-isla-margarita-disfruta-de-unas-vacaciones-espectaculares-con-salida-desde-valencia"
+                              class="btn  btn-nav-p1-outline">Leer más
+                            </a>
+                            
+                        </div>
+                    </div>
+                    
+                </div><!-- /.col-md-6 -->
+            </div><!-- /.row -->
+            <div class="row single-deal-carosel align-items-center">
+                <div class="col-lg-5 item-left pr-0">
+                    <div class="deal-bg" style="background-image: url({{'navicu/imgs/jpg/VERANO-2.jpg'|media}})">
+                        
+                    </div><!-- /.deal-bg -->
+                </div><!-- /.col-md-6 -->
+                <div class="col-lg-7 item-right">
+                    <div class="carousel-text-container d-flex align-items-start flex-column justify-content-between">
+                        <div class="rt-section-title-wrapper text-white" >
+                            <h4>Disfruta de la magia de Canaima con navicu.com </h4>
+                            
+                            <h2 class="rt-section-title">
+                               
+                                Paquetes turísticos todo incluído
+                            </h2>
+                            
+                            <!-- /.rt-section-title -->
+                            <p class="text-white">
+                                Vive una experiencia única donde tendrás todo incluido en el Campamento Parakaupa,
+                                disfruta de 5 días y 4 noches con salida desde #Caracas  </p>
+                            <h4>Incluye:</h4>
+                            
+                            <p class="text-white">
+                                <ul>
+                                    <li>
+                                        Boleto ida y vuelta desde CCS 
+                                    </li>
+                                    <li>
+                                        Asistencia en aeropuerto de Canaima y Traslados 
+                                    </li>
+                                    <li>
+                                        Cóctel de Bienvenida
+                                    </li>
+                                    <li>
+                                        Excursión: Laguna de Canaima, Salta Sapo y Hacha
+                                    </li>
+                                    
+                                </ul>
+                                 
+                            </p>
+                            
+                        </div><!-- /.rt-section-title-wrapper -->
+                        <div class="">
+                            {#
+                            <a href="#" class="btn  btn-nav-y1">Comprar</a>
+                            #}
+                            <a 
+                              href="https://navicu.com.ve/post/semana-santa-2022-en-isla-margarita-disfruta-de-unas-vacaciones-espectaculares-con-salida-desde-valencia"
+                              class="btn  btn-nav-p1-outline">Leer más
+                            </a>
+                            
+                        </div>
+                    </div>
+                    
+                </div><!-- /.col-md-6 -->
+            </div><!-- /.row -->
+           
+       </div><!-- /.deal-carosel-active -->
+    </div><!-- /.container -->
+ </section>
+
+ 
+
+ 
+ 
+ 
+ 
+ ";s:5:"mtime";i:1660850688;s:6:"markup";s:6865:"<!-- style="background-image: url({{'images/background/bgshapes_1.png'|media}})" -->
+<section class="deal-area   rtbgprefix-full bg-hide-md" >
+    <div class="container-fluid p-0">
+       <div class="deal-carosel-active owl-carousel">
+
+            <div class="row single-deal-carosel align-items-center">
+                <div class="col-lg-5 item-left pr-0">
+                    <div class="deal-bg" style="background-image: url({{'navicu/imgs/jpg/VERANO-2.jpg'|media}})">
+                        
+                    </div><!-- /.deal-bg -->
+                </div><!-- /.col-md-6 -->
+                <div class="col-lg-7 item-right">
+                    <div class="carousel-text-container d-flex align-items-start flex-column justify-content-between">
+                        <div class="rt-section-title-wrapper text-white" >
+                            <h4>Disfruta de la magia de Canaima con navicu.com </h4>
+                            
+                            <h2 class="rt-section-title">
+                               
+                                Paquetes turísticos todo incluído
+                            </h2>
+                            
+                            <!-- /.rt-section-title -->
+                            <p class="text-white">
+                                Vive una experiencia única donde tendrás todo incluido en el Campamento Parakaupa,
+                                disfruta de 5 días y 4 noches con salida desde #Caracas  </p>
+                            <h4>Incluye:</h4>
+                            
+                            <p class="text-white">
+                                <ul>
+                                    <li>
+                                        Boleto ida y vuelta desde CCS 
+                                    </li>
+                                    <li>
+                                        Asistencia en aeropuerto de Canaima y Traslados 
+                                    </li>
+                                    <li>
+                                        Cóctel de Bienvenida
+                                    </li>
+                                    <li>
+                                        Excursión: Laguna de Canaima, Salta Sapo y Hacha
+                                    </li>
+                                    <li>
+                                        Habitación con A/A y agua caliente 
+                                    </li>
+                                    <li>
+                                        Comidas con platos típicos venezolanos con bebidas e hidratación 
+                                    </li>
+                                    <li>
+                                        Visita a la comunidad indígena (Cultura Pemón) 
+                                    </li>
+
+                                </ul>
+                                 
+                            </p>
+                            
+                        </div><!-- /.rt-section-title-wrapper -->
+                        <div class="">
+                            {#
+                            <a href="#" class="btn  btn-nav-y1">Comprar</a>
+                            #}
+                            <a 
+                              href="https://navicu.com.ve/post/semana-santa-2022-en-isla-margarita-disfruta-de-unas-vacaciones-espectaculares-con-salida-desde-valencia"
+                              class="btn  btn-nav-p1-outline">Leer más
+                            </a>
+                            
+                        </div>
+                    </div>
+                    
+                </div><!-- /.col-md-6 -->
+            </div><!-- /.row -->
+            <div class="row single-deal-carosel align-items-center">
+                <div class="col-lg-5 item-left pr-0">
+                    <div class="deal-bg" style="background-image: url({{'navicu/imgs/jpg/VERANO-2.jpg'|media}})">
+                        
+                    </div><!-- /.deal-bg -->
+                </div><!-- /.col-md-6 -->
+                <div class="col-lg-7 item-right">
+                    <div class="carousel-text-container d-flex align-items-start flex-column justify-content-between">
+                        <div class="rt-section-title-wrapper text-white" >
+                            <h4>Disfruta de la magia de Canaima con navicu.com </h4>
+                            
+                            <h2 class="rt-section-title">
+                               
+                                Paquetes turísticos todo incluído
+                            </h2>
+                            
+                            <!-- /.rt-section-title -->
+                            <p class="text-white">
+                                Vive una experiencia única donde tendrás todo incluido en el Campamento Parakaupa,
+                                disfruta de 5 días y 4 noches con salida desde #Caracas  </p>
+                            <h4>Incluye:</h4>
+                            
+                            <p class="text-white">
+                                <ul>
+                                    <li>
+                                        Boleto ida y vuelta desde CCS 
+                                    </li>
+                                    <li>
+                                        Asistencia en aeropuerto de Canaima y Traslados 
+                                    </li>
+                                    <li>
+                                        Cóctel de Bienvenida
+                                    </li>
+                                    <li>
+                                        Excursión: Laguna de Canaima, Salta Sapo y Hacha
+                                    </li>
+                                    
+                                </ul>
+                                 
+                            </p>
+                            
+                        </div><!-- /.rt-section-title-wrapper -->
+                        <div class="">
+                            {#
+                            <a href="#" class="btn  btn-nav-y1">Comprar</a>
+                            #}
+                            <a 
+                              href="https://navicu.com.ve/post/semana-santa-2022-en-isla-margarita-disfruta-de-unas-vacaciones-espectaculares-con-salida-desde-valencia"
+                              class="btn  btn-nav-p1-outline">Leer más
+                            </a>
+                            
+                        </div>
+                    </div>
+                    
+                </div><!-- /.col-md-6 -->
+            </div><!-- /.row -->
+           
+       </div><!-- /.deal-carosel-active -->
+    </div><!-- /.container -->
+ </section>";s:4:"code";N;}}

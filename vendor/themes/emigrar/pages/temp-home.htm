@@ -1,0 +1,47 @@
+url = "/"
+layout = "default"
+title = "temp-home"
+meta_title = "Home"
+meta_description = "Meta descripción"
+
+[SearchHandler]
+
+[formSubscribe]
+urlToUnsubscribe = "unsubscribe"
+urlToProfile = "subscriber-profile"
+geo = "disabled"
+thanksMessage = "Gracias por suscribirte"
+errorMessage = "Ya te encuentras suscrito"
+==
+
+
+{% partial 'home/banner-home' %}
+
+{% partial 'home/counter-area' %}
+
+{% partial 'home/services-section' %}
+
+{% partial 'home/carousel-trip' %}
+
+{% partial 'home/home-steps' %}
+
+{% partial 'home/recommended-hotels' %}
+
+{% partial 'home/flights-info' %}
+
+{% partial 'home/action-block' %}
+
+{% partial 'home/carousel-post' %}
+
+{% partial 'home/video-block' %}
+
+{% partial 'home/testimonials' %}
+
+{#
+{% partial 'home/download-block' %}
+#}
+
+{#
+
+#}
+{% partial 'home/partners' %}

@@ -1,0 +1,1 @@
+1672362182a:1:{s:7:"precios";a:3:{s:5:"label";s:7:"Precios";s:4:"view";a:2:{s:4:"list";s:57:"$/hesperiaplugins/hoteles/models/preciofecha/columns.yaml";s:14:"toolbarButtons";s:6:"delete";}s:6:"manage";a:2:{s:4:"form";s:56:"$/hesperiaplugins/hoteles/models/preciofecha/fields.yaml";s:14:"recordsPerPage";i:10;}}}

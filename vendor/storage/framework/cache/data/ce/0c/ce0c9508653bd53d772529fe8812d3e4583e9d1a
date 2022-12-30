@@ -1,0 +1,47 @@
+1672345353a:1:{s:19:"cart/cart-total.htm";a:5:{s:8:"fileName";s:19:"cart/cart-total.htm";s:7:"content";s:724:"{% set cart = CartHandler.getCart() %}
+
+{% set currentCurrency = CurrencyHandler.getCurrentCurrency() %}
+{% set arPrices = CartHandler.getCartPriceArray() %} 
+<div class="rt-sidebar-group pb-4">
+    <div class="rt-widget final-booking">
+
+        <ul>
+            <li class="clearfix equivalent">
+
+                <span>Equivalente</span>
+                <span class="float-right">{{arPrices.VES}} VES</span>
+            </li>
+
+            <li class="clearfix sub-total">
+
+                <span>Total</span>
+                <span class="float-right">{{arPrices.total_price }} <small>{{currentCurrency.acronimo}}</small></span>
+            </li>
+
+        </ul>
+    </div><!-- /.rt-widget -->
+    
+</div>";s:5:"mtime";i:1671815073;s:6:"markup";s:724:"{% set cart = CartHandler.getCart() %}
+
+{% set currentCurrency = CurrencyHandler.getCurrentCurrency() %}
+{% set arPrices = CartHandler.getCartPriceArray() %} 
+<div class="rt-sidebar-group pb-4">
+    <div class="rt-widget final-booking">
+
+        <ul>
+            <li class="clearfix equivalent">
+
+                <span>Equivalente</span>
+                <span class="float-right">{{arPrices.VES}} VES</span>
+            </li>
+
+            <li class="clearfix sub-total">
+
+                <span>Total</span>
+                <span class="float-right">{{arPrices.total_price }} <small>{{currentCurrency.acronimo}}</small></span>
+            </li>
+
+        </ul>
+    </div><!-- /.rt-widget -->
+    
+</div>";s:4:"code";N;}}

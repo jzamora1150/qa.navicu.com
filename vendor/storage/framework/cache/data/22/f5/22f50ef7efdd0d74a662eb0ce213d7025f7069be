@@ -1,0 +1,91 @@
+1672493554a:1:{s:18:"upselling-list.htm";a:9:{s:8:"fileName";s:18:"upselling-list.htm";s:7:"content";s:1411:"url = "/actividades"
+layout = "default"
+title = "upselling-list"
+
+[ListaUpselling]
+==
+{% partial 'banners/upselling-banner' %}
+
+<div class="col-md-12">
+    <div class="d-flex justify-content-center">
+        <div class="tour-title-container ">
+            <h4 class="tour-page-pre-title text-center">
+                Actividades para toda la familia
+            </h4>
+            <h2 class="tour-page-title text-center">
+                
+            </h2>
+            <p class="tour-page-description text-center">
+               
+
+                </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        {% set unitList = ListaUpselling.getList() %}
+
+        {% for upselling in unitList %}
+
+   
+            <div class="col-md-4 mb-5 tour-wrapper">
+                <div class="tour-item">
+                    <a href="{{'upselling'|page({slug:upselling.slug})}}">
+                        <img src="{{upselling.imagen.path}}" alt="{{tour.titulo}}">
+                    </a>
+                    <div class="d-flex justify-content-center">
+                        <a href="{{'upselling'|page({slug:upselling.slug})}}" class="tour-item-link">Ver detalles   <span>→</span> </a>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+       
+        {% endfor %}
+
+    </div>
+</div>";s:5:"mtime";i:1671815073;s:6:"markup";s:1325:"{% partial 'banners/upselling-banner' %}
+
+<div class="col-md-12">
+    <div class="d-flex justify-content-center">
+        <div class="tour-title-container ">
+            <h4 class="tour-page-pre-title text-center">
+                Actividades para toda la familia
+            </h4>
+            <h2 class="tour-page-title text-center">
+                
+            </h2>
+            <p class="tour-page-description text-center">
+               
+
+                </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        {% set unitList = ListaUpselling.getList() %}
+
+        {% for upselling in unitList %}
+
+   
+            <div class="col-md-4 mb-5 tour-wrapper">
+                <div class="tour-item">
+                    <a href="{{'upselling'|page({slug:upselling.slug})}}">
+                        <img src="{{upselling.imagen.path}}" alt="{{tour.titulo}}">
+                    </a>
+                    <div class="d-flex justify-content-center">
+                        <a href="{{'upselling'|page({slug:upselling.slug})}}" class="tour-item-link">Ver detalles   <span>→</span> </a>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+       
+        {% endfor %}
+
+    </div>
+</div>";s:4:"code";N;s:3:"url";s:12:"/actividades";s:6:"layout";s:7:"default";s:5:"title";s:14:"upselling-list";s:14:"ListaUpselling";a:0:{}}}

@@ -1,0 +1,160 @@
+url = "/paquete/:slug"
+layout = "default"
+title = "tour"
+
+[TourPage]
+slug = "{{ :slug }}"
+==
+{% set tour = TourPage.tour %}
+{% set room = tour.habitaciones.first() %}
+{% set item = TourPage.loadItem() %}
+
+{% partial 'banners/tour-banner' %}
+
+<div class="container">
+    <div class="col-md-12">
+        <div class="d-flex justify-content-center">
+            <div class="tour-title-container ">
+                <h4 class="tour-page-pre-title text-center">
+                    Reserva tu próximo viaje
+                </h4>
+                <h2 class="tour-page-title text-center">
+                    {{tour.titulo}}
+                </h2>
+                <p class="tour-page-description text-center">
+                    Conoce los paquetes que hemos seleccionado especialmente para ti
+                    y vive la mejor experiencia durante tu viaje
+                 </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-12">
+        <div class="tour-container">
+            <div class="row">
+            
+                <div class="col-md-4 tour-img">
+                    <img src="{{tour.banner.path}}" class="img-fluid" alt="">
+                </div>
+                   
+                <div class="col-md-8 tour-info">
+                    <form id="tour-form" name="tour-form">
+                        <div class="col-md-12">
+                            <div class="d-flex">
+                                <h4 class="tour-title">
+                                    {{tour.titulo}}
+                                </h4>
+                                
+                                
+                            </div>
+                            <div class="d-flex">
+                                <div class="tour-rules w-100 d-md-flex">
+                                    {# <div class="d-flex">
+                                        <span >
+                                            {{item.getNightsDescription() }} 
+                                        </span>
+                                        
+                                    </div>
+                                    <div class="d-none d-sm-block">
+                                        <span class="custom-separator">·</span>
+                                    </div> #}
+                                    {% if tour.hotel is not empty %}
+                                    <div class="d-flex">
+                                        <span>
+                                            {{tour.hotel.nombre}} 
+                                        </span>
+                                        
+                                    </div>
+                                    <div class="d-none d-sm-block">
+                                        <span class="custom-separator">·</span>
+                                    </div>
+                                    {% endif %}
+                                    <div class="d-flex">
+                                        <span >
+                                            <strong>Salida</strong> {{tour.fecha_desde|date("d-m")}}
+                                            <strong>Retorno</strong> {{tour.fecha_hasta|date("d-m")}}
+                                        </span>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="yellow-separator">
+                                    
+                                </div>
+                            </div>
+
+                            <div class="d-flex">
+                                <div class="d-flex justify-content-around">
+                                    
+                                    <div class="form-group pax-element col-md-4 pl-0">
+                                        <label for="">Adultos</label>
+                                        <select class="form-control pax-control" name="adults" id="adult-select">
+                                            {% for i in 1..TourPage.maxAdults %}
+                                                <option value="{{i}}">{{i}}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                    <div class="form-group pax-element pr-5 col-md-4">
+                                        <label for="">Niños</label>
+                                        <select class="form-control pax-control" name="kids" id="kid-select">
+                                            {% for i in 0..TourPage.maxKids %}
+                                                <option value="{{i}}">{{i}}</option>
+                                            {% endfor %}
+                                        </select>
+                                    </div>
+                                    <div class="form-group px-3 d-flex align-items-end col-md-4 ">
+                                        <button class="round-button tour-quantity" data-action="subs">
+                                            <i class="fas fa-minus fa-xs"></i>
+                                        </button>
+                                        
+                                        <span class="px-3" id="tour-quantity-value" >1</span>
+                                        <input type="hidden" id="tour-quantity" name="quantity" value="1">
+                                        <button class="round-button tour-quantity" data-action="add">
+                                            <i class="fas fa-plus fa-xs"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                               
+                            </div>
+
+                            <div class="d-flex">
+                                <div class="col-md-12 px-0">
+                                    <div class="row">
+                                        <div class="col-md-8" id="tour-description-content">
+                                            {{tour.descripcion|raw}}
+                                        </div>
+                                        {% set arPrices = item.getTourPrices() %}
+                                        <div class="col-md-4 tour-price-container d-flex flex-column justify-content-center">
+                                            {% for price in arPrices %}
+                                            <p id="price-{{price.ocupacion}}" class="justify-content-center price-element align-items-end {{loop.first == false ? 'd-none' : 'd-flex'}}">
+                                                <span class="total-label">TOTAL</span> 
+                                                <span class="amount" data-ref="{{price.total_markup}}">{{price.total_markup}} </span>
+                                                <span class="currency-code"> USD</span>
+                                            </p> 
+                                            {% endfor %}
+                                            <input type="hidden" name="tour_id" value="{{tour.id}}">
+                                            {% if arPrices is not empty %}
+                                            <button class="add-to-cart-tour-button" id="tour-button">Añadir al carrito</button>
+                                            {% endif %}
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                       
+                        
+                        
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+       
+    </div>
+    
+    
+
+</div>

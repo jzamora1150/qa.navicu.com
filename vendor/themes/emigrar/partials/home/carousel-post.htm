@@ -1,0 +1,67 @@
+description = "Más reciente"
+
+[viewBag]
+snippetCode = "mas-reciente"
+snippetName = "Post más reciente"
+snippetProperties[linkblog][title] = "link al blog"
+snippetProperties[linkblog][type] = "checkbox"
+snippetProperties[linkblog][default] = 0
+snippetProperties[linkblog][options][] = ""
+==
+<?php
+function onStart()
+{
+  use Rainlab\Blog\Models\Post;
+    $this['posts'] = Post::isPublished()->orderBy('published_at', 'desc')->get();
+}
+?>
+==
+<!-- style="background-image: url({{'images/background/bgshapes_1.png'|media}})" -->
+<section class="post-area  rtbgprefix-full bg-hide-md" >
+    <div class="container-fluid p-0">
+       <div class="deal-carosel-active owl-carousel">
+            {% for post in posts %}
+            <div class="row single-deal-carosel align-items-center ">
+                <div class="col-lg-5 item-left pr-0">
+                    {% if post.featured_images[0] is not empty %}
+                        {% set postImg = post.featured_images[0].path %}
+                    {% else %}
+                        {% set postImg = 'images/misc/deal-bg.jpg'|media %}
+                    {% endif %}
+                    <div class="deal-bg" style="background-image: url('{{postImg}}')">
+                        
+                    </div><!-- /.deal-bg -->
+                </div><!-- /.col-md-6 -->
+                <div class="col-lg-7 item-right">
+                    <div class="carousel-text-container d-flex align-items-start flex-column justify-content-between">
+                        <div class="rt-section-title-wrapper text-white" >
+                            
+    
+                            <h2 class="rt-section-title">
+                               
+                                {{ post.title }}
+                            </h2><!-- /.rt-section-title -->
+                            
+                            
+                            <p class="pt-3">
+                                {{ str_words(post.summary, 25) }}
+                            </p>
+                            
+                        </div><!-- /.rt-section-title-wrapper -->
+                        <div class="pt-4">
+                           
+                            <a href="{{ 'single-post'|page({slug: post.slug }) }}" class="btn  btn-nav-v1-outline ml-3">Leer más</a>
+                            
+                        </div>
+                    </div>
+                    
+                </div><!-- /.col-md-6 -->
+            </div><!-- /.row -->
+            {% endfor %}
+       </div><!-- /.deal-carosel-active -->
+    </div><!-- /.container -->
+ </section>
+
+
+
+ 

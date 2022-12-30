@@ -1,0 +1,109 @@
+1672493554a:1:{s:10:"search.htm";a:8:{s:8:"fileName";s:10:"search.htm";s:7:"content";s:2005:"url = "/busqueda/:page/:q"
+layout = "default"
+title = "search"
+==
+{% partial "search-banner" %}
+
+
+{% set result = SearchHandler.getHotelsFromRequest() %}
+
+{% set filters = SearchHandler.filters %}
+
+<div class="spacer-bottom"></div><!-- /.spacer-bottom -->
+<section class="content-area" id="search-wrapper" style="min-height: 800px;">
+    
+    <nav id="sidebar" class="col-md-3 d-none d-lg-block pr-0">
+        
+        {% partial 'search-results/filters' filters = filters %}
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="mobile-result-bar w-100 d-flex justify-content-between align-items-center
+            d-flex d-sm-none">
+                
+                <span>
+                    {{searchParams.criteria}} -- {{searchParams.dates}}
+                </span>
+                
+                <span>
+                    editar 
+                    <a href="#" data-toggle="modal" data-target="#side-search-box">
+                        <img src="{{'navicu/imgs/svg/edit-mobile.svg'|media}}" alt="">
+                    </a>
+                </span>
+            
+            </div>
+            <div class="container-fluid">
+                
+                <div class="row">
+                    <div id="results-container" class="col-md-12 pl-0">
+                        <div class="tab-content" id="rt-BototmTab">
+                            <div class="tab-pane show active fade-in-bottom" id="rt-item_b_second" role="tabpanel" aria-labelledby="rt-item_b_second">
+                                <div class="row">
+                                     
+                                    {% partial 'search-results/hotel-results' result = result %}
+        
+                                </div><!-- /.row -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+</section>";s:5:"mtime";i:1671815073;s:6:"markup";s:1935:"{% partial "search-banner" %}
+
+
+{% set result = SearchHandler.getHotelsFromRequest() %}
+
+{% set filters = SearchHandler.filters %}
+
+<div class="spacer-bottom"></div><!-- /.spacer-bottom -->
+<section class="content-area" id="search-wrapper" style="min-height: 800px;">
+    
+    <nav id="sidebar" class="col-md-3 d-none d-lg-block pr-0">
+        
+        {% partial 'search-results/filters' filters = filters %}
+    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="mobile-result-bar w-100 d-flex justify-content-between align-items-center
+            d-flex d-sm-none">
+                
+                <span>
+                    {{searchParams.criteria}} -- {{searchParams.dates}}
+                </span>
+                
+                <span>
+                    editar 
+                    <a href="#" data-toggle="modal" data-target="#side-search-box">
+                        <img src="{{'navicu/imgs/svg/edit-mobile.svg'|media}}" alt="">
+                    </a>
+                </span>
+            
+            </div>
+            <div class="container-fluid">
+                
+                <div class="row">
+                    <div id="results-container" class="col-md-12 pl-0">
+                        <div class="tab-content" id="rt-BototmTab">
+                            <div class="tab-pane show active fade-in-bottom" id="rt-item_b_second" role="tabpanel" aria-labelledby="rt-item_b_second">
+                                <div class="row">
+                                     
+                                    {% partial 'search-results/hotel-results' result = result %}
+        
+                                </div><!-- /.row -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+</section>";s:4:"code";N;s:3:"url";s:18:"/busqueda/:page/:q";s:6:"layout";s:7:"default";s:5:"title";s:6:"search";}}

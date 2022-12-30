@@ -1,0 +1,177 @@
+1672236155a:1:{s:13:"tour-list.htm";a:12:{s:8:"fileName";s:13:"tour-list.htm";s:7:"content";s:2881:"url = "/paquetes"
+layout = "default"
+title = "tour-list"
+meta_title = "Lista de paquetes"
+meta_description = "Esto es una descripción"
+
+[ListaPaquetes]
+
+[ListaUpselling]
+==
+{% partial 'banners/tour-banner' %}
+
+{% set tours = ListaPaquetes.getList() %}
+
+<div class="col-md-12">
+    <div class="d-flex justify-content-center">
+        <div class="tour-title-container ">
+            <h4 class="tour-page-pre-title text-center">
+                Reserva tu próximo viaje
+            </h4>
+            <h2 class="tour-page-title text-center">
+                Vacaciones de Verano Margarita
+            </h2>
+            <p class="tour-page-description text-center">
+                Conoce los paquetes que hemos seleccionado especialmente para ti
+                y vive la mejor experiencia durante tu viaje
+                </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    
+    <div class="row">
+    {% for tour in tours %}
+        
+        <div class="col-md-4 mb-5 tour-wrapper">
+            <div class="tour-item">
+                <a href="{{'tour'|page({slug:tour.slug})}}">
+                    <img src="{{tour.banner.path}}" alt="{{tour.titulo}}">
+                </a>
+                <div class="d-flex justify-content-center">
+                    <a href="{{'tour'|page({slug:tour.slug})}}" class="tour-item-link">Ver detalles   <span>→</span> </a>
+                </div>
+                
+                
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+    {#
+    <div class="row">
+
+        {% set otherTours = ListaPaquetes.getTourByCodes("001,002") %}
+
+        {% for tour in otherTours %}
+
+        <div class="col-md-4 mb-5 tour-wrapper">
+            <div class="tour-item">
+                <a href="{{'tour'|page({slug:tour.slug})}}">
+                    <img src="{{tour.banner.path}}" alt="{{tour.titulo}}">
+                </a>
+                <div class="d-flex justify-content-center">
+                    <a href="{{'tour'|page({slug:tour.slug})}}" class="tour-item-link">Ver detalles   <span>→</span> </a>
+                </div>
+                
+                
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="row">
+        {% set unitList = ListaUpselling.getUpsellingByCodes("003") %}
+
+        {% for tour in unitList %}
+
+        <div class="col-md-4 mb-5 tour-wrapper">
+            <div class="tour-item">
+                <a href="{{'tour'|page({slug:tour.slug})}}">
+                    <img src="{{tour.imagen.path}}" alt="{{tour.titulo}}">
+                </a>
+                <div class="d-flex justify-content-center">
+                    <a href="{{'upselling'|page({slug:tour.slug})}}" class="tour-item-link">Ver detalles   <span>→</span> </a>
+                </div>
+                
+                
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+    #}
+</div>";s:5:"mtime";i:1672147070;s:6:"markup";s:2707:"{% partial 'banners/tour-banner' %}
+
+{% set tours = ListaPaquetes.getList() %}
+
+<div class="col-md-12">
+    <div class="d-flex justify-content-center">
+        <div class="tour-title-container ">
+            <h4 class="tour-page-pre-title text-center">
+                Reserva tu próximo viaje
+            </h4>
+            <h2 class="tour-page-title text-center">
+                Vacaciones de Verano Margarita
+            </h2>
+            <p class="tour-page-description text-center">
+                Conoce los paquetes que hemos seleccionado especialmente para ti
+                y vive la mejor experiencia durante tu viaje
+                </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    
+    <div class="row">
+    {% for tour in tours %}
+        
+        <div class="col-md-4 mb-5 tour-wrapper">
+            <div class="tour-item">
+                <a href="{{'tour'|page({slug:tour.slug})}}">
+                    <img src="{{tour.banner.path}}" alt="{{tour.titulo}}">
+                </a>
+                <div class="d-flex justify-content-center">
+                    <a href="{{'tour'|page({slug:tour.slug})}}" class="tour-item-link">Ver detalles   <span>→</span> </a>
+                </div>
+                
+                
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+    {#
+    <div class="row">
+
+        {% set otherTours = ListaPaquetes.getTourByCodes("001,002") %}
+
+        {% for tour in otherTours %}
+
+        <div class="col-md-4 mb-5 tour-wrapper">
+            <div class="tour-item">
+                <a href="{{'tour'|page({slug:tour.slug})}}">
+                    <img src="{{tour.banner.path}}" alt="{{tour.titulo}}">
+                </a>
+                <div class="d-flex justify-content-center">
+                    <a href="{{'tour'|page({slug:tour.slug})}}" class="tour-item-link">Ver detalles   <span>→</span> </a>
+                </div>
+                
+                
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="row">
+        {% set unitList = ListaUpselling.getUpsellingByCodes("003") %}
+
+        {% for tour in unitList %}
+
+        <div class="col-md-4 mb-5 tour-wrapper">
+            <div class="tour-item">
+                <a href="{{'tour'|page({slug:tour.slug})}}">
+                    <img src="{{tour.imagen.path}}" alt="{{tour.titulo}}">
+                </a>
+                <div class="d-flex justify-content-center">
+                    <a href="{{'upselling'|page({slug:tour.slug})}}" class="tour-item-link">Ver detalles   <span>→</span> </a>
+                </div>
+                
+                
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+    #}
+</div>";s:4:"code";N;s:3:"url";s:9:"/paquetes";s:6:"layout";s:7:"default";s:5:"title";s:9:"tour-list";s:10:"meta_title";s:17:"Lista de paquetes";s:16:"meta_description";s:24:"Esto es una descripción";s:13:"ListaPaquetes";a:0:{}s:14:"ListaUpselling";a:0:{}}}

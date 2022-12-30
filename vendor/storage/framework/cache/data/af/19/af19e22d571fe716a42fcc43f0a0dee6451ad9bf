@@ -1,0 +1,55 @@
+1672233025a:1:{s:23:"banners/tour-banner.htm";a:5:{s:8:"fileName";s:23:"banners/tour-banner.htm";s:7:"content";s:1305:"<div class="rt-breadcump rt-breadcump-height d-none d-sm-block">
+    <div class="rt-page-bg rtbgprefix-cover" style="background-image: url({{'navicu/imgs/jpg/covers/cover-paquetes-navicu.jpg'|media}})">
+    </div><!-- /.rt-page-bg -->
+    <div class="container">
+        <div class="row rt-breadcump-height">
+            <div class="col-12">
+                <div class="breadcrumbs-content">
+                    <h3>Paquetes</h3>
+                    {#
+                    <div class="breadcrumbs">
+                        <span class="divider"><i class="icofont-home"></i></span>
+                        <a href="#" title="Home">Home</a>
+                        <span class="divider">
+                            <i class="icofont-simple-right"></i>
+                        </span>
+                        <a href="#" title="Blog">Paquete</a>
+
+                        <span class="divider">
+                            <i class="icofont-simple-right"></i>
+                        </span>
+                        {{tour.titulo}}
+                    </div><!-- /.breadcrumbs -->
+                    #}
+                </div><!-- /.breadcrumbs-content -->
+            </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</div><!-- /.rt-bredcump -->";s:5:"mtime";i:1671815073;s:6:"markup";s:1305:"<div class="rt-breadcump rt-breadcump-height d-none d-sm-block">
+    <div class="rt-page-bg rtbgprefix-cover" style="background-image: url({{'navicu/imgs/jpg/covers/cover-paquetes-navicu.jpg'|media}})">
+    </div><!-- /.rt-page-bg -->
+    <div class="container">
+        <div class="row rt-breadcump-height">
+            <div class="col-12">
+                <div class="breadcrumbs-content">
+                    <h3>Paquetes</h3>
+                    {#
+                    <div class="breadcrumbs">
+                        <span class="divider"><i class="icofont-home"></i></span>
+                        <a href="#" title="Home">Home</a>
+                        <span class="divider">
+                            <i class="icofont-simple-right"></i>
+                        </span>
+                        <a href="#" title="Blog">Paquete</a>
+
+                        <span class="divider">
+                            <i class="icofont-simple-right"></i>
+                        </span>
+                        {{tour.titulo}}
+                    </div><!-- /.breadcrumbs -->
+                    #}
+                </div><!-- /.breadcrumbs-content -->
+            </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</div><!-- /.rt-bredcump -->";s:4:"code";N;}}

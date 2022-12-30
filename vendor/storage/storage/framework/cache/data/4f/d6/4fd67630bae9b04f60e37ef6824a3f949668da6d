@@ -1,0 +1,524 @@
+1672155369a:1:{s:9:"hotel.htm";a:9:{s:8:"fileName";s:9:"hotel.htm";s:7:"content";s:15846:"url = "/hotel/:slug"
+layout = "default"
+title = "hotel"
+
+[HotelPage]
+slug = "{{ :slug }}"
+==
+<?php
+function onStart(){
+  $this->addJs('assets/vendor/gmapsjs/gmaps.js');
+  //$this->addJs('https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCZylRj0lhbpYyZuVv8grqcizQAVQyCFXQ');
+}
+
+
+?>
+==
+
+{% set hotel = HotelPage.getHotel()  %} 
+
+{% set currentCurrency = CurrencyHandler.getCurrentCurrency() %}
+
+<div class="rt-breadcump rt-breadcump-height d-none d-sm-block">
+    <div class="rt-page-bg rtbgprefix-cover rtbgprefix-cover-room" style="background-image: url({{'navicu/imgs/jpg/covers/cover-hoteles.jpg'|media}})">
+    </div><!-- /.rt-page-bg -->
+    <div class="container">
+        <div class="row rt-breadcump-height">
+            <div class="col-12">
+                <div class="breadcrumbs-content">
+                    <h3>{{hotel.nombre}}</h3>
+                </div><!-- /.breadcrumbs-content -->
+            </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</div><!-- /.rt-bredcump -->
+<section class="content-area" id="hotel-main-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mx-auto mt-5 mt-lg-0 pb-4">
+                <div class="hotel-inner-content landing-hotel-inner-content">
+                    <h5 class="f-size-18 rt-medium">{{hotel.nombre}} - {{hotel.city.name}}</h5>
+                     <p>
+                        {% if hotel.estrellas > 0 %}
+                        <span class="star-rating">
+                            {% for i in 0.. hotel.estrellas -1 %}
+                            <img src="{{'navicu/imgs/svg/fill-star-nv.svg'|media}}" alt="{{atributo.nombre}}" class="hotel-star">
+                            {% endfor %}
+                            
+                        </span>
+                        {% endif %}
+
+                    </p>
+                    <p class="hotel-description f-size-14 text-333">{{hotel.descripcion}}</p>
+                    {% set atributos = hotel.atributos %}
+                    
+                    <div class="d-flex flex-wrap pt-3">
+                        {% for atributo in atributos |sort((a, b) => a.pivot.orden <=> b.pivot.orden) %}
+                       
+                        <div class="pr-4 d-flex align-items-center">
+                            <span class="d-block">
+                                {% if atributo.icon.path is not null %}
+                                    {% set path = atributo.icon.path %}
+                                    <img src="{{path}}" alt="{{atributo.nombre}}" class="attribute-icon">
+                                    
+                               
+                                {% endif %}
+                                {{atributo.nombre}}
+                                
+                            </span>
+                        </div>
+                        {% endfor  %}
+                    </div>
+                </div><!-- /.hotel-text -->
+            </div><!-- /.col-lg-5 -->
+            <div class="col-lg-12 mx-auto d-none d-sm-block">
+                <div class="rt-duel-slider-main rt-mb-30">
+                    {% for image in hotel.galeria %}
+                    <div class="single-main rtbgprefix-cover" style="background-image: url('{{image.path}}')">
+                        
+                    </div><!-- /.single-main -->
+                    {% endfor %}
+                    
+                </div><!-- /.rt-duel-slider-main -->
+                <div class="rt-duel-slider-thumb">
+                    {% for image in hotel.galeria %}
+                        <div class="single--thumb rtbgprefix-cover" style="background-image: url('{{image.path}}')"></div><!-- /.single-thumb -->
+                    {% endfor %}
+                    
+                    
+                </div><!-- /.rt-duel-slider-thumb -->
+            </div><!-- /.col-lg-7 -->
+            <div class="col-lg-10 mx-auto d-block d-sm-none">
+                    <div class="tiny-slider">
+                        {% for image in hotel.galeria %}
+                        <div class="mobile-hotel-gallery-item">
+                            
+                            <img class="img-fluid" src="{{image.path}}">
+                           
+                        </div>
+                        {% endfor %}
+                    </div>
+            </div>
+        </div><!-- /.row -->
+        <div class="row">
+            <div class="col-12 pt-4">
+                <div class="hotel-tabs">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="rt-itm_1" role="tabpanel" aria-labelledby="rt-itm_1-tab">
+                            <div class="flight-list-box rt-mb-30">
+                                <div class="inner-content rt-pl-15 hotel-information-raw">
+                                    {{hotel.informacion|raw}}
+                                </div><!-- /.inner-content -->
+                            </div><!-- /.flight-list-box -->
+                            <div class="col-md-12  justify-content-between d-flex d-sm-none" id="edit-dates-container">
+                                {{searchParams.dates}} 
+                                <span>editar 
+                                    <a  data-toggle="collapse" href="#search-room-container">
+                                        <img src="{{'navicu/imgs/svg/edit-mobile.svg'|media}}" alt="">
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="rt-mb-30 collapse d-sm-none d-md-block" id="search-room-container">
+                                <div class="inner-content rt-pl-15">
+                                    <form class="hotel-search-bar" id="hotel-dates-form">
+                                    <ul class="rt-list d-flex flex-lg-row flex-column justify-content-start align-items-center">
+
+                                        <li class="rt-pt-8 col-md-3 d-flex align-items-center"> 
+                                            <h5>Elige tus fechas de alojamiento</h5>
+                                        </li>
+                                        <li class="rt-pt-8 col-md-5 rt-input-group">
+                                            <div class="single-input w-100">
+                                                <input type="text" autocomplete="off" onkeypress="return false;" value="{{searchParams.dates}}" id="calendar-input" name="dates"
+                                                    class="form-control rt-date-picker has-icon calendar-input" placeholder="Elige tus fechas">
+                                                <span class="input-iconbadge"><i class="icofont-ui-calendar"></i></span>
+                                                </div>
+                                        </li> 
+                                            <li class="rt-pt-8 col-md-3 text-center">
+                                                <input type="hidden" value="{{hotel.slug}}" name="slug">
+                                            <button type="submit" class="change-dates-button">Modificar fechas</button>
+                                            </li>
+                                    </ul>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="box-style__1 rt-light-gray rt-mb-30 rooms-main-container">
+                                {% for habitacion in hotel.habitaciones %}
+
+                                {% set pricesArray = HotelPage.getRoomPrices(habitacion.id) %} 
+
+                                
+                                {% set minPrice = pricesArray.min_price %}
+                                
+                                <!-- Button trigger modal -->
+                                <!-- Modal -->
+                                
+                                <div class="row grey-room-body">
+                                    <div class="col-md-5 col-lg-3 pl-0" id="room-{{habitacion.id}}-left-side">
+                                        
+                                       
+                                        <div class="rtbgprefix-cover-room px-3" 
+                                        style="background-image: url({{habitacion.foto_portada.path}})"></div><!-- /.hote-room -->
+                                            
+                                    </div><!-- /.col-md-3 -->
+                                    <div class="col-md-12 col-lg-9 pb-4" id="room-{{habitacion.id}}-right-side"> 
+                                        
+                                        <div class="row" >
+                                            <div class="col-lg-12 col-md-6 room-info-container pt-4">
+                                                <h5 class="">{{habitacion.nombre}} <small class="room-capacity">Capacidad para {{habitacion.capacidad}} personas</small></h5>
+                                                <p>{{habitacion.descripcion}} </p> 
+                                            </div><!-- /.col-lg-12 -->
+                                            
+                                            <div class="col-lg-9 d-flex flex-wrap pt-3">
+                                                {% for atributo in habitacion.atributos |sort((a, b) => a.pivot.orden <=> b.pivot.orden) %}
+                                               
+                                                <div class="col">
+                                                    <span class="d-block">
+                                                        {% if atributo.icon.path is not null %}
+                                                            {% set path = atributo.icon.path %}
+                                                            <img src="{{path}}" alt="{{atributo.nombre}}" class="attribute-icon">
+                                                        {% endif %}
+                                                        
+                                                       
+                                                    </span>
+                                                </div>
+                                                {% endfor  %}
+                                            </div>
+                                            <div class="col-lg-3">
+                                                {% if minPrice is not empty %}
+                                                    
+                                                    <div class="pb-2 room-min-price-container text-right">
+                                                        
+                                                        <span class="">
+                                                            <small>Desde</small> {{minPrice.total_markup}} {{currentCurrency.acronimo}}
+                                                        </span>
+                                                        
+                                                    </div>
+                                                    <div class="text-right">
+                                                        <form class="hotel-room-form" data-roomid="{{habitacion.id}}">
+                                                            <input type="hidden" name="dates" value="{{searchParams.dates}}">
+                                                            <input type="hidden" name="room_id" value="{{habitacion.id}}">
+                                                            <input type="hidden" name="capacity" value="{{habitacion.capacidad}}">
+                                                            <!-- data-target="#booking-modal" -->
+                                                            <button type="submit" class="room-modal-trigger-btn pl-5 pr-5"
+                                                               data-toggle="modal">
+                                                                RESERVAR
+                                                            </button>
+                                                        </form>
+                                                        
+                                                        
+                                                    </div>
+                                                        
+                                                    
+                                                {% else %}
+                                                   
+                                                    <div class="alert rt-alrt-1">
+                                                        <div class="media">
+                                                            <i class="icofont-close-circled mr-2"></i>
+                                                            <div class="media-body mt-1">
+                                                                <h6 class="mt-0 rt-semiblod">No disponible</h6>
+                                                                
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                {% endif %}
+                                            </div>
+                                        </div><!-- /.row -->
+                                        
+                                    </div><!-- /.col-md-9 -->
+                                    <div class="col-md-12 py-3" id="room-{{habitacion.id}}-container">
+                                        {#
+                                        {% partial 'hotel/room-form' %}
+                                        #}
+                                    </div>
+                                </div><!-- /.row -->
+                                
+                                {% endfor %}
+                            </div><!-- /.flight-list-box -->
+
+                            {% if hotel.latitud != "" and hotel.longitud !=""%}
+                                {% partial 'hotel/map-section' item = hotel %}
+                            {% endif %}
+                            {#
+                            <div class="googleMap">
+                                
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29220.818804296498!2d90.37472176549844!3d23.72589036448156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8d73a64e709%3A0x65a4e99bd5bb0ebd!2sOld%20Dhaka%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1570045602199!5m2!1sen!2sbd"
+                                    width="100%" height="292" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                            </div>
+                            #}
+                        </div>
+                    </div>
+                </div><!-- /.hotel-tabs -->
+            </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+        
+        
+    </div><!-- /.container -->
+</section>
+
+
+<div class="modal-wrapper">
+    <div class="modal fade" id="room-booking-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document" id="modal-body-container">
+            
+        </div>
+    </div>
+</div>";s:5:"mtime";i:1662676868;s:6:"markup";s:15527:"{% set hotel = HotelPage.getHotel()  %} 
+
+{% set currentCurrency = CurrencyHandler.getCurrentCurrency() %}
+
+<div class="rt-breadcump rt-breadcump-height d-none d-sm-block">
+    <div class="rt-page-bg rtbgprefix-cover rtbgprefix-cover-room" style="background-image: url({{'navicu/imgs/jpg/covers/cover-hoteles.jpg'|media}})">
+    </div><!-- /.rt-page-bg -->
+    <div class="container">
+        <div class="row rt-breadcump-height">
+            <div class="col-12">
+                <div class="breadcrumbs-content">
+                    <h3>{{hotel.nombre}}</h3>
+                </div><!-- /.breadcrumbs-content -->
+            </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</div><!-- /.rt-bredcump -->
+<section class="content-area" id="hotel-main-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mx-auto mt-5 mt-lg-0 pb-4">
+                <div class="hotel-inner-content landing-hotel-inner-content">
+                    <h5 class="f-size-18 rt-medium">{{hotel.nombre}} - {{hotel.city.name}}</h5>
+                     <p>
+                        {% if hotel.estrellas > 0 %}
+                        <span class="star-rating">
+                            {% for i in 0.. hotel.estrellas -1 %}
+                            <img src="{{'navicu/imgs/svg/fill-star-nv.svg'|media}}" alt="{{atributo.nombre}}" class="hotel-star">
+                            {% endfor %}
+                            
+                        </span>
+                        {% endif %}
+
+                    </p>
+                    <p class="hotel-description f-size-14 text-333">{{hotel.descripcion}}</p>
+                    {% set atributos = hotel.atributos %}
+                    
+                    <div class="d-flex flex-wrap pt-3">
+                        {% for atributo in atributos |sort((a, b) => a.pivot.orden <=> b.pivot.orden) %}
+                       
+                        <div class="pr-4 d-flex align-items-center">
+                            <span class="d-block">
+                                {% if atributo.icon.path is not null %}
+                                    {% set path = atributo.icon.path %}
+                                    <img src="{{path}}" alt="{{atributo.nombre}}" class="attribute-icon">
+                                    
+                               
+                                {% endif %}
+                                {{atributo.nombre}}
+                                
+                            </span>
+                        </div>
+                        {% endfor  %}
+                    </div>
+                </div><!-- /.hotel-text -->
+            </div><!-- /.col-lg-5 -->
+            <div class="col-lg-12 mx-auto d-none d-sm-block">
+                <div class="rt-duel-slider-main rt-mb-30">
+                    {% for image in hotel.galeria %}
+                    <div class="single-main rtbgprefix-cover" style="background-image: url('{{image.path}}')">
+                        
+                    </div><!-- /.single-main -->
+                    {% endfor %}
+                    
+                </div><!-- /.rt-duel-slider-main -->
+                <div class="rt-duel-slider-thumb">
+                    {% for image in hotel.galeria %}
+                        <div class="single--thumb rtbgprefix-cover" style="background-image: url('{{image.path}}')"></div><!-- /.single-thumb -->
+                    {% endfor %}
+                    
+                    
+                </div><!-- /.rt-duel-slider-thumb -->
+            </div><!-- /.col-lg-7 -->
+            <div class="col-lg-10 mx-auto d-block d-sm-none">
+                    <div class="tiny-slider">
+                        {% for image in hotel.galeria %}
+                        <div class="mobile-hotel-gallery-item">
+                            
+                            <img class="img-fluid" src="{{image.path}}">
+                           
+                        </div>
+                        {% endfor %}
+                    </div>
+            </div>
+        </div><!-- /.row -->
+        <div class="row">
+            <div class="col-12 pt-4">
+                <div class="hotel-tabs">
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="rt-itm_1" role="tabpanel" aria-labelledby="rt-itm_1-tab">
+                            <div class="flight-list-box rt-mb-30">
+                                <div class="inner-content rt-pl-15 hotel-information-raw">
+                                    {{hotel.informacion|raw}}
+                                </div><!-- /.inner-content -->
+                            </div><!-- /.flight-list-box -->
+                            <div class="col-md-12  justify-content-between d-flex d-sm-none" id="edit-dates-container">
+                                {{searchParams.dates}} 
+                                <span>editar 
+                                    <a  data-toggle="collapse" href="#search-room-container">
+                                        <img src="{{'navicu/imgs/svg/edit-mobile.svg'|media}}" alt="">
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="rt-mb-30 collapse d-sm-none d-md-block" id="search-room-container">
+                                <div class="inner-content rt-pl-15">
+                                    <form class="hotel-search-bar" id="hotel-dates-form">
+                                    <ul class="rt-list d-flex flex-lg-row flex-column justify-content-start align-items-center">
+
+                                        <li class="rt-pt-8 col-md-3 d-flex align-items-center"> 
+                                            <h5>Elige tus fechas de alojamiento</h5>
+                                        </li>
+                                        <li class="rt-pt-8 col-md-5 rt-input-group">
+                                            <div class="single-input w-100">
+                                                <input type="text" autocomplete="off" onkeypress="return false;" value="{{searchParams.dates}}" id="calendar-input" name="dates"
+                                                    class="form-control rt-date-picker has-icon calendar-input" placeholder="Elige tus fechas">
+                                                <span class="input-iconbadge"><i class="icofont-ui-calendar"></i></span>
+                                                </div>
+                                        </li> 
+                                            <li class="rt-pt-8 col-md-3 text-center">
+                                                <input type="hidden" value="{{hotel.slug}}" name="slug">
+                                            <button type="submit" class="change-dates-button">Modificar fechas</button>
+                                            </li>
+                                    </ul>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="box-style__1 rt-light-gray rt-mb-30 rooms-main-container">
+                                {% for habitacion in hotel.habitaciones %}
+
+                                {% set pricesArray = HotelPage.getRoomPrices(habitacion.id) %} 
+
+                                
+                                {% set minPrice = pricesArray.min_price %}
+                                
+                                <!-- Button trigger modal -->
+                                <!-- Modal -->
+                                
+                                <div class="row grey-room-body">
+                                    <div class="col-md-5 col-lg-3 pl-0" id="room-{{habitacion.id}}-left-side">
+                                        
+                                       
+                                        <div class="rtbgprefix-cover-room px-3" 
+                                        style="background-image: url({{habitacion.foto_portada.path}})"></div><!-- /.hote-room -->
+                                            
+                                    </div><!-- /.col-md-3 -->
+                                    <div class="col-md-12 col-lg-9 pb-4" id="room-{{habitacion.id}}-right-side"> 
+                                        
+                                        <div class="row" >
+                                            <div class="col-lg-12 col-md-6 room-info-container pt-4">
+                                                <h5 class="">{{habitacion.nombre}} <small class="room-capacity">Capacidad para {{habitacion.capacidad}} personas</small></h5>
+                                                <p>{{habitacion.descripcion}} </p> 
+                                            </div><!-- /.col-lg-12 -->
+                                            
+                                            <div class="col-lg-9 d-flex flex-wrap pt-3">
+                                                {% for atributo in habitacion.atributos |sort((a, b) => a.pivot.orden <=> b.pivot.orden) %}
+                                               
+                                                <div class="col">
+                                                    <span class="d-block">
+                                                        {% if atributo.icon.path is not null %}
+                                                            {% set path = atributo.icon.path %}
+                                                            <img src="{{path}}" alt="{{atributo.nombre}}" class="attribute-icon">
+                                                        {% endif %}
+                                                        
+                                                       
+                                                    </span>
+                                                </div>
+                                                {% endfor  %}
+                                            </div>
+                                            <div class="col-lg-3">
+                                                {% if minPrice is not empty %}
+                                                    
+                                                    <div class="pb-2 room-min-price-container text-right">
+                                                        
+                                                        <span class="">
+                                                            <small>Desde</small> {{minPrice.total_markup}} {{currentCurrency.acronimo}}
+                                                        </span>
+                                                        
+                                                    </div>
+                                                    <div class="text-right">
+                                                        <form class="hotel-room-form" data-roomid="{{habitacion.id}}">
+                                                            <input type="hidden" name="dates" value="{{searchParams.dates}}">
+                                                            <input type="hidden" name="room_id" value="{{habitacion.id}}">
+                                                            <input type="hidden" name="capacity" value="{{habitacion.capacidad}}">
+                                                            <!-- data-target="#booking-modal" -->
+                                                            <button type="submit" class="room-modal-trigger-btn pl-5 pr-5"
+                                                               data-toggle="modal">
+                                                                RESERVAR
+                                                            </button>
+                                                        </form>
+                                                        
+                                                        
+                                                    </div>
+                                                        
+                                                    
+                                                {% else %}
+                                                   
+                                                    <div class="alert rt-alrt-1">
+                                                        <div class="media">
+                                                            <i class="icofont-close-circled mr-2"></i>
+                                                            <div class="media-body mt-1">
+                                                                <h6 class="mt-0 rt-semiblod">No disponible</h6>
+                                                                
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                {% endif %}
+                                            </div>
+                                        </div><!-- /.row -->
+                                        
+                                    </div><!-- /.col-md-9 -->
+                                    <div class="col-md-12 py-3" id="room-{{habitacion.id}}-container">
+                                        {#
+                                        {% partial 'hotel/room-form' %}
+                                        #}
+                                    </div>
+                                </div><!-- /.row -->
+                                
+                                {% endfor %}
+                            </div><!-- /.flight-list-box -->
+
+                            {% if hotel.latitud != "" and hotel.longitud !=""%}
+                                {% partial 'hotel/map-section' item = hotel %}
+                            {% endif %}
+                            {#
+                            <div class="googleMap">
+                                
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29220.818804296498!2d90.37472176549844!3d23.72589036448156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8d73a64e709%3A0x65a4e99bd5bb0ebd!2sOld%20Dhaka%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1570045602199!5m2!1sen!2sbd"
+                                    width="100%" height="292" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                            </div>
+                            #}
+                        </div>
+                    </div>
+                </div><!-- /.hotel-tabs -->
+            </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+        
+        
+    </div><!-- /.container -->
+</section>
+
+
+<div class="modal-wrapper">
+    <div class="modal fade" id="room-booking-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document" id="modal-body-container">
+            
+        </div>
+    </div>
+</div>";s:4:"code";s:203:"
+function onStart(){
+  $this->addJs('assets/vendor/gmapsjs/gmaps.js');
+  //$this->addJs('https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyCZylRj0lhbpYyZuVv8grqcizQAVQyCFXQ');
+}
+
+";s:3:"url";s:12:"/hotel/:slug";s:6:"layout";s:7:"default";s:5:"title";s:5:"hotel";s:9:"HotelPage";a:1:{s:4:"slug";s:11:"{{ :slug }}";}}}

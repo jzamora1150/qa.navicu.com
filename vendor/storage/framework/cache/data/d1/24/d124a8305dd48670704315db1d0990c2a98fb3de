@@ -1,0 +1,76 @@
+1672493554a:1:{s:13:"temp-home.htm";a:12:{s:8:"fileName";s:13:"temp-home.htm";s:7:"content";s:836:"url = "/"
+layout = "default"
+title = "temp-home"
+meta_title = "Home"
+meta_description = "Meta descripción"
+
+[SearchHandler]
+
+[formSubscribe]
+urlToUnsubscribe = "unsubscribe"
+urlToProfile = "subscriber-profile"
+geo = "disabled"
+thanksMessage = "Gracias por suscribirte"
+errorMessage = "Ya te encuentras suscrito"
+==
+
+
+{% partial 'home/banner-home' %}
+
+{% partial 'home/counter-area' %}
+
+{% partial 'home/services-section' %}
+
+{% partial 'home/carousel-trip' %}
+
+{% partial 'home/home-steps' %}
+
+{% partial 'home/recommended-hotels' %}
+
+{% partial 'home/flights-info' %}
+
+{% partial 'home/action-block' %}
+
+{% partial 'home/carousel-post' %}
+
+{% partial 'home/video-block' %}
+
+{% partial 'home/testimonials' %}
+
+{#
+{% partial 'home/download-block' %}
+#}
+
+{#
+
+#}
+{% partial 'home/partners' %}";s:5:"mtime";i:1671815073;s:6:"markup";s:501:"{% partial 'home/banner-home' %}
+
+{% partial 'home/counter-area' %}
+
+{% partial 'home/services-section' %}
+
+{% partial 'home/carousel-trip' %}
+
+{% partial 'home/home-steps' %}
+
+{% partial 'home/recommended-hotels' %}
+
+{% partial 'home/flights-info' %}
+
+{% partial 'home/action-block' %}
+
+{% partial 'home/carousel-post' %}
+
+{% partial 'home/video-block' %}
+
+{% partial 'home/testimonials' %}
+
+{#
+{% partial 'home/download-block' %}
+#}
+
+{#
+
+#}
+{% partial 'home/partners' %}";s:4:"code";N;s:3:"url";s:1:"/";s:6:"layout";s:7:"default";s:5:"title";s:9:"temp-home";s:10:"meta_title";s:4:"Home";s:16:"meta_description";s:17:"Meta descripción";s:13:"SearchHandler";a:0:{}s:13:"formSubscribe";a:5:{s:16:"urlToUnsubscribe";s:11:"unsubscribe";s:12:"urlToProfile";s:18:"subscriber-profile";s:3:"geo";s:8:"disabled";s:13:"thanksMessage";s:23:"Gracias por suscribirte";s:12:"errorMessage";s:25:"Ya te encuentras suscrito";}}}

@@ -1,0 +1,475 @@
+1672499202a:1:{s:22:"home/carousel-trip.htm";a:5:{s:8:"fileName";s:22:"home/carousel-trip.htm";s:7:"content";s:13886:"<!-- style="background-image: url({{'images/background/bgshapes_1.png'|media}})" -->
+<section class="deal-area   rtbgprefix-full bg-hide-md" >
+    <div class="container-fluid p-0">
+       <div class="deal-carosel-active owl-carousel">
+
+            <div class="row single-deal-carosel align-items-center">
+                <div class="col-lg-5 item-left pr-0">
+                    <div class="deal-bg" style="background-image: url({{'navicu/imgs/jpg/Web1.jpg'|media}})">
+                        
+                    </div><!-- /.deal-bg -->
+                </div><!-- /.col-md-6 -->
+                <div class="col-lg-7 item-right">
+                    <div class="carousel-text-container d-flex align-items-start flex-column justify-content-between">
+                        <div class="rt-section-title-wrapper text-white" >
+                           {# <h4>Disfruta de la magia de Canaima con navicu.com </h4>#}
+                            
+                            <h2 class="rt-section-title">
+                               Fin de año desde Caracas 
+                            </h2>
+                            
+                            <!-- /.rt-section-title -->
+                            <p class="text-white">  Año nuevo en Margarita navicu.com</p>
+                             <p class="text-white"> En este fin de año viaja al Caribe, a la Isla de Margarita, donde podrá explorar las hermosas arenas blancas y las cristalinas aguas turquesas. Esta promoción por tiempo limitado es su oportunidad de escaparse con sus seres queridos o amigos y disfrutar de una semana de Año Nuevo de diversión y relajación.</p>
+                            <p class="text-white">   Al adquirir nuestra promoción de Año Nuevo, podrás disfrutar:</p>
+                            <p class="text-white">
+                                <ul>
+                                    <li>
+                                        ● 6 días y 5 noches con hospedaje todo incluido
+                                    </li>
+                                    <li>
+                                        ● Vuelo Ida y vuelta desde Caracas
+                                    </li>
+                                    <li>
+                                       ● Traslado Aeropuerto - Hotel - Aeropuerto y mucho más
+                                    </li>
+                                </ul> 
+                          </p>
+                           <p class="text-white">
+                              Para más información contáctanos a nuestros WhatsApp Business:<br><br>
+                              - Oficina Valencia: 04140340934<br>- Oficina Maracay: 0414034093
+
+                            </p>
+                            
+                        </div><!-- /.rt-section-title-wrapper -->
+                        <div class="">
+                            
+                            {# <a 
+                              href="https://navicu.com.ve/post/semana-santa-2022-en-isla-margarita-disfruta-de-unas-vacaciones-espectaculares-con-salida-desde-valencia"
+                              class="btn  btn-nav-p1-outline">Leer más
+                            </a>#}
+                            
+                        </div>
+                    </div>
+                    
+                </div><!-- /.col-md-6 -->
+            </div><!-- /.row -->
+            <div class="row single-deal-carosel align-items-center">
+                <div class="col-lg-5 item-left pr-0">
+                    <div class="deal-bg" style="background-image: url({{'navicu/imgs/jpg/Web4.jpg'|media}})">
+                        
+                    </div><!-- /.deal-bg -->
+                </div><!-- /.col-md-6 -->
+                <div class="col-lg-7 item-right">
+                    <div class="carousel-text-container d-flex align-items-start flex-column justify-content-between">
+                        <div class="rt-section-title-wrapper text-white" >
+                            {#<h4>Disfruta de la magia de Canaima con navicu.com </h4>#}
+                            
+                            <h2 class="rt-section-title">
+                               Vamos a Margarita con navicu.com
+                            </h2>
+                            
+                            <!-- /.rt-section-title -->
+                            <p class="text-white">
+                           Experimente la magia caribeña de Isla Margarita
+                            </p>
+                            <p class="text-white">
+                               Descubre las espectaculares vistas de la isla, sumérgete en las aguas cristalinas, pasea por las playas vírgenes y únete a la cultura vibrante de este paraíso tropical con nuestra promoción “Vamos a Margarita con navicu.com”  
+                            </p>
+                            <p class="text-white">
+                            Por 4 días y 3 noches podrás disfrutar de:
+                            </p>
+                            <p class="text-white">
+                                <ul>
+                                    <li>
+                                        ● Boletos aéreos Ida y Vuelta desde Caracas
+                                    </li>
+                                    <li>
+                                        ● Hospedaje todo incluido
+                                    </li>
+                                    <li>
+                                        ● Desayuno, almuerzo y cena garantizados
+                                    </li>
+                                    <li>
+                                        ● Modalidad pago en cuotas y mucho más.
+                                    </li>
+                                </ul>
+                             </p>
+                            <p class="text-white">
+                           
+                           Para más información contáctanos a nuestros WhatsApp Business:<br><br>
+
+                           - Oficina Valencia: 04140340934<br>  - Oficina Maracay: 04140340933<br>
+                            </p>
+                            
+                        </div><!-- /.rt-section-title-wrapper -->
+                        <div class="">
+                            {#
+                            <a href="#" class="btn  btn-nav-y1">Comprar</a>
+                            #}
+                             {# <a 
+                              href="https://navicu.com.ve/post/semana-santa-2022-en-isla-margarita-disfruta-de-unas-vacaciones-espectaculares-con-salida-desde-valencia"
+                              class="btn  btn-nav-p1-outline">Leer más
+                            </a>#}
+                            
+                        </div>
+                    </div>
+                    
+                </div><!-- /.col-md-6 -->
+            </div><!-- /.row -->
+
+            <div class="row single-deal-carosel align-items-center">
+                <div class="col-lg-5 item-left pr-0">
+                    <div class="deal-bg" style="background-image: url({{'navicu/imgs/jpg/Web3.jpg'|media}})">
+                        
+                    </div><!-- /.deal-bg -->
+                </div><!-- /.col-md-6 -->
+                <div class="col-lg-7 item-right">
+                    <div class="carousel-text-container d-flex align-items-start flex-column justify-content-between">
+                        <div class="rt-section-title-wrapper text-white" >
+                            {#<h4>Disfruta de la magia de Canaima con navicu.com </h4>#}
+                            
+                            <h2 class="rt-section-title">
+                              Bogotá 
+                            </h2>
+                            
+                            <!-- /.rt-section-title -->
+                            <p class="text-white">
+                                Viaje a Bogotá, Colombia, y descubra una ciudad bulliciosa y metropolitana con su intrigante cultura y la gente más amable del mundo. Vea hermosas calles, parques y plazas públicas, grandes zonas verdes y edificios de una arquitectura moderna a un precio que sólo navicu.com te puede ofrecer.
+                            </p>
+                             <p class="text-white">
+                                Al adquirir nuestra promo “Vuela a Bogotá con navicu.com” podrás disfrutar de: 
+                            </p>
+                            <p class="text-white">
+                                <ul>
+                                    <li>
+                                       ● Vuelo directo con Turpial Airlines 
+                                    </li>
+                                    <li>
+                                        ● Salida desde Caracas
+                                    </li>
+                                    <li>
+                                        ● 23 Kg de Bodega y 5 Kg de equipaje de mano y mucho más. 
+                                    </li>
+                                </ul>
+                             </p>
+                            <p class="text-white">
+                            Para más información contáctanos a nuestros WhatsApp Business: <br><br>
+                            - Oficina Valencia: 04140340934<br> - Oficina Valencia: 04140340934 
+                            </p>
+                            
+                        </div><!-- /.rt-section-title-wrapper -->
+                        <div class="">
+                            {#
+                            <a href="#" class="btn  btn-nav-y1">Comprar</a>
+                            #}
+                             {# <a 
+                              href="https://navicu.com.ve/post/semana-santa-2022-en-isla-margarita-disfruta-de-unas-vacaciones-espectaculares-con-salida-desde-valencia"
+                              class="btn  btn-nav-p1-outline">Leer más
+                            </a>#}
+                            
+                        </div>
+                    </div>
+                    
+                </div><!-- /.col-md-6 -->
+            </div><!-- /.row -->
+
+            <div class="row single-deal-carosel align-items-center">
+                <div class="col-lg-5 item-left pr-0">
+                    <div class="deal-bg" style="background-image: url({{'navicu/imgs/jpg/Web2.jpg'|media}})">
+                        
+                    </div><!-- /.deal-bg -->
+                </div><!-- /.col-md-6 -->
+                <div class="col-lg-7 item-right">
+                    <div class="carousel-text-container d-flex align-items-start flex-column justify-content-between">
+                        <div class="rt-section-title-wrapper text-white" >
+                            {#<h4>Disfruta de la magia de Canaima con navicu.com </h4>#}
+                            
+                            <h2 class="rt-section-title">
+                               
+                               Reyes Magos en Margarita 
+                            </h2>
+                            
+                            <!-- /.rt-section-title -->
+                            <p class="text-white">
+                                Isla Margarita, un paraíso de playas bellas y exuberante vegetación tropical, es la escapada perfecta para cualquiera que busque unas vacaciones tranquilas en este principio de año.
+                            </p>
+                            <p class="text-white">
+                               Todo esto lo podrás disfrutar con nuestra promoción "Reyes Magos en Margarita" tiene todo lo necesario para un viaje a la isla lleno de diversión, incluyendo vuelos de ida y vuelta desde Valencia a Isla Margarita, alojamiento en los más exclusivos hoteles y muchas sorpresas más.
+                            </p>
+                            <p class="text-white">
+                            Aparte de todo lo mencionado, también tendrás: 
+                            </p>
+                            
+                            <p class="text-white">
+                                <ul>
+                                    <li>
+                                       ● 4 Días y 3 Noches todo incluido
+                                    </li>
+                                    <li>
+                                        ● Desayuno incluido, entre otros 
+                                    </li>
+                                </ul>
+                             </p>
+                            <p class="text-white">
+                           
+                            Para más información contáctanos a nuestros WhatsApp Business: <br> <br>
+                            - Oficina Valencia: 04140340934 <br> - Oficina Maracay: 04140340933 
+                            </p>
+                            
+                        </div><!-- /.rt-section-title-wrapper -->
+                        <div class="">
+                            {#
+                            <a href="#" class="btn  btn-nav-y1">Comprar</a>
+                            #}
+                            {# <a 
+                              href="https://navicu.com.ve/post/semana-santa-2022-en-isla-margarita-disfruta-de-unas-vacaciones-espectaculares-con-salida-desde-valencia"
+                              class="btn  btn-nav-p1-outline">Leer más
+                            </a>#}
+                            
+                        </div>
+                    </div>
+                    
+                </div><!-- /.col-md-6 -->
+            </div><!-- /.row -->
+           
+       </div><!-- /.deal-carosel-active -->
+    </div><!-- /.container -->
+ </section>";s:5:"mtime";i:1672404100;s:6:"markup";s:13886:"<!-- style="background-image: url({{'images/background/bgshapes_1.png'|media}})" -->
+<section class="deal-area   rtbgprefix-full bg-hide-md" >
+    <div class="container-fluid p-0">
+       <div class="deal-carosel-active owl-carousel">
+
+            <div class="row single-deal-carosel align-items-center">
+                <div class="col-lg-5 item-left pr-0">
+                    <div class="deal-bg" style="background-image: url({{'navicu/imgs/jpg/Web1.jpg'|media}})">
+                        
+                    </div><!-- /.deal-bg -->
+                </div><!-- /.col-md-6 -->
+                <div class="col-lg-7 item-right">
+                    <div class="carousel-text-container d-flex align-items-start flex-column justify-content-between">
+                        <div class="rt-section-title-wrapper text-white" >
+                           {# <h4>Disfruta de la magia de Canaima con navicu.com </h4>#}
+                            
+                            <h2 class="rt-section-title">
+                               Fin de año desde Caracas 
+                            </h2>
+                            
+                            <!-- /.rt-section-title -->
+                            <p class="text-white">  Año nuevo en Margarita navicu.com</p>
+                             <p class="text-white"> En este fin de año viaja al Caribe, a la Isla de Margarita, donde podrá explorar las hermosas arenas blancas y las cristalinas aguas turquesas. Esta promoción por tiempo limitado es su oportunidad de escaparse con sus seres queridos o amigos y disfrutar de una semana de Año Nuevo de diversión y relajación.</p>
+                            <p class="text-white">   Al adquirir nuestra promoción de Año Nuevo, podrás disfrutar:</p>
+                            <p class="text-white">
+                                <ul>
+                                    <li>
+                                        ● 6 días y 5 noches con hospedaje todo incluido
+                                    </li>
+                                    <li>
+                                        ● Vuelo Ida y vuelta desde Caracas
+                                    </li>
+                                    <li>
+                                       ● Traslado Aeropuerto - Hotel - Aeropuerto y mucho más
+                                    </li>
+                                </ul> 
+                          </p>
+                           <p class="text-white">
+                              Para más información contáctanos a nuestros WhatsApp Business:<br><br>
+                              - Oficina Valencia: 04140340934<br>- Oficina Maracay: 0414034093
+
+                            </p>
+                            
+                        </div><!-- /.rt-section-title-wrapper -->
+                        <div class="">
+                            
+                            {# <a 
+                              href="https://navicu.com.ve/post/semana-santa-2022-en-isla-margarita-disfruta-de-unas-vacaciones-espectaculares-con-salida-desde-valencia"
+                              class="btn  btn-nav-p1-outline">Leer más
+                            </a>#}
+                            
+                        </div>
+                    </div>
+                    
+                </div><!-- /.col-md-6 -->
+            </div><!-- /.row -->
+            <div class="row single-deal-carosel align-items-center">
+                <div class="col-lg-5 item-left pr-0">
+                    <div class="deal-bg" style="background-image: url({{'navicu/imgs/jpg/Web4.jpg'|media}})">
+                        
+                    </div><!-- /.deal-bg -->
+                </div><!-- /.col-md-6 -->
+                <div class="col-lg-7 item-right">
+                    <div class="carousel-text-container d-flex align-items-start flex-column justify-content-between">
+                        <div class="rt-section-title-wrapper text-white" >
+                            {#<h4>Disfruta de la magia de Canaima con navicu.com </h4>#}
+                            
+                            <h2 class="rt-section-title">
+                               Vamos a Margarita con navicu.com
+                            </h2>
+                            
+                            <!-- /.rt-section-title -->
+                            <p class="text-white">
+                           Experimente la magia caribeña de Isla Margarita
+                            </p>
+                            <p class="text-white">
+                               Descubre las espectaculares vistas de la isla, sumérgete en las aguas cristalinas, pasea por las playas vírgenes y únete a la cultura vibrante de este paraíso tropical con nuestra promoción “Vamos a Margarita con navicu.com”  
+                            </p>
+                            <p class="text-white">
+                            Por 4 días y 3 noches podrás disfrutar de:
+                            </p>
+                            <p class="text-white">
+                                <ul>
+                                    <li>
+                                        ● Boletos aéreos Ida y Vuelta desde Caracas
+                                    </li>
+                                    <li>
+                                        ● Hospedaje todo incluido
+                                    </li>
+                                    <li>
+                                        ● Desayuno, almuerzo y cena garantizados
+                                    </li>
+                                    <li>
+                                        ● Modalidad pago en cuotas y mucho más.
+                                    </li>
+                                </ul>
+                             </p>
+                            <p class="text-white">
+                           
+                           Para más información contáctanos a nuestros WhatsApp Business:<br><br>
+
+                           - Oficina Valencia: 04140340934<br>  - Oficina Maracay: 04140340933<br>
+                            </p>
+                            
+                        </div><!-- /.rt-section-title-wrapper -->
+                        <div class="">
+                            {#
+                            <a href="#" class="btn  btn-nav-y1">Comprar</a>
+                            #}
+                             {# <a 
+                              href="https://navicu.com.ve/post/semana-santa-2022-en-isla-margarita-disfruta-de-unas-vacaciones-espectaculares-con-salida-desde-valencia"
+                              class="btn  btn-nav-p1-outline">Leer más
+                            </a>#}
+                            
+                        </div>
+                    </div>
+                    
+                </div><!-- /.col-md-6 -->
+            </div><!-- /.row -->
+
+            <div class="row single-deal-carosel align-items-center">
+                <div class="col-lg-5 item-left pr-0">
+                    <div class="deal-bg" style="background-image: url({{'navicu/imgs/jpg/Web3.jpg'|media}})">
+                        
+                    </div><!-- /.deal-bg -->
+                </div><!-- /.col-md-6 -->
+                <div class="col-lg-7 item-right">
+                    <div class="carousel-text-container d-flex align-items-start flex-column justify-content-between">
+                        <div class="rt-section-title-wrapper text-white" >
+                            {#<h4>Disfruta de la magia de Canaima con navicu.com </h4>#}
+                            
+                            <h2 class="rt-section-title">
+                              Bogotá 
+                            </h2>
+                            
+                            <!-- /.rt-section-title -->
+                            <p class="text-white">
+                                Viaje a Bogotá, Colombia, y descubra una ciudad bulliciosa y metropolitana con su intrigante cultura y la gente más amable del mundo. Vea hermosas calles, parques y plazas públicas, grandes zonas verdes y edificios de una arquitectura moderna a un precio que sólo navicu.com te puede ofrecer.
+                            </p>
+                             <p class="text-white">
+                                Al adquirir nuestra promo “Vuela a Bogotá con navicu.com” podrás disfrutar de: 
+                            </p>
+                            <p class="text-white">
+                                <ul>
+                                    <li>
+                                       ● Vuelo directo con Turpial Airlines 
+                                    </li>
+                                    <li>
+                                        ● Salida desde Caracas
+                                    </li>
+                                    <li>
+                                        ● 23 Kg de Bodega y 5 Kg de equipaje de mano y mucho más. 
+                                    </li>
+                                </ul>
+                             </p>
+                            <p class="text-white">
+                            Para más información contáctanos a nuestros WhatsApp Business: <br><br>
+                            - Oficina Valencia: 04140340934<br> - Oficina Valencia: 04140340934 
+                            </p>
+                            
+                        </div><!-- /.rt-section-title-wrapper -->
+                        <div class="">
+                            {#
+                            <a href="#" class="btn  btn-nav-y1">Comprar</a>
+                            #}
+                             {# <a 
+                              href="https://navicu.com.ve/post/semana-santa-2022-en-isla-margarita-disfruta-de-unas-vacaciones-espectaculares-con-salida-desde-valencia"
+                              class="btn  btn-nav-p1-outline">Leer más
+                            </a>#}
+                            
+                        </div>
+                    </div>
+                    
+                </div><!-- /.col-md-6 -->
+            </div><!-- /.row -->
+
+            <div class="row single-deal-carosel align-items-center">
+                <div class="col-lg-5 item-left pr-0">
+                    <div class="deal-bg" style="background-image: url({{'navicu/imgs/jpg/Web2.jpg'|media}})">
+                        
+                    </div><!-- /.deal-bg -->
+                </div><!-- /.col-md-6 -->
+                <div class="col-lg-7 item-right">
+                    <div class="carousel-text-container d-flex align-items-start flex-column justify-content-between">
+                        <div class="rt-section-title-wrapper text-white" >
+                            {#<h4>Disfruta de la magia de Canaima con navicu.com </h4>#}
+                            
+                            <h2 class="rt-section-title">
+                               
+                               Reyes Magos en Margarita 
+                            </h2>
+                            
+                            <!-- /.rt-section-title -->
+                            <p class="text-white">
+                                Isla Margarita, un paraíso de playas bellas y exuberante vegetación tropical, es la escapada perfecta para cualquiera que busque unas vacaciones tranquilas en este principio de año.
+                            </p>
+                            <p class="text-white">
+                               Todo esto lo podrás disfrutar con nuestra promoción "Reyes Magos en Margarita" tiene todo lo necesario para un viaje a la isla lleno de diversión, incluyendo vuelos de ida y vuelta desde Valencia a Isla Margarita, alojamiento en los más exclusivos hoteles y muchas sorpresas más.
+                            </p>
+                            <p class="text-white">
+                            Aparte de todo lo mencionado, también tendrás: 
+                            </p>
+                            
+                            <p class="text-white">
+                                <ul>
+                                    <li>
+                                       ● 4 Días y 3 Noches todo incluido
+                                    </li>
+                                    <li>
+                                        ● Desayuno incluido, entre otros 
+                                    </li>
+                                </ul>
+                             </p>
+                            <p class="text-white">
+                           
+                            Para más información contáctanos a nuestros WhatsApp Business: <br> <br>
+                            - Oficina Valencia: 04140340934 <br> - Oficina Maracay: 04140340933 
+                            </p>
+                            
+                        </div><!-- /.rt-section-title-wrapper -->
+                        <div class="">
+                            {#
+                            <a href="#" class="btn  btn-nav-y1">Comprar</a>
+                            #}
+                            {# <a 
+                              href="https://navicu.com.ve/post/semana-santa-2022-en-isla-margarita-disfruta-de-unas-vacaciones-espectaculares-con-salida-desde-valencia"
+                              class="btn  btn-nav-p1-outline">Leer más
+                            </a>#}
+                            
+                        </div>
+                    </div>
+                    
+                </div><!-- /.col-md-6 -->
+            </div><!-- /.row -->
+           
+       </div><!-- /.deal-carosel-active -->
+    </div><!-- /.container -->
+ </section>";s:4:"code";N;}}

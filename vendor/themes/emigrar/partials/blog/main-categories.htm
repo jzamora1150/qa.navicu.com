@@ -1,0 +1,19 @@
+[blogCategories]
+slug = "{{ :slug }}"
+displayEmpty = 1
+categoryPage = "blog"
+==
+<div class="widget widget_categories">
+    <h4>Categorías</h4>
+    <ul>
+        {% for category  in blogCategories.categories %}
+        
+        <li>
+            <a href="{{ 'blog-category'|page({slug: category.slug }) }}">
+            {{category.name}}
+        </a> <span>({{category.posts|length}})</span>
+        </li>
+        {% endfor %}
+        
+    </ul>
+</div><!-- ./  single widget -->

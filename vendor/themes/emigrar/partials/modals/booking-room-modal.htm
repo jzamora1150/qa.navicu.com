@@ -1,0 +1,86 @@
+
+{% set currentCurrency = CurrencyHandler.getCurrentCurrency() %}
+
+
+<div class="modal-content">
+    <form class="room-modal-form">
+    <div class="modal-header">
+        <h5 class="modal-title pl-3">Deluxe cama king</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body ">
+        
+            <div class="row py-3 px-3">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Elige tu régimen de comidas</label>
+                        <select class="form-control room-modal-select" name="regime" id="modal-regime-select">
+                        {% for arRegime in regimenList %}
+                            <option value="{{arRegime.id}}">{{arRegime.name}}</option>
+                        {% endfor %}                        
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label>Elige tu ocupación</label>
+                        <select class="form-control room-modal-select" name="pax" id="modal-pax-select">
+                        {% for arPax in paxList %}
+                            <option value="{{arPax.pax}}" >{{arPax.pax_description}}</option>
+                        {% endfor %}
+                        </select>
+                    </div> 
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-12">
+          
+                    {% for arRegime in regimenList %}
+                    <div class="media single-tour {{loop.index != 1 ? 'd-none' }} regime-info" id="room-modal-regime-info-{{arRegime.id}}">
+                        <div class="icon-thumb rt-mr-23">
+                            <img src="{{arRegime.icon.path}}">
+                        </div><!-- /.icon-thumb -->
+                        <div class="media-body">
+                            <span class="d-block f-size-16 text-333 rt-strong">{{arRegime.name}}</span>
+                            <span class="d-block f-size-14 primary-color rt-medium title-font">
+                                {{arRegime.description}}
+                            </span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                {% for key, price in prices %}
+               
+                <div class="col-md-12 {{loop.index != 1 ? 'd-none' }} room-modal-price" id="room-modal-price-{{key}}">
+                    <p class="text-center">
+                        {% if price.total_markup > 0 %}
+                        <span class="d-block modal-total-text">
+                            <small>Total</small> {{price.total_markup}} {{currentCurrency.acronimo}}
+                        </span>
+                        {% else %}
+                        <span class="d-block modal-total-text">
+                            Precio no disponible
+                        </span>
+                        {% endif %}
+                    </p>
+                    
+                    
+                </div>
+                {% endfor %}
+            </div>
+        
+    </div>
+    <div class="modal-footer">
+        <input type="hidden" name="room_id" value="{{room_id}}">
+        <button type="submit" class="add-to-cart">
+            Añadir al carrito
+        </button>
+    </div>
+    </form>
+</div>

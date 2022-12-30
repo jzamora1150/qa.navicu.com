@@ -1,0 +1,259 @@
+1672155369a:1:{s:11:"contact.htm";a:9:{s:8:"fileName";s:11:"contact.htm";s:7:"content";s:5860:"url = "/contacto"
+layout = "default"
+title = "contact"
+
+[contactForm]
+==
+<div class="rt-breadcump rt-breadcump-height blog-banner-container">
+    <div class="rt-page-bg rtbgprefix-cover" style="background-image: url({{'navicu/imgs/jpg/covers/cover-contacto.jpg'|media}})">
+    </div><!-- /.rt-page-bg -->
+    <div class="container">
+        <div class="row rt-breadcump-height">
+            <div class="col-12">
+                <div class="breadcrumbs-content">
+                    <h3>Contáctanos para planificar tu próxima aventura</h3>
+                    {#
+                    <div class="breadcrumbs">
+                        <span class="divider"><i class="icofont-home"></i></span>
+                        <a href="#" title="Home">Home</a>
+                        <span class="divider">
+                            <i class="icofont-simple-right"></i>
+                        </span>
+                        <a href="#" title="Blog">Paquete</a>
+
+                        <span class="divider">
+                            <i class="icofont-simple-right"></i>
+                        </span>
+                        {{tour.titulo}}
+                    </div><!-- /.breadcrumbs -->
+                    #}
+                </div><!-- /.breadcrumbs-content -->
+            </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</div><!-- /.rt-bredcump -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="">
+
+                <h5 class="host-label">Nuestros agentes están listos para hacer realidad tu viaje</h5>
+                
+                <form id="contact-form" class="rt-form rt-line-form flight-lable pt-4 contact-form">
+                    <div class="row">
+                        <div class="col-md-12 rt-mb-30 ">
+                            <input type="text" class="form-control" name="name" placeholder="Nombre">
+                        </div>
+                        <div class="col-md-12 rt-mb-30">
+                            <input type="text" class="form-control" name="email" placeholder="Correo">
+                        </div>
+                        <div class="col-md-12 rt-mb-30">
+                            <input type="text" class="form-control" name="message" placeholder="Mensaje">
+                        </div>
+                        <div class="col-md-12 rt-mb-30">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" name="terms" class="custom-control-input" id="terms">
+                                <label class="custom-control-label pl-2" for="terms">
+                                    Acepto las <a href="#" data-toggle="modal" data-target="#terms-condition-modal">condiciones de uso y las políticas de privacidad</a>
+                                </label>
+                              </div>
+                        </div>
+                    </div><!-- /.row -->
+
+                    <div class="d-flex">
+                        <div class="col-md-12 text-left pl-0 d-flex justify-content-between pr-0">
+
+                            <button type="submit" class="contact-form-button contact-action-button">Enviar</button>
+
+                            <a href="https://wa.me/584140340934" class="btn whatsapp-gradient-button contact-action-button
+                            d-block d-sm-none"> 
+                                <img src="{{'images/misc/whatsapp-white.png'|media}}" alt="">
+                                Abrir chat
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6 d-none d-sm-none d-md-block">
+            <img class="img-fluid" src="{{'navicu/imgs/png/background-contact.png'|media}}" alt="">
+        </div>
+    </div>
+    <div class="row pb-5 d-none d-sm-none d-md-flex">
+        <a href="https://wa.me/584140340934" class="btn whatsapp-gradient-button mx-auto"> 
+            <img src="{{'images/misc/whatsapp-white.png'|media}}" alt="">
+            Abrir chat
+        </a>
+    </div>
+    <div class="row d-flex align-items-stretch">
+        <div class="col-md-4 mb-5">
+            <div class="contact-item text-center d-flex align-items-center flex-column 
+            justify-content-between">
+                <img src="{{'navicu/imgs/svg/pin-contact.svg'|media}}" alt="">
+                <h4>
+                    Direccion
+                </h4>
+                <p>
+                    Av. Salvador Feo La Cruz - Torre WTC Piso 3 - Naguanagua, Carabobo VE
+                </p>
+            </div>
+            
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="contact-item text-center d-flex align-items-center flex-column 
+            justify-content-between">
+                <img src="{{'navicu/imgs/svg/phone-contact.svg'|media}}" alt="">
+                <h4>
+                    Teléfono y correo
+                </h4>
+                <p>
+                    +58 414 034 09 34 - + 58 414 034 09 33 <br> preguntas@navicu.com
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5" >
+            <div class="contact-item text-center d-flex justify-content-center">
+                <div class="align-self-center">
+                    <img src="{{'navicu/imgs/svg/whatsapp-contact.svg'|media}}" class="my-auto" alt="">
+                    <h3 class="my-auto">
+                        Whatsapp
+                    </h3>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row pt-5">
+        {% partial 'home/partners' %}
+    </div>
+</div>";s:5:"mtime";i:1662769586;s:6:"markup";s:5781:"<div class="rt-breadcump rt-breadcump-height blog-banner-container">
+    <div class="rt-page-bg rtbgprefix-cover" style="background-image: url({{'navicu/imgs/jpg/covers/cover-contacto.jpg'|media}})">
+    </div><!-- /.rt-page-bg -->
+    <div class="container">
+        <div class="row rt-breadcump-height">
+            <div class="col-12">
+                <div class="breadcrumbs-content">
+                    <h3>Contáctanos para planificar tu próxima aventura</h3>
+                    {#
+                    <div class="breadcrumbs">
+                        <span class="divider"><i class="icofont-home"></i></span>
+                        <a href="#" title="Home">Home</a>
+                        <span class="divider">
+                            <i class="icofont-simple-right"></i>
+                        </span>
+                        <a href="#" title="Blog">Paquete</a>
+
+                        <span class="divider">
+                            <i class="icofont-simple-right"></i>
+                        </span>
+                        {{tour.titulo}}
+                    </div><!-- /.breadcrumbs -->
+                    #}
+                </div><!-- /.breadcrumbs-content -->
+            </div><!-- /.col-12 -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</div><!-- /.rt-bredcump -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="">
+
+                <h5 class="host-label">Nuestros agentes están listos para hacer realidad tu viaje</h5>
+                
+                <form id="contact-form" class="rt-form rt-line-form flight-lable pt-4 contact-form">
+                    <div class="row">
+                        <div class="col-md-12 rt-mb-30 ">
+                            <input type="text" class="form-control" name="name" placeholder="Nombre">
+                        </div>
+                        <div class="col-md-12 rt-mb-30">
+                            <input type="text" class="form-control" name="email" placeholder="Correo">
+                        </div>
+                        <div class="col-md-12 rt-mb-30">
+                            <input type="text" class="form-control" name="message" placeholder="Mensaje">
+                        </div>
+                        <div class="col-md-12 rt-mb-30">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" name="terms" class="custom-control-input" id="terms">
+                                <label class="custom-control-label pl-2" for="terms">
+                                    Acepto las <a href="#" data-toggle="modal" data-target="#terms-condition-modal">condiciones de uso y las políticas de privacidad</a>
+                                </label>
+                              </div>
+                        </div>
+                    </div><!-- /.row -->
+
+                    <div class="d-flex">
+                        <div class="col-md-12 text-left pl-0 d-flex justify-content-between pr-0">
+
+                            <button type="submit" class="contact-form-button contact-action-button">Enviar</button>
+
+                            <a href="https://wa.me/584140340934" class="btn whatsapp-gradient-button contact-action-button
+                            d-block d-sm-none"> 
+                                <img src="{{'images/misc/whatsapp-white.png'|media}}" alt="">
+                                Abrir chat
+                            </a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6 d-none d-sm-none d-md-block">
+            <img class="img-fluid" src="{{'navicu/imgs/png/background-contact.png'|media}}" alt="">
+        </div>
+    </div>
+    <div class="row pb-5 d-none d-sm-none d-md-flex">
+        <a href="https://wa.me/584140340934" class="btn whatsapp-gradient-button mx-auto"> 
+            <img src="{{'images/misc/whatsapp-white.png'|media}}" alt="">
+            Abrir chat
+        </a>
+    </div>
+    <div class="row d-flex align-items-stretch">
+        <div class="col-md-4 mb-5">
+            <div class="contact-item text-center d-flex align-items-center flex-column 
+            justify-content-between">
+                <img src="{{'navicu/imgs/svg/pin-contact.svg'|media}}" alt="">
+                <h4>
+                    Direccion
+                </h4>
+                <p>
+                    Av. Salvador Feo La Cruz - Torre WTC Piso 3 - Naguanagua, Carabobo VE
+                </p>
+            </div>
+            
+        </div>
+        <div class="col-md-4 mb-5">
+            <div class="contact-item text-center d-flex align-items-center flex-column 
+            justify-content-between">
+                <img src="{{'navicu/imgs/svg/phone-contact.svg'|media}}" alt="">
+                <h4>
+                    Teléfono y correo
+                </h4>
+                <p>
+                    +58 414 034 09 34 - + 58 414 034 09 33 <br> preguntas@navicu.com
+                </p>
+            </div>
+        </div>
+        <div class="col-md-4 mb-5" >
+            <div class="contact-item text-center d-flex justify-content-center">
+                <div class="align-self-center">
+                    <img src="{{'navicu/imgs/svg/whatsapp-contact.svg'|media}}" class="my-auto" alt="">
+                    <h3 class="my-auto">
+                        Whatsapp
+                    </h3>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row pt-5">
+        {% partial 'home/partners' %}
+    </div>
+</div>";s:4:"code";N;s:3:"url";s:9:"/contacto";s:6:"layout";s:7:"default";s:5:"title";s:7:"contact";s:11:"contactForm";a:0:{}}}

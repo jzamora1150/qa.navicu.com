@@ -1,0 +1,49 @@
+url = "/actividades"
+layout = "default"
+title = "upselling-list"
+
+[ListaUpselling]
+==
+{% partial 'banners/upselling-banner' %}
+
+<div class="col-md-12">
+    <div class="d-flex justify-content-center">
+        <div class="tour-title-container ">
+            <h4 class="tour-page-pre-title text-center">
+                Actividades para toda la familia
+            </h4>
+            <h2 class="tour-page-title text-center">
+                
+            </h2>
+            <p class="tour-page-description text-center">
+               
+
+                </p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        {% set unitList = ListaUpselling.getList() %}
+
+        {% for upselling in unitList %}
+
+   
+            <div class="col-md-4 mb-5 tour-wrapper">
+                <div class="tour-item">
+                    <a href="{{'upselling'|page({slug:upselling.slug})}}">
+                        <img src="{{upselling.imagen.path}}" alt="{{tour.titulo}}">
+                    </a>
+                    <div class="d-flex justify-content-center">
+                        <a href="{{'upselling'|page({slug:upselling.slug})}}" class="tour-item-link">Ver detalles   <span>→</span> </a>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+       
+        {% endfor %}
+
+    </div>
+</div>

@@ -1,0 +1,186 @@
+
+{% set arPrices = obReservation.getArPrecios() %}
+{% set obMoneda = obReservation.moneda %}
+
+{% set arEquivalent = CurrencyHandler.getEquivalentArray(arPrices.total_markup) %}
+
+{% if obReservation.status.id == 2 %}
+<div class="rt-sidebar-group pb-4">
+    <div class="rt-widget final-booking">
+
+        <ul>
+            <li>
+                <div id="created_at" class="d-flex justify-content-center w-100 mb-2" data-date="{{obReservation.fecha_vigencia|date('m/d/Y g:i:s a','America/Caracas')}}" data-created="{{obReservation.created_at|date('m/d/Y g:i:s a','America/Caracas')}}">
+                    <p class="text-center">
+                        Tiempo restante para realizar el pago <br>
+
+                        <strong>
+    
+                            <span id="clock"></span>
+            
+                        </strong>
+                       
+                    </p>
+                </div>
+                
+            </li>
+            <li class="clearfix">
+              
+                <span>N° de Reserva</span>
+                <span class="float-right">{{obReservation.id}}</span>
+            </li>
+            <li class="clearfix">
+              
+                <span>Status</span>
+                <span class="float-right">{{obReservation.status.status}}</span>
+            </li>
+            {#
+            <li class="clearfix">
+              
+                <span>Equivalente</span>
+                <span class="float-right">{{arEquivalent.VES}} VES</span>
+            </li>
+            #}
+            <li class="clearfix sub-total">
+
+                <span>Total</span>
+                <span class="float-right">{{arPrices.total_markup }} <small>{{obMoneda.acronimo}}</small></span>
+            </li>
+
+        </ul>
+    </div><!-- /.rt-widget -->
+    
+</div>
+{% endif %}
+    <!-- desk-->
+    <div class="flt-dtls-box rt-mb-30 d-none d-sm-none d-md-block">
+        <div class="upper-top-content d-md-flex flex-md-row justify-content-md-between align-items-center">
+            <div class="left">
+                
+                <span>{{obReservation.hotel.nombre}}</span>
+                
+            </div><!-- /.left -->
+            <!-- /.right -->
+        </div><!-- /.upper-top-content -->
+        {% for detalle in obReservation.detalles %}
+        <div class="flight-list-box">
+            <div class="hotel-inner-content row pb-2">
+                
+                <div class="hotel-text col-md-12">
+    
+                   <div class="footer3-elements">
+                       {#
+                       <a href="#" data-code="{{hotel.hotel_id}}-{{loop.index0}}" class="remove-from-cart">
+                        <span><i class="icofont-close"></i></span>
+                       </a>
+                       #}
+                       {% set obHabitacion = detalle.habitacion %}
+                       <span class="d-block heading-color-1 rt-strong">{{obHabitacion.nombre}}</span>
+                       
+                           <div class="clearfix f-size-12 text-555">
+                               <span class="float-left ">Ocupación</span>
+                               <span class="float-right">{{obHabitacion.getOcupacion(detalle.ocupacion)}}</span>
+                            </div>
+                           <div class="clearfix f-size-12 text-555">
+                               <span class="float-left">Régimen</span>
+                               <span class="float-right">{{detalle.regimen.nombre}}</span>
+                            </div>
+                            <div class="clearfix f-size-12 text-555">
+                                <span class="float-left">Check-in</span>
+                                <span class="float-right">{{obReservation.checkin|date("d-m-Y")}}</span>
+                             </div>
+                             <div class="clearfix f-size-12 text-555">
+                                <span class="float-left">Check-out</span>
+                                <span class="float-right">{{obReservation.checkout|date("d-m-Y")}}</span>
+                             </div>
+                             <div class="clearfix room-price">
+                                <span class="float-left">Precio</span>
+                                <span class="float-right rt-strong">{{detalle.precio}} {{obMoneda.acronimo}}</span>
+                             </div>
+                          
+                            
+                       
+                   </div><!-- /.footer3-elements -->
+                </div><!-- /.hotel-text -->
+            </div><!-- /.hotel-inner-content -->
+            {#
+            <div class="rt-divider style-three"></div>
+            #}
+        </div><!-- /.flight-list-box -->
+        {% endfor %}
+       
+    </div>
+    <!-- end desk-->
+
+    <!-- mobile -->
+
+    <div class="row pt-5 pb-5 d-block d-sm-none" style="margin-top: 65px;">
+        <div class="col-md-12 text-center">
+            <a  data-toggle="collapse" href="#resume-mobile-container"  class="yellow-pill-button">Detalles de la reserva</a>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="flt-dtls-box rt-mb-30 d-sm-none collapse" id="resume-mobile-container">
+            <div class="upper-top-content d-md-flex flex-md-row justify-content-md-between align-items-center">
+                <div class="left">
+                    
+                    <span>{{obReservation.hotel.nombre}}</span>
+                    
+                </div><!-- /.left -->
+                <!-- /.right -->
+            </div><!-- /.upper-top-content -->
+            {% for detalle in obReservation.detalles %}
+            <div class="flight-list-box">
+                <div class="hotel-inner-content row pb-2">
+                    
+                    <div class="hotel-text col-md-12">
+        
+                       <div class="footer3-elements">
+                           {#
+                           <a href="#" data-code="{{hotel.hotel_id}}-{{loop.index0}}" class="remove-from-cart">
+                            <span><i class="icofont-close"></i></span>
+                           </a>
+                           #}
+                           {% set obHabitacion = detalle.habitacion %}
+                           <span class="d-block heading-color-1 rt-strong">{{obHabitacion.nombre}}</span>
+                           
+                               <div class="clearfix f-size-12 text-555">
+                                   <span class="float-left ">Ocupación</span>
+                                   <span class="float-right">{{obHabitacion.getOcupacion(detalle.ocupacion)}}</span>
+                                </div>
+                               <div class="clearfix f-size-12 text-555">
+                                   <span class="float-left">Régimen</span>
+                                   <span class="float-right">{{detalle.regimen.nombre}}</span>
+                                </div>
+                                <div class="clearfix f-size-12 text-555">
+                                    <span class="float-left">Check-in</span>
+                                    <span class="float-right">{{obReservation.checkin|date("d-m-Y")}}</span>
+                                 </div>
+                                 <div class="clearfix f-size-12 text-555">
+                                    <span class="float-left">Check-out</span>
+                                    <span class="float-right">{{obReservation.checkout|date("d-m-Y")}}</span>
+                                 </div>
+                                 <div class="clearfix room-price">
+                                    <span class="float-left">Precio</span>
+                                    <span class="float-right rt-strong">{{detalle.precio}} {{obMoneda.acronimo}}</span>
+                                 </div>
+                              
+                                
+                           
+                       </div><!-- /.footer3-elements -->
+                    </div><!-- /.hotel-text -->
+                </div><!-- /.hotel-inner-content -->
+                {#
+                <div class="rt-divider style-three"></div>
+                #}
+            </div><!-- /.flight-list-box -->
+            {% endfor %}
+           
+        </div>
+    </div>
+    
+    <!-- end mobile -->
+    
+
+    
+

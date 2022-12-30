@@ -1,0 +1,489 @@
+1672155385a:1:{s:32:"search-results/hotel-results.htm";a:6:{s:8:"fileName";s:32:"search-results/hotel-results.htm";s:7:"content";s:11986:"[Pagination]
+count_per_page = 10
+pagination_limit = 5
+active_class = "active"
+first_button_name = "First"
+first_button_limit = 1
+first-more_button_name = "..."
+first-more_button_limit = 1
+prev_button_name = "Prev"
+prev_button_limit = 1
+prev-more_button_name = "..."
+prev-more_button_limit = 1
+next-more_button_name = "..."
+next-more_button_limit = 1
+next_button_name = "Next"
+next_button_limit = 1
+last-more_button_name = "..."
+last-more_button_limit = 1
+last_button_name = "Last"
+last_button_limit = 1
+==
+
+<!-- 
+
+    <a href="{{'hotel'|page({ slug: model.slug })  }}?{{SearchHandler.getDatesFromUrl()}}"></a>
+-->
+{% set currentCurrency = CurrencyHandler.getCurrentCurrency() %}
+<div class="col-xl-9 col-lg-12 mt-lg-0 d-none d-sm-none d-md-block">
+    <h5 class="text-left hotel-result-count pt-2 pb-2">Hoteles encontrados: {{SearchHandler.getCount()}}</h5>
+</div>
+<div class="col-sm-12 d-block d-sm-none d-flex justify-content-between
+    align-items-center mt-3">
+    <h5 class="text-left hotel-result-count pt-2 pb-2 mt-3">Hoteles encontrados: {{SearchHandler.getCount()}}</h5>
+    
+    <img src="{{'navicu/imgs/svg/filter-mobile.svg'|media}}" alt="">
+    
+</div>
+<div class="col-xl-9 col-lg-12 mt-3 mt-lg-0">
+    {% for hotel in result %}
+        
+        
+        {% set model = hotel.getModel() %}
+
+        {% set atributos = model.atributos %}
+
+
+        {% set arAttributes = hotel.getAttributes() %}
+        
+        {% set minPrice = hotel.getMinPrice() %}
+
+        {% set defaultPrice = hotel.defaultRegimeMinPrice() %}
+        <div class="result-link" data-url="{{'hotel'|page({ slug: model.slug })  }}?{{SearchHandler.getDatesFromUrl()}}">
+        
+        <div class="box-style__1 rt-mb-30 hotel-result-card">
+            <div class="hotel-inner-content row">
+                <div class="hotel-thumb col-md-4 mb-4 mb-md-0">
+                    <div class="hotel-bg rtbgprefix-cover" style="background-image: url({{model.foto_inicio.path}})">
+                        {% if defaultPrice is not null %}
+                            <div class="default-price text-center d-block d-sm-none ">
+                                <img src="{{'navicu/imgs/svg/recommended-hotel.svg'|media}}" class="img-fluid" alt="Recomendado">{{defaultPrice.nombre_regimen}}
+                            </div>
+                            
+                            {% endif %}
+                    </div>
+                    <div class=" justify-content-between pt-3  d-none d-sm-none d-md-flex">
+                        {% for atributo in atributos |sort((a, b) => a.pivot.orden <=> b.pivot.orden) %}
+                    
+                            {% if loop.index0 < 5 and atributo.icon.path is not null %}
+                            <div class="col">
+                                <span class="d-block">
+                                    {% if atributo.icon.path is not null %}
+                                    {% set path = atributo.icon.path %}
+                                    {% else %}
+                                    {% set path = 'navicu/imgs/png/jigsaw.png'|media %}
+                                    {% endif %}
+                                    <img src="{{path}}" alt="{{atributo.nombre}}" class="attribute-icon">
+                                
+                                </span>
+                            </div>
+                            {% endif %}
+                        {% endfor  %}
+                    </div>
+                
+                </div><!-- /.hotel-thumb -->
+                <div class="hotel-text col-md-8">
+                    <div class="top mb-4 mb-md-0">
+                        <h5>{{arAttributes.nombre}}
+                            {% if arAttributes.estrellas > 0 %}
+                            <span class="star-rating">
+                                {% for i in 0.. arAttributes.estrellas -1 %}
+                                <img src="{{'navicu/imgs/svg/fill-star-nv.svg'|media}}" alt="{{atributo.nombre}}" class="hotel-star">
+
+                                {% endfor %}
+                                
+                            </span>
+                            {% endif %}
+                        </h5>
+                        {% set city = model.city %}
+                        <p class="hotel-card-city">{{city.name}}, {{city.state.name}}</p>
+                        <p class="hotel-card-presentation">
+
+                            {% set numberOfWords = arAttributes.descripcion|split(' ')|length %}
+
+                            {{ str_words(arAttributes.descripcion, 20, "...") }}
+                            
+                            {% if numberOfWords > 19 %}
+                            <br><a href="#" class="d-none d-sm-none d-md-block">Leer más</a>
+                            {% endif %}
+
+                            {% if defaultPrice is not null %}
+                            <div class="default-price d-none d-sm-none d-md-block">
+                                <img src="{{'navicu/imgs/svg/recommended-icon.svg'|media}}" class="img-fluid" alt="Recomendado">{{defaultPrice.nombre_regimen}}
+                            </div>
+                            
+                            {% endif %}
+                        </p>
+                        {% if numberOfWords > 19 %}
+                        <p class="text-right d-block d-sm-none">
+                            <a href="#">Leer más</a>
+                        </p>
+                        
+                        {% endif %}
+                    </div><!-- /.top -->
+                    <div class="middle-text mb-4 mb-md-0 row">
+                        <div class="col-md-8">
+                        
+                            <div class="justify-content-between  d-flex d-sm-none attribute-container">
+                                {% for atributo in atributos |sort((a, b) => a.pivot.orden <=> b.pivot.orden) %}
+                    
+                                    {% if loop.index0 < 5 and atributo.icon.path is not null %}
+                                    <div class="col text-center">
+                                        <span class="d-block">
+                                            {% if atributo.icon.path is not null %}
+                                            {% set path = atributo.icon.path %}
+                                                <img src="{{path}}" alt="{{atributo.nombre}}" class="attribute-icon">
+                                            {% else %}
+                                            {#
+                                                {% set path = 'navicu/imgs/png/jigsaw.png'|media %}
+                                            #}
+                                            
+                                            {% endif %}
+                                            
+                                        
+                                        </span>
+                                    </div>
+                                    {% endif %}
+                                {% endfor  %}
+                            </div>
+                            
+                        </div>
+                        <div class="right min-price-content col-md-4 text-right d-none d-sm-none d-md-block">
+                                
+                                <span class="d-block"></span>
+                                <span class="d-block">
+                                    <small>Desde</small>
+                                    {{minPrice.total_markup}} {{currentCurrency.acronimo}}
+                                </span>
+                                
+                                <button  class="hotel-result-button">Ver Hotel</button>           
+                        </div>
+
+                        <div class="right min-price-content col-md-4 text-right align-items-center
+                        d-flex d-sm-none justify-content-between">
+                                
+                            <span class="d-none"></span>
+                            <span class="d-block">
+                                <small>Desde</small>
+                                {{minPrice.total_markup}} {{currentCurrency.acronimo}}
+                            </span>
+                            
+                            <button  class="hotel-result-button">Ver Hotel</button>           
+                    </div>
+
+                    </div><!-- /.middle-text -->
+                    <div class="footer-elements mt-2 d-flex justify-content-md-between align-items-center">
+                        <div class="left">
+                            
+                        </div><!-- /.left -->
+                        <div class="right">
+                            
+                        </div><!-- /.right -->
+                    </div><!-- /.footer-elements -->
+                </div><!-- /.hotel-text -->
+            </div><!-- /.hotel-inner-content -->
+        </div><!-- hotel-result-card -->
+    </div>
+    {% endfor %}
+
+    {% set iPage = Pagination.getPageFromRequest() %}
+    {% set iCount = SearchHandler.getCount() %}
+    {% set arPaginationList = Pagination.get(iPage, iCount) %}
+    
+    {% set paramsForPagination = SearchHandler.getSearchParamUrl() %}
+    
+    {% if arPaginationList is not empty  %}
+
+        {# 
+            and arPaginationList|length > 1    
+        #}
+        <nav class="d-flex justify-content-end">
+            <ul class="pagination  rt-paganation">
+
+                {% if iPage != 1 %}
+                
+                    {% if paramsForPagination is not empty %}
+                    <li class="page-item">
+                        <a class="pagination-link" href="{{'search'|page({q:'q?'~paramsForPagination})}}&page={{iPage-1}}">
+                            <i class="icofont-simple-left"></i>
+                        </a>
+                    </li>
+                    {% else %}
+                    <li class="page-item">
+                        <a class="pagination-link" href="{{ url_current() }}?page={{ iPage-1 }}"><i class="icofont-simple-left"></i></a>
+                    </li>
+                    {% endif %}
+                    
+                {% endif %}
+
+                {% for arPagination in arPaginationList %}
+
+                    {% if paramsForPagination is not empty %}
+                    <li class="page-item {{ arPagination.class }}">
+                        <a class="pagination-link " href="{{'search'|page({q:'q?'~paramsForPagination})}}&page={{arPagination.value}}">
+                            {{ arPagination.name }}
+                        </a>
+                    </li>
+                    {% else %}
+                    <li class="page-item {{ arPagination.class }}">
+                        <a class="pagination-link " href="{{ url_current() }}?page={{ arPagination.value }} ">
+                            {{ arPagination.name }}
+                        </a>
+                    </li>
+                    {% endif %}
+                    
+                {% endfor %}
+
+                {% if paramsForPagination is not empty %}
+
+                <li class="page-item {{iPage ==  arPaginationList|length ? 'disabled' }}">
+                    <a class="pagination-link" href="{{'search'|page({q:'q?'~SearchHandler.getSearchParamUrl()})}}&page={{iPage+1}}"><i class="icofont-simple-right"></i></a>
+                </li>
+
+                {% else %}
+
+                <li class="page-item {{iPage ==  arPaginationList|length ? 'disabled' }}">
+                    <a class="pagination-link" href="{{ url_current() }}?page={{ iPage+1 }}"><i class="icofont-simple-right"></i></a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+        
+    {% endif %}
+
+</div><!-- /.col-lg-9 -->
+
+
+
+";s:5:"mtime";i:1662661724;s:6:"markup";s:11449:"<!-- 
+
+    <a href="{{'hotel'|page({ slug: model.slug })  }}?{{SearchHandler.getDatesFromUrl()}}"></a>
+-->
+{% set currentCurrency = CurrencyHandler.getCurrentCurrency() %}
+<div class="col-xl-9 col-lg-12 mt-lg-0 d-none d-sm-none d-md-block">
+    <h5 class="text-left hotel-result-count pt-2 pb-2">Hoteles encontrados: {{SearchHandler.getCount()}}</h5>
+</div>
+<div class="col-sm-12 d-block d-sm-none d-flex justify-content-between
+    align-items-center mt-3">
+    <h5 class="text-left hotel-result-count pt-2 pb-2 mt-3">Hoteles encontrados: {{SearchHandler.getCount()}}</h5>
+    
+    <img src="{{'navicu/imgs/svg/filter-mobile.svg'|media}}" alt="">
+    
+</div>
+<div class="col-xl-9 col-lg-12 mt-3 mt-lg-0">
+    {% for hotel in result %}
+        
+        
+        {% set model = hotel.getModel() %}
+
+        {% set atributos = model.atributos %}
+
+
+        {% set arAttributes = hotel.getAttributes() %}
+        
+        {% set minPrice = hotel.getMinPrice() %}
+
+        {% set defaultPrice = hotel.defaultRegimeMinPrice() %}
+        <div class="result-link" data-url="{{'hotel'|page({ slug: model.slug })  }}?{{SearchHandler.getDatesFromUrl()}}">
+        
+        <div class="box-style__1 rt-mb-30 hotel-result-card">
+            <div class="hotel-inner-content row">
+                <div class="hotel-thumb col-md-4 mb-4 mb-md-0">
+                    <div class="hotel-bg rtbgprefix-cover" style="background-image: url({{model.foto_inicio.path}})">
+                        {% if defaultPrice is not null %}
+                            <div class="default-price text-center d-block d-sm-none ">
+                                <img src="{{'navicu/imgs/svg/recommended-hotel.svg'|media}}" class="img-fluid" alt="Recomendado">{{defaultPrice.nombre_regimen}}
+                            </div>
+                            
+                            {% endif %}
+                    </div>
+                    <div class=" justify-content-between pt-3  d-none d-sm-none d-md-flex">
+                        {% for atributo in atributos |sort((a, b) => a.pivot.orden <=> b.pivot.orden) %}
+                    
+                            {% if loop.index0 < 5 and atributo.icon.path is not null %}
+                            <div class="col">
+                                <span class="d-block">
+                                    {% if atributo.icon.path is not null %}
+                                    {% set path = atributo.icon.path %}
+                                    {% else %}
+                                    {% set path = 'navicu/imgs/png/jigsaw.png'|media %}
+                                    {% endif %}
+                                    <img src="{{path}}" alt="{{atributo.nombre}}" class="attribute-icon">
+                                
+                                </span>
+                            </div>
+                            {% endif %}
+                        {% endfor  %}
+                    </div>
+                
+                </div><!-- /.hotel-thumb -->
+                <div class="hotel-text col-md-8">
+                    <div class="top mb-4 mb-md-0">
+                        <h5>{{arAttributes.nombre}}
+                            {% if arAttributes.estrellas > 0 %}
+                            <span class="star-rating">
+                                {% for i in 0.. arAttributes.estrellas -1 %}
+                                <img src="{{'navicu/imgs/svg/fill-star-nv.svg'|media}}" alt="{{atributo.nombre}}" class="hotel-star">
+
+                                {% endfor %}
+                                
+                            </span>
+                            {% endif %}
+                        </h5>
+                        {% set city = model.city %}
+                        <p class="hotel-card-city">{{city.name}}, {{city.state.name}}</p>
+                        <p class="hotel-card-presentation">
+
+                            {% set numberOfWords = arAttributes.descripcion|split(' ')|length %}
+
+                            {{ str_words(arAttributes.descripcion, 20, "...") }}
+                            
+                            {% if numberOfWords > 19 %}
+                            <br><a href="#" class="d-none d-sm-none d-md-block">Leer más</a>
+                            {% endif %}
+
+                            {% if defaultPrice is not null %}
+                            <div class="default-price d-none d-sm-none d-md-block">
+                                <img src="{{'navicu/imgs/svg/recommended-icon.svg'|media}}" class="img-fluid" alt="Recomendado">{{defaultPrice.nombre_regimen}}
+                            </div>
+                            
+                            {% endif %}
+                        </p>
+                        {% if numberOfWords > 19 %}
+                        <p class="text-right d-block d-sm-none">
+                            <a href="#">Leer más</a>
+                        </p>
+                        
+                        {% endif %}
+                    </div><!-- /.top -->
+                    <div class="middle-text mb-4 mb-md-0 row">
+                        <div class="col-md-8">
+                        
+                            <div class="justify-content-between  d-flex d-sm-none attribute-container">
+                                {% for atributo in atributos |sort((a, b) => a.pivot.orden <=> b.pivot.orden) %}
+                    
+                                    {% if loop.index0 < 5 and atributo.icon.path is not null %}
+                                    <div class="col text-center">
+                                        <span class="d-block">
+                                            {% if atributo.icon.path is not null %}
+                                            {% set path = atributo.icon.path %}
+                                                <img src="{{path}}" alt="{{atributo.nombre}}" class="attribute-icon">
+                                            {% else %}
+                                            {#
+                                                {% set path = 'navicu/imgs/png/jigsaw.png'|media %}
+                                            #}
+                                            
+                                            {% endif %}
+                                            
+                                        
+                                        </span>
+                                    </div>
+                                    {% endif %}
+                                {% endfor  %}
+                            </div>
+                            
+                        </div>
+                        <div class="right min-price-content col-md-4 text-right d-none d-sm-none d-md-block">
+                                
+                                <span class="d-block"></span>
+                                <span class="d-block">
+                                    <small>Desde</small>
+                                    {{minPrice.total_markup}} {{currentCurrency.acronimo}}
+                                </span>
+                                
+                                <button  class="hotel-result-button">Ver Hotel</button>           
+                        </div>
+
+                        <div class="right min-price-content col-md-4 text-right align-items-center
+                        d-flex d-sm-none justify-content-between">
+                                
+                            <span class="d-none"></span>
+                            <span class="d-block">
+                                <small>Desde</small>
+                                {{minPrice.total_markup}} {{currentCurrency.acronimo}}
+                            </span>
+                            
+                            <button  class="hotel-result-button">Ver Hotel</button>           
+                    </div>
+
+                    </div><!-- /.middle-text -->
+                    <div class="footer-elements mt-2 d-flex justify-content-md-between align-items-center">
+                        <div class="left">
+                            
+                        </div><!-- /.left -->
+                        <div class="right">
+                            
+                        </div><!-- /.right -->
+                    </div><!-- /.footer-elements -->
+                </div><!-- /.hotel-text -->
+            </div><!-- /.hotel-inner-content -->
+        </div><!-- hotel-result-card -->
+    </div>
+    {% endfor %}
+
+    {% set iPage = Pagination.getPageFromRequest() %}
+    {% set iCount = SearchHandler.getCount() %}
+    {% set arPaginationList = Pagination.get(iPage, iCount) %}
+    
+    {% set paramsForPagination = SearchHandler.getSearchParamUrl() %}
+    
+    {% if arPaginationList is not empty  %}
+
+        {# 
+            and arPaginationList|length > 1    
+        #}
+        <nav class="d-flex justify-content-end">
+            <ul class="pagination  rt-paganation">
+
+                {% if iPage != 1 %}
+                
+                    {% if paramsForPagination is not empty %}
+                    <li class="page-item">
+                        <a class="pagination-link" href="{{'search'|page({q:'q?'~paramsForPagination})}}&page={{iPage-1}}">
+                            <i class="icofont-simple-left"></i>
+                        </a>
+                    </li>
+                    {% else %}
+                    <li class="page-item">
+                        <a class="pagination-link" href="{{ url_current() }}?page={{ iPage-1 }}"><i class="icofont-simple-left"></i></a>
+                    </li>
+                    {% endif %}
+                    
+                {% endif %}
+
+                {% for arPagination in arPaginationList %}
+
+                    {% if paramsForPagination is not empty %}
+                    <li class="page-item {{ arPagination.class }}">
+                        <a class="pagination-link " href="{{'search'|page({q:'q?'~paramsForPagination})}}&page={{arPagination.value}}">
+                            {{ arPagination.name }}
+                        </a>
+                    </li>
+                    {% else %}
+                    <li class="page-item {{ arPagination.class }}">
+                        <a class="pagination-link " href="{{ url_current() }}?page={{ arPagination.value }} ">
+                            {{ arPagination.name }}
+                        </a>
+                    </li>
+                    {% endif %}
+                    
+                {% endfor %}
+
+                {% if paramsForPagination is not empty %}
+
+                <li class="page-item {{iPage ==  arPaginationList|length ? 'disabled' }}">
+                    <a class="pagination-link" href="{{'search'|page({q:'q?'~SearchHandler.getSearchParamUrl()})}}&page={{iPage+1}}"><i class="icofont-simple-right"></i></a>
+                </li>
+
+                {% else %}
+
+                <li class="page-item {{iPage ==  arPaginationList|length ? 'disabled' }}">
+                    <a class="pagination-link" href="{{ url_current() }}?page={{ iPage+1 }}"><i class="icofont-simple-right"></i></a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+        
+    {% endif %}
+
+</div><!-- /.col-lg-9 -->";s:4:"code";N;s:10:"Pagination";a:19:{s:14:"count_per_page";s:2:"10";s:16:"pagination_limit";s:1:"5";s:12:"active_class";s:6:"active";s:17:"first_button_name";s:5:"First";s:18:"first_button_limit";s:1:"1";s:22:"first-more_button_name";s:3:"...";s:23:"first-more_button_limit";s:1:"1";s:16:"prev_button_name";s:4:"Prev";s:17:"prev_button_limit";s:1:"1";s:21:"prev-more_button_name";s:3:"...";s:22:"prev-more_button_limit";s:1:"1";s:21:"next-more_button_name";s:3:"...";s:22:"next-more_button_limit";s:1:"1";s:16:"next_button_name";s:4:"Next";s:17:"next_button_limit";s:1:"1";s:21:"last-more_button_name";s:3:"...";s:22:"last-more_button_limit";s:1:"1";s:16:"last_button_name";s:4:"Last";s:17:"last_button_limit";s:1:"1";}}}

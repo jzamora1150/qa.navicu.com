@@ -1,0 +1,152 @@
+
+
+{% set arPrices = obPurchase.getArPrecios() %}
+{% set obMoneda = obPurchase.moneda %}
+
+{% set arEquivalent = CurrencyHandler.getEquivalentArray(arPrices.total_markup) %}
+
+<div class="rt-sidebar-group pb-4">
+    <div class="rt-widget final-booking">
+
+        <ul>
+            <li>
+                <div id="created_at" class="d-flex justify-content-center w-100 mb-2" data-date="{{obPurchase.fecha_vigencia|date('m/d/Y g:i:s a','America/Caracas')}}" data-created="{{obPurchase.created_at|date('m/d/Y g:i:s a','America/Caracas')}}">
+                    <p class="text-center">
+                        Tiempo restante para realizar el pago <br>
+
+                        <strong>
+    
+                            <span id="clock"></span>
+            
+                        </strong>
+                       
+                    </p>
+                </div>
+                
+            </li>
+
+            <li class="clearfix">
+              
+                <span>N° de Compra</span>
+                <span class="float-right">{{obPurchase.id}}</span>
+            </li>
+
+            <li class="clearfix sub-total">
+
+                <span>Total</span>
+                <span class="float-right">{{arPrices.total_markup }} <small>{{obMoneda.acronimo}}</small></span>
+            </li>
+
+        </ul>
+    </div><!-- /.rt-widget -->
+    
+
+    {% for obReservation in obPurchase.reservaciones %}
+    <div class="flt-dtls-box rt-mb-30">
+        <div class="upper-top-content d-md-flex flex-md-row justify-content-md-between align-items-center">
+            <div class="left">
+                
+                <span>{{obReservation.hotel.nombre}}</span>
+                
+            </div><!-- /.left -->
+            <!-- /.right -->
+        </div><!-- /.upper-top-content -->
+        {% for detalle in obReservation.detalles %}
+        <div class="flight-list-box">
+            <div class="hotel-inner-content row pb-2">
+                
+                <div class="hotel-text col-md-12">
+    
+                   <div class="footer3-elements cart-body-element">
+                       {#
+                       <a href="#" data-code="{{hotel.hotel_id}}-{{loop.index0}}" class="remove-from-cart">
+                        <span><i class="icofont-close"></i></span>
+                       </a>
+                       #}
+                       {% set obHabitacion = detalle.habitacion %}
+                       <span class="d-block heading-color-1 rt-strong">{{obHabitacion.nombre}}</span>
+                            {% if obReservation.paquete is not empty%}
+                            <div class="clearfix room-detail d-flex align-items-center pb-2">
+                                <img src="{{'navicu/imgs/svg/packs.svg'|media}}">
+                                <p class="p-0 m-0 hotel-tour-name">
+                                    
+                                    {{obReservation.paquete.titulo}}
+                                </p>
+                            </div>
+                            {% endif %}
+                           <div class="clearfix f-size-12 text-555">
+                               <span class="float-left ">Ocupación</span>
+                               <span class="float-right">{{obHabitacion.getOcupacion(detalle.ocupacion)}}</span>
+                            </div>
+                           <div class="clearfix f-size-12 text-555">
+                               <span class="float-left">Régimen</span>
+                               <span class="float-right">{{detalle.regimen.nombre}}</span>
+                            </div>
+                            <div class="clearfix f-size-12 text-555">
+                                <span class="float-left">Check-in</span>
+                                <span class="float-right">{{obReservation.checkin|date("d-m-Y")}}</span>
+                             </div>
+                             <div class="clearfix f-size-12 text-555">
+                                <span class="float-left">Check-out</span>
+                                <span class="float-right">{{obReservation.checkout|date("d-m-Y")}}</span>
+                             </div>
+
+                             <div class="clearfix room-price">
+                                <span class="float-left">Precio</span>
+                                <span class="float-right rt-strong">{{detalle.precio}} {{obMoneda.acronimo}}</span>
+                             </div>
+
+                            
+                       
+                   </div><!-- /.footer3-elements -->
+                </div><!-- /.hotel-text -->
+            </div><!-- /.hotel-inner-content -->
+            {#
+            <div class="rt-divider style-three"></div>
+            #}
+        </div><!-- /.flight-list-box -->
+        {% endfor %}
+       
+    </div>
+    {% endfor %}
+
+    {% for upgrade in obPurchase.upgrades %}
+    <div class="flight-list-box pb-2  mb-4 upselling-cart-item">
+        <div class="hotel-inner-content row">
+            
+            <div class="hotel-text col-md-12">
+
+               <div class="footer3-elements cart-body-element">
+                   
+                
+                   <div class=" d-flex align-items-center">
+                    <img src="{{'navicu/imgs/svg/packs-basics.svg'|media}}">
+                    <span class="d-block heading-color-1 rt-strong room-name mt-1">{{upgrade.upselling.titulo}}</span>
+                   </div>
+                   
+                        
+                       <div class="clearfix room-detail">
+                           <span class="float-left ">Ocupación</span>
+                           <span class="float-right">{{upgrade.getTextoOcupacion()}}</span>
+                        </div>
+                       
+                        <div class="clearfix room-detail">
+                            <span class="float-left">Fecha de disfrute</span>
+                            <span class="float-right">{{upgrade.fecha_disfrute|date("d-m-Y")}}</span>
+                         </div>
+                        
+                       <div class="clearfix room-price pt-3">
+                           <span class="float-left">Precio</span>
+                           <span class="float-right">{{upgrade.precio}} {{obMoneda.acronimo}}</span>
+                        </div>
+                        
+                   
+               </div><!-- /.footer3-elements -->
+            </div><!-- /.hotel-text -->
+        </div><!-- /.hotel-inner-content -->
+        {#
+        <div class="rt-divider style-three"></div>
+        #}
+    </div><!-- /.flight-list-box -->
+    {% endfor %}
+</div>

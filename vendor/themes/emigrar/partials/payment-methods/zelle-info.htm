@@ -1,0 +1,37 @@
+<div class="alert">
+    <div class="media">
+       
+        <div class="media-body">
+            <h6 class="mt-0 rt-semiblod">
+                <img src="{{'navicu/imgs/svg/zelle-purple.svg'|media}}">
+            </h6>
+            <p>realiza tu pago a la siguiente cuenta</p>
+            <p><strong>Navicu LLC. - cuenta bussiness - pagos@navicu.com</strong></p>
+            <p>Notifica tu pago en el formulario a continuación</p>
+            
+            
+        
+        </div>
+    </div>
+</div>
+
+
+<form class="payment-form pt-5">
+    <div class="row">
+       
+        <div class="col-md-12 rt-mb-30 rt-input-group">
+            <label class="half-violet-1-text"><strong>Nombre de quien envía el pago</strong></label>
+            <input type="text" class="form-control" name="reference" placeholder="Ej: Juan Perez">
+        </div>
+        
+    </div>                        
+    <div class="d-flex">
+        <div class="col-md-12 text-right">
+            <input type="hidden" name="type" value="{{type}}">
+            <input type="hidden" name="id" value="{{object.id}}">
+            <input type="hidden" name="payment_method_id" value="{{paymentMethod.id}}">
+            <input type="hidden" name="status_id" value="3">
+            <button type="submit" class="hotel-result-button">Notificar</button>
+        </div>
+    </div>
+</form>
